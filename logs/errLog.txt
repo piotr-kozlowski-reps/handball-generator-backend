@@ -1,0 +1,18 @@
+20221026	13:03:49	46a6f523-cfdd-4dcb-9455-f1ceeb1cc681	bad auth : Authentication failed.
+20221026	14:47:23	24fe3efb-03b1-40dd-b7f5-a550350835f8	Error: Could not find this route.
+20221026	14:48:30	c6044131-9aeb-476f-b355-1723a9125c77	Error: Could not find this route.
+20221026	15:31:35	ce472dfb-d146-475e-b00c-a40d135b1f48	Error: Could not find this route.
+20221026	15:31:54	4b71499f-d49c-42b1-86b2-e1ae3d0a2ab3	Error: Could not find this route.
+20221026	15:36:54	3d76e100-afdb-4bb3-ada1-785874f77167	SyntaxError: Unexpected token } in JSON at position 23
+20221026	15:49:14	8d25e5a1-5708-4f97-80cb-7a1d63b20333	Error: Nie udało się zalogować, spróbuj ponownie.
+20221026	16:24:00	b92b6002-9ffb-4449-8d83-b443b25cf1da	Error: Niepoprawne dane, spróbuj raz jeszcze.
+20221026	16:40:12	ef3c28e9-c551-4622-9c86-697c5ede5b45	Error: Niepoprawne dane, spróbuj raz jeszcze.
+20221027	11:42:15	d45b9aa6-706a-471c-85e6-37f222e43de1	Error: Could not find this route.
+20221027	11:42:20	e8b21b01-f314-41d8-890d-0c5ed5768109	Error: Could not find this route.
+20221027	11:42:39	de24cf73-32f6-48d2-af59-0575f00c708e	Error: Could not find this route.
+20221027	11:42:56	642c443c-c023-4286-b014-6df5bf2840bf	Error: Could not find this route.
+20221027	11:43:23	a622befd-aa8e-4836-82a1-3292b0025ab1	Error: Could not find this route.
+20221027	11:43:25	007f29dd-53d1-45ac-818d-51fa5c489fb2	Error: Could not find this route.
+20221027	16:27:37	55086134-8cdc-4a22-86ff-a31c488d79bc	Error: Nie jesteś zalogowany.
+20221027	16:30:20	5bcbc5ac-4319-4a72-95cf-5896953184ed	Error: Nie jesteś zalogowany.
+20221027	16:30:22	c9207b18-26f1-4b66-9280-17e3e6692aa0	Error: Nie jesteś zalogowany.
