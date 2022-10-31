@@ -16,3 +16,12 @@
 20221027	16:27:37	55086134-8cdc-4a22-86ff-a31c488d79bc	Error: Nie jesteś zalogowany.
 20221027	16:30:20	5bcbc5ac-4319-4a72-95cf-5896953184ed	Error: Nie jesteś zalogowany.
 20221027	16:30:22	c9207b18-26f1-4b66-9280-17e3e6692aa0	Error: Nie jesteś zalogowany.
+20221031	10:04:16	7b42859d-a456-4bd5-8994-fdb3d4ee955e	Error: Nie masz dostępu do tych zasobów.
+20221031	10:04:16	300bafcb-0ec9-4a78-86a6-6f908c63ead0	Error: Nie masz dostępu do tych zasobów.
+20221031	10:50:15	b1e4378b-3f3f-44c5-b767-ae1d9f7043af	Error: Nie masz dostępu do tych zasobów.
+20221031	10:51:21	25ad216e-1dc6-42c0-a932-cd8c8fc4d294	Error: Nie masz dostępu do tych zasobów.
+20221031	11:39:55	cba2fff9-a862-4019-b460-97156379dfcf	Error: Nie masz dostępu do tych zasobów.
+20221031	14:35:07	7be2deff-1c43-4b5d-ad81-8dcc49b1d64a	Error: Niepoprawne dane, spróbuj raz jeszcze..
+20221031	16:18:08	6c61a18f-24a5-4063-8dbf-917f9f601ace	Error: Niepoprawne dane, spróbuj raz jeszcze..
+20221031	16:57:54	f7d05977-714b-4f82-8c51-9e04641fd93d	Error: Nie masz dostępu do tych zasobów.
+20221031	17:02:07	5804f4b6-7771-4cf7-917f-2a84b212b99a	Error: Nie masz dostępu do tych zasobów.

@@ -6,6 +6,8 @@ const jwt = require("jsonwebtoken");
 const authHandler = async (req, res, next) => {
   // /** Encrypted password generator for temporary password*/
   // //start
+  //userName: obslugameczu
+  //password : obslugameczuhaslo1
   // const desiredPassword = "obslugameczuhaslo1";
   // let hashedPassword;
   // try {
@@ -30,7 +32,7 @@ const authHandler = async (req, res, next) => {
     );
   }
   if (!foundUser)
-    return next(new HttpError("Niepoprawne dane, spróbuj raz jeszcze..", 403)); //unauthorized
+    return next(new HttpError("Niepoprawne dane, spróbuj raz jeszcze.", 403)); //unauthorized
 
   //password check
   let isValidPassword;
