@@ -25,3 +25,19 @@
 20221031	16:18:08	6c61a18f-24a5-4063-8dbf-917f9f601ace	Error: Niepoprawne dane, spróbuj raz jeszcze..
 20221031	16:57:54	f7d05977-714b-4f82-8c51-9e04641fd93d	Error: Nie masz dostępu do tych zasobów.
 20221031	17:02:07	5804f4b6-7771-4cf7-917f-2a84b212b99a	Error: Nie masz dostępu do tych zasobów.
+20221031	19:56:09	38d0488d-5276-4be5-9846-6684886db30b	Error: Nie masz dostępu do tych zasobów.
+20221031	19:56:09	19e1d0b7-a0de-4bbe-b710-72fab6cf2e82	Error: Nie masz dostępu do tych zasobów.
+20221101	17:45:35	30187a14-b932-41b3-8a8b-7cdeb98ee0a8	Error: Niepoprawne dane, spróbuj raz jeszcze.
+20221101	17:46:12	6695d21d-fe10-40d5-803d-9abc481f7dfe	Error: Niepoprawne dane, spróbuj raz jeszcze.
+20221101	17:46:37	1a85b726-9fbf-4532-a52a-6dcabf99806f	Error: Niepoprawne dane, spróbuj raz jeszcze.
+20221101	17:46:46	3ec69849-7ba3-46d0-902b-b9cb62228f08	Error: Niepoprawne dane, spróbuj raz jeszcze.
+20221101	17:47:40	6395608c-85ef-4794-9068-51a2989b93ac	Error: Niepoprawne dane, spróbuj raz jeszcze.
+20221101	17:48:48	ed7a1642-a0d7-4314-ade5-2e4dc6176644	Error: Niepoprawne dane, spróbuj raz jeszcze.
+20221101	17:50:14	60093b0a-546a-4f26-bde1-1a89dbc477bd	Error: Niepoprawne dane, spróbuj raz jeszcze.
+20221101	17:51:45	7d66180e-6ffb-44be-9215-01f590e95006	Error: Niepoprawne dane, spróbuj raz jeszcze.
+20221101	18:01:13	beb4348b-e8ce-41e2-aeb1-848ed1145dad	Error: Nie masz dostępu do tych zasobów.
+20221101	18:02:26	66b6f810-77b5-4ca4-b2f8-22d2e44ecf24	Error: Nie masz dostępu do tych zasobów.
+20221101	18:03:13	eaea4345-d0cc-46ee-9e9d-a7c6dd3e3c92	Error: Nie masz dostępu do tych zasobów.
+20221101	18:05:51	86f037b4-9e4f-4fe9-acbe-a20d77e9b631	Error: Nie masz dostępu do tych zasobów.
+20221101	18:06:09	727b1352-67df-4b25-a7f3-e1be7467b937	Error: Nie masz dostępu do tych zasobów.
+20221101	22:42:27	13fc1f47-2620-4aec-83af-cead5400c121	Error: Nie masz dostępu do tych zasobów.

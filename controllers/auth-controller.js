@@ -31,8 +31,10 @@ const authHandler = async (req, res, next) => {
       new HttpError("Nie udało się zalogować, spróbuj ponownie.", 500)
     );
   }
-  if (!foundUser)
-    return next(new HttpError("Niepoprawne dane, spróbuj raz jeszcze.", 403)); //unauthorized
+  if (!foundUser) {
+    console.log("403 być powinno");
+    return next(new HttpError("Niepoprawne dane, spróbuj raz jeszcze.", 204)); //unauthorized
+  }
 
   //password check
   let isValidPassword;
