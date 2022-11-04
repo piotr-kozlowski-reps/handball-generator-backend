@@ -4,12 +4,13 @@ const HttpError = require("../helpers/http-error");
 const jwt = require("jsonwebtoken");
 
 const logoutHandler = async (req, res, next) => {
-  //TODO: access token delete also on client!
-
   const cookies = req.cookies;
+  console.log("cokkies: ", cookies);
   if (!cookies?.jwt)
     return next(res.status(204).json({ message: "Nie jesteś zalogowany." })); //No content
   const refreshToken = cookies.jwt;
+
+  console.log("refreshToken: ", refreshToken);
 
   /** is refresh token in DB */
   let foundUser;
@@ -34,7 +35,7 @@ const logoutHandler = async (req, res, next) => {
     res.clearCookie("jwt", {
       httpOnly: true,
       sameSite: "None",
-      //  secure: true
+      secure: true, //TODO: turn on for Browsers / off for ThunderClient
     });
     res.status(204).json({ message: "Nie jesteś zalogowany." });
   } catch (err) {

@@ -32,8 +32,7 @@ const authHandler = async (req, res, next) => {
     );
   }
   if (!foundUser) {
-    console.log("403 być powinno");
-    return next(new HttpError("Niepoprawne dane, spróbuj raz jeszcze.", 204)); //unauthorized
+    return next(new HttpError("Niepoprawne dane, spróbuj raz jeszcze.", 401)); //unauthorized
   }
 
   //password check
@@ -94,7 +93,7 @@ const authHandler = async (req, res, next) => {
   //secure cookie set
   res.cookie("jwt", refreshToken, {
     httpOnly: true,
-    // secure: true, //TODO: turn on for Browsers / off for ThunderClient
+    secure: true, //TODO: turn on for Browsers / off for ThunderClient
     sameSite: "None",
     maxAge: 24 * 60 * 60 * 1000,
   });
