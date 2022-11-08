@@ -7,7 +7,11 @@ const createMulterStorage = (multer) => {
       console.log("originalUrl: ", req.originalUrl);
       switch (req.originalUrl) {
         case "/api/team":
-          cb(null, path.join("images", "team-crest"));
+          cb(null, path.join("images", "team-crests"));
+          return;
+        case "/api/sponsors-bar":
+          cb(null, path.join("images", "sponsors-bars"));
+          return;
       }
     },
     filename: (req, file, cb) => {

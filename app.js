@@ -21,6 +21,12 @@ connectDB();
 /** custom middleware logger */
 app.use(logger);
 
+/** show request */
+app.use((req, res, next) => {
+  console.log(req);
+  next();
+});
+
 //multer
 const multer = require("multer");
 const storage = createMulterStorage(multer);
@@ -35,7 +41,6 @@ let corsConfig = {
   origin: true,
   credentials: true,
 };
-
 app.use(cors(corsConfig));
 app.options("*", cors(corsConfig));
 
@@ -59,6 +64,11 @@ app.use(
   "/api/team",
   upload.single("teamCrest"),
   require("./routes/team-routes")
+);
+app.use(
+  "/api/sponsors-bar",
+  upload.single("sponsorsBarImageUrl"),
+  require("./routes/sponsors-bar-routes")
 );
 
 /**  error handling */

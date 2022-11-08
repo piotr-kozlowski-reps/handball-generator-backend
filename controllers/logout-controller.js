@@ -35,7 +35,7 @@ const logoutHandler = async (req, res, next) => {
     res.clearCookie("jwt", {
       httpOnly: true,
       sameSite: "None",
-      secure: true, //TODO: turn on for Browsers / off for ThunderClient
+      // secure: true, //TODO: turn on for Browsers / off for ThunderClient
     });
     res.status(204).json({ message: "Nie jesteś zalogowany." });
   } catch (err) {

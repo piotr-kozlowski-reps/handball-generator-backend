@@ -7,7 +7,7 @@ const verifyJWT = (req, res, next) => {
     return next(new HttpError("Nie masz dostępu do tych zasobów.", 401));
 
   const token = authHeader.split(" ")[1];
-  console.log(token);
+  console.log({ token });
 
   jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, decoded) => {
     if (err) return next(new HttpError("Token jest niepoprawny", 403));
