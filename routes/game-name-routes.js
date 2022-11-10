@@ -1,5 +1,5 @@
 const express = require("express");
-const teamController = require("../controllers/team-controller");
+const gameNameController = require("../controllers/game-name-controller");
 const fileExtensionLimiter = require("../middleware/fileExtensionLimiter");
 const fileResolutionLimiter = require("../middleware/fileResolutionLimiter");
 const router = express.Router();
@@ -7,16 +7,16 @@ const router = express.Router();
 const filesPayloadExists = require("../middleware/filesPaylodExists");
 
 ////routes
-router.get("/", teamController.getAllTeams);
-router.get("/:id", teamController.getTeam);
+router.get("/", gameNameController.getAllGameNames);
+router.get("/:id", gameNameController.getGameName);
 router.post(
   "/",
   filesPayloadExists,
-  fileExtensionLimiter([".png"]),
+  fileExtensionLimiter([".png", ".jpg", ".jpeg"]),
   fileResolutionLimiter,
-  teamController.createTeam
+  gameNameController.createGameName
 );
-router.put("/", teamController.updateTeam);
-router.delete("/:id", teamController.deleteTeam);
+router.put("/", gameNameController.updateGameName);
+router.delete("/:id", gameNameController.deleteGameName);
 
 module.exports = router;

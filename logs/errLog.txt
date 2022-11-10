@@ -192,3 +192,316 @@ Dopuszczalna wysokość pliku to: 10 px.
 20221108	09:08:49	72797af7-762b-4edc-80f0-8bc8f58aaf9d	MulterError: Unexpected field
 20221108	09:12:25	02ba68af-6d98-4af8-82b8-5729c6ba8e9a	MulterError: Unexpected field
 20221108	09:25:45	d28ddaff-af3e-460d-b932-cb2498375c8d	Error: Drużyna już istnieje.
+20221108	12:25:15	e42f8137-c41a-4488-a344-913eb447e7a9	Error: Nie masz dostępu do tych zasobów.
+20221108	12:25:15	7338c261-da59-44bd-a240-777209eaec34	Error: Nie masz dostępu do tych zasobów.
+20221108	12:25:15	94248bd4-f069-4f03-844f-72dbe4c9342e	Error: Nie masz dostępu do tych zasobów.
+20221108	12:25:15	239281f1-4bb1-4ee6-bc61-031b1e7bbe6a	Error: Nie masz dostępu do tych zasobów.
+20221108	12:27:39	079f9b0e-2449-4674-b52d-9a6fb50119f6	Error: Nie masz dostępu do tych zasobów.
+20221108	12:27:39	e69adf3d-5e68-40ec-813a-701dde78754e	Error: Nie masz dostępu do tych zasobów.
+20221108	12:27:39	2eec5500-fcc4-429d-9a55-9a1d8984888d	Error: Nie masz dostępu do tych zasobów.
+20221108	12:27:39	fa6cfb7e-ea81-480f-9891-635cd7a55bb2	Error: Nie masz dostępu do tych zasobów.
+20221108	12:28:58	590057d4-20de-4af9-9122-bc51b71a6574	Error: Nie masz dostępu do tych zasobów.
+20221108	12:28:58	51599261-c5c0-4e61-a633-4d33a571c9a8	Error: Nie masz dostępu do tych zasobów.
+20221108	12:28:58	6b9e77ff-3c1e-48c8-b80e-66308162a6ad	Error: Nie masz dostępu do tych zasobów.
+20221108	12:28:58	b92e71a4-7f82-4113-98f9-04df82e85dd6	Error: Nie masz dostępu do tych zasobów.
+20221108	12:29:06	c4ca056d-c47d-4780-9c8b-38c44c3c50aa	Error: Nie masz dostępu do tych zasobów.
+20221108	12:29:06	edb3a8a3-9585-4a51-b800-aade41f69ad4	Error: Nie masz dostępu do tych zasobów.
+20221108	12:29:06	2e0223bd-8b14-4c7b-b19f-4cc771d5c891	Error: Nie masz dostępu do tych zasobów.
+20221108	12:29:06	75406efd-2372-4069-b4ef-e8c1f65e7c23	Error: Nie masz dostępu do tych zasobów.
+20221108	12:29:07	02538e6d-2d29-4122-b4cc-9233ef21caa5	Error: Nie masz dostępu do tych zasobów.
+20221108	12:29:07	97b2e524-9d6b-41db-8418-bcf4c4abbec2	Error: Nie masz dostępu do tych zasobów.
+20221108	12:29:07	1f47b1f6-64c0-4a46-b18c-7c1a5158f3d3	Error: Nie masz dostępu do tych zasobów.
+20221108	12:29:07	c48b668a-f1a3-43ce-9527-71cadd4adf81	Error: Nie masz dostępu do tych zasobów.
+20221108	12:31:11	5108e14c-f2da-4614-9d04-f70ab3d87f38	Error: Nie masz dostępu do tych zasobów.
+20221108	12:31:11	d31a81dd-6fa4-400d-b9a2-2b0badcd373f	Error: Nie masz dostępu do tych zasobów.
+20221108	12:31:11	77830437-afaa-429e-a7c1-8df782888935	Error: Nie masz dostępu do tych zasobów.
+20221108	12:31:11	496ab605-ee32-4295-b3f9-b405c396c58c	Error: Nie masz dostępu do tych zasobów.
+20221108	12:46:35	55b00123-7dcc-4639-b599-c3997133d360	Error: Nie masz dostępu do tych zasobów.
+20221108	12:46:35	12540b58-62be-4a18-a775-d660fb957bc6	Error: Nie masz dostępu do tych zasobów.
+20221108	12:46:35	0fd66340-64e1-4dad-80a0-f9cf5b247fb8	Error: Nie masz dostępu do tych zasobów.
+20221108	12:46:35	c0de0dd8-c763-440d-b18b-d6e72e60e224	Error: Nie masz dostępu do tych zasobów.
+20221108	12:50:38	a8a9ca26-6cd9-464e-87c7-a24a694b6f02	Error: Nie masz dostępu do tych zasobów.
+20221108	12:50:38	ffa4570d-023a-4371-9cce-683034dfe21b	Error: Nie masz dostępu do tych zasobów.
+20221108	12:50:38	48695395-811b-49fa-8462-bf48a7a794b4	Error: Nie masz dostępu do tych zasobów.
+20221108	12:50:38	2c436356-998a-44e9-9ad0-4669682d6f13	Error: Nie masz dostępu do tych zasobów.
+20221108	12:50:40	3d892a65-abff-4187-b5ac-e1b427e9da27	Error: Nie masz dostępu do tych zasobów.
+20221108	12:50:40	1eb28cb1-c1cc-41f2-a24c-ed928c7d79bb	Error: Nie masz dostępu do tych zasobów.
+20221108	12:50:40	48bd0613-bc3e-48b6-a9b1-8f0fbf875598	Error: Nie masz dostępu do tych zasobów.
+20221108	12:50:50	368ae2b4-e0ff-407e-95ff-1e8d08ce4e35	Error: Nie masz dostępu do tych zasobów.
+20221108	12:50:50	1b8b8332-d365-4bda-8c9f-b489b0ea4596	Error: Nie masz dostępu do tych zasobów.
+20221108	12:55:30	ac423bff-9620-49d5-b0fd-420b63a0bf16	Error: Nie masz dostępu do tych zasobów.
+20221108	12:55:30	739a872a-aa86-452d-a443-c6d9dfd6f7bf	Error: Nie masz dostępu do tych zasobów.
+20221108	13:00:06	78a2ed49-f2a2-427f-8dd6-436e630d7dc6	Error: Token jest niepoprawny
+20221108	13:00:27	f80ecde3-f345-4669-9f1e-3b67e1df7064	Error: Could not find this route.
+20221108	13:04:54	455a3308-4367-41bd-9269-d236f7dfb245	Error: Błąd serwera, spróbuj ponownie.
+20221108	13:04:55	cd762c67-b6e3-4181-a400-db06ac49a55f	Error: Błąd serwera, spróbuj ponownie.
+20221108	13:04:57	fcada282-f1ee-40f9-a8b7-6dd74e67b09d	Error: Błąd serwera, spróbuj ponownie.
+20221108	13:05:01	fca440bc-4c7d-4d4f-a69c-db38206b0e39	Error: Błąd serwera, spróbuj ponownie.
+20221108	13:13:30	b492970e-b856-4229-b40f-54223e0e08bf	Error: Wymagany ID drużyny.
+20221108	13:13:39	c54276d3-726b-461a-bdc0-7df1b33db313	Error: Wymagany ID drużyny.
+20221108	13:14:09	c97d45f1-8da8-4f97-816f-4ed3210baf24	Error: Nie ma drużyny o ID: undefined.
+20221108	13:14:21	f239df40-eb97-447a-80a7-e02e8510db56	Error: Nie ma drużyny o ID: undefined.
+20221108	13:15:14	f554b45a-5c19-4eb5-b198-bab5dcb4dd73	Error: Nie ma drużyny o ID: idsdcsd.
+20221108	13:15:48	3ca05b8e-c1a5-48eb-985c-a6a90f48d29a	Error: Nie ma drużyny o ID: idsdcsd.
+20221108	13:16:35	e44229f1-686f-4e1d-b688-85700822b70a	Error: Nie ma drużyny o ID: 63638bf16fb001fc5f038b24.
+20221108	13:36:24	fbb2b6f9-7b34-4f7e-a32b-8567dcae6762	Error: Nie masz dostępu do tych zasobów.
+20221108	13:37:02	38048bcb-0de5-4a95-ad8c-5ee1a83f6c21	Error: Nie masz dostępu do tych zasobów.
+20221108	13:38:04	665281e6-c665-4e5a-82ee-9382697fd4df	Error: Nie masz dostępu do tych zasobów.
+20221108	13:51:09	1841d507-a26e-4e82-adca-dcc9146d0a12	Error: Token jest niepoprawny
+20221108	13:55:37	c39d0228-6d66-4dd6-9f5a-05afe605e47b	MulterError: Unexpected field
+20221108	13:56:35	c00ed597-aa3c-4565-aa64-9e8835105a8d	Error: Belka sponsorów o takiej nazwie już istnieje.
+20221108	13:59:12	916ffe29-2c67-45bf-b128-95513c817167	Error: Nie masz dostępu do tych zasobów.
+20221108	14:01:16	5fc6da64-452e-4cfc-b312-fbab86cc8113	MulterError: Unexpected field
+20221108	14:02:11	575e2944-17d9-47a6-aeae-e6414e31be64	Error: Nie udało zapisać danych, spróbuj ponownie.
+20221108	15:04:04	0cb1fbfd-5a8f-4416-95ac-4219af983154	Error: Nie masz dostępu do tych zasobów.
+20221108	15:22:05	4b3faebf-5c58-482e-9a6a-ca89977f2467	Error: Could not find this route.
+20221108	15:23:02	552f766e-32dd-4697-9c6c-51503cc314f3	Error: Nie udało zapisać danych, spróbuj ponownie.
+20221108	15:27:33	bbe73001-6186-42ff-b17b-ffd368336f70	Error: Could not find this route.
+20221108	15:31:32	cbed7f70-9a8f-4fc0-a6af-08bb2c6d5657	Error: Could not find this route.
+20221108	15:32:49	27471a4f-ee68-4f0c-98eb-8191a22ec19a	Error: Could not find this route.
+20221108	15:45:45	479b34ff-2156-4f96-9436-67d9320d762c	Error: Token jest niepoprawny
+20221108	15:46:54	d5e74f98-42fd-4bdd-9fed-04b838beccee	Error: Could not find this route.
+20221108	15:47:38	1c27f9bc-34e2-4620-833c-2d7cbba43bf4	Error: Could not find this route.
+20221108	15:47:40	9bf66308-b052-407b-97c5-d44279303b0f	Error: Brak pliku graficznego.
+20221108	16:04:08	c3d22af5-38ca-4486-ac7e-e826f3c78c0b	MulterError: Unexpected field
+20221108	16:04:29	e5987ef6-7231-4305-9c60-9ea5cab063bf	Error: ENOENT: no such file or directory, open 'D:\__programowanie\__react\handball-generator\backend\images\background-images\sklad_uklad_lista_wyjazd___20221108-160429.jpg'
+20221108	16:33:04	865d2b89-17ac-4cbb-9a12-5c9ffbd4d7d6	Error: Nie masz dostępu do tych zasobów.
+20221108	16:35:57	8b13753d-c317-4117-9482-26e32401f6be	Error: Nie masz dostępu do tych zasobów.
+20221108	16:56:03	576ffe98-34e7-4bb2-9503-bf963b413203	Error: Nie masz dostępu do tych zasobów.
+20221108	22:29:29	fb72443d-c52c-46b9-9f14-b7617e0bf968	Error: Dostęp zabroniony.
+20221108	22:41:33	5c4dae79-33bb-4543-9497-9551b55164b0	Error: Token jest niepoprawny
+20221108	22:41:34	db958363-1abc-49cc-8761-a5a0f357ae5a	Error: Token jest niepoprawny
+20221108	22:41:36	23b8a8e0-09e4-4b5e-afd5-19ab4e7cda8b	Error: Token jest niepoprawny
+20221108	22:41:40	7b477227-8e40-4441-821a-3e4e3d3cba2a	Error: Token jest niepoprawny
+20221108	22:42:18	896bb89e-034d-4c55-b696-008c76d93989	Error: Token jest niepoprawny
+20221108	22:57:02	588e3c67-d26d-4481-b3c9-0e387d2b72d1	Error: Nie masz dostępu do tych zasobów.
+20221108	22:58:51	f6f379b1-acb4-4ee7-9363-8ff48beda8f9	Error: Nie jesteś zalogowany.
+20221108	22:59:43	325b19e2-c845-4ff0-91cf-9d40084fb4e0	Error: Nie jesteś zalogowany.
+20221108	23:00:33	0690b953-c492-4daa-8af9-4b796275cd7a	Error: Nie jesteś zalogowany.
+20221108	23:04:59	420ff1fa-0c4f-44e1-86c0-270ef3dfb6ce	Error: Nie jesteś zalogowany.
+20221108	23:08:48	543596a2-189a-45e3-9a92-18d421027c97	Error: Nie jesteś zalogowany.
+20221109	09:47:41	fcf3a392-dbad-4b88-9c77-eea6b4aa35da	Error: Nie masz dostępu do tych zasobów.
+20221109	09:47:52	b5114284-a0ab-4c88-b2a2-3aa2193c99b0	Error: Nie masz dostępu do tych zasobów.
+20221109	09:47:54	2f4be4f6-f59c-4873-be70-cc9153781ef4	Error: Nie masz dostępu do tych zasobów.
+20221109	09:47:59	446ff589-38a1-4369-ad83-9500b88b62b6	Error: Nie masz dostępu do tych zasobów.
+20221109	09:48:16	6931f952-9460-4ca4-bd90-e64988e4fbb1	Error: Nie masz dostępu do tych zasobów.
+20221109	09:48:17	7280d779-95d2-4135-abce-c3cc853cbad6	Error: Nie masz dostępu do tych zasobów.
+20221109	09:48:19	92869f4f-02fb-496c-8222-9bf876835712	Error: Nie masz dostępu do tych zasobów.
+20221109	09:48:23	384b4169-841c-4f8f-bd44-ef8798324463	Error: Nie masz dostępu do tych zasobów.
+20221109	10:15:11	c0ed1380-c6c2-4a1c-a804-a1870f23b90d	Error: Token jest niepoprawny
+20221109	10:19:39	7ef6d9de-1078-4df9-91f8-1107c2f31930	Error: Nie jesteś zalogowany.
+20221109	10:20:59	5a9d4966-9ab9-4087-b526-e3ebb09f25d8	Error: Token jest niepoprawny
+20221109	10:20:59	8558a53d-7d56-478a-8a67-feb3b5ffbc4e	Error: Nie jesteś zalogowany.
+20221109	10:21:00	6fb0d53a-a83c-4de1-9241-ff1485f4ce47	Error: Token jest niepoprawny
+20221109	10:21:00	32a33b5a-0f2b-49a2-adf4-03652b2698be	Error: Nie jesteś zalogowany.
+20221109	10:21:02	4b2d0f5b-1afb-4862-912c-decf4d35c916	Error: Token jest niepoprawny
+20221109	10:21:02	dd2c10c4-e13a-4c3b-b436-a0abe0cb71b5	Error: Nie jesteś zalogowany.
+20221109	10:21:06	8bbee8be-6619-4edc-aa4a-f1b379408f16	Error: Token jest niepoprawny
+20221109	10:21:06	90819127-929e-442f-b0cb-24537ecb6c99	Error: Nie jesteś zalogowany.
+20221109	10:21:14	5638b0ea-1f68-4218-bdab-ce212164967b	Error: Token jest niepoprawny
+20221109	10:21:14	83276a0f-376d-44ff-aab6-a0fa96a4cdee	Error: Nie jesteś zalogowany.
+20221109	10:21:15	14541154-ba89-4a15-905a-e6e269193ce0	Error: Token jest niepoprawny
+20221109	10:21:15	4122dcf9-129a-4981-a923-e012c91d4039	Error: Nie jesteś zalogowany.
+20221109	10:21:17	5d0fee7e-4d9c-4547-8003-a1e899e41f6c	Error: Token jest niepoprawny
+20221109	10:21:17	348a24b9-6b06-4bae-bedc-369e5cb07792	Error: Nie jesteś zalogowany.
+20221109	10:21:20	4676220b-aaad-4eaa-a095-8bbfba63b904	Error: Token jest niepoprawny
+20221109	10:21:20	cba4b014-8aaa-430f-bcba-92163363fd33	Error: Nie jesteś zalogowany.
+20221109	10:21:21	0d1f23c5-b312-4883-a851-703d6af25b13	Error: Token jest niepoprawny
+20221109	10:21:21	dda4f50e-9015-453a-b4ce-c58200f76273	Error: Nie jesteś zalogowany.
+20221109	10:21:23	ddf6e9c5-fcec-403a-b904-a29f494968c4	Error: Token jest niepoprawny
+20221109	10:21:23	c13f9a89-58e8-4eba-a886-9150379e55cf	Error: Nie jesteś zalogowany.
+20221109	10:21:27	bfdbc65f-843f-4af4-8bb7-245847445f60	Error: Token jest niepoprawny
+20221109	10:21:27	832b341c-770a-4bf2-9dc8-60a6d4ba2459	Error: Nie jesteś zalogowany.
+20221109	10:23:20	fbfdfa41-2528-45dc-bdae-149ec8052e8d	Error: Token jest niepoprawny
+20221109	10:23:20	34fb248a-9993-4d8b-aa4d-143394fad1ac	Error: Dostęp zabroniony.
+20221109	10:23:20	c34319c3-e233-409f-bc48-80f9064143e9	Error: Dostęp zabroniony.
+20221109	10:23:20	91734c70-fb35-4b31-b45f-656be1a0151e	Error: Dostęp zabroniony.
+20221109	10:23:23	3d23131a-2088-4e94-8697-86847b27df9d	undefined: undefined
+20221109	10:25:37	bf45b510-a22c-4236-b08d-fbef754dca59	Error: Token jest niepoprawny
+20221109	10:51:24	0a2e96d4-6fee-47ee-ba0e-602562676612	Error: Token jest niepoprawny
+20221109	10:51:24	62204819-9cf5-447a-9110-731c04af69d4	Error: Nie jesteś zalogowany.
+20221109	10:51:25	fc3a0b82-cbb6-4a1d-b44c-cf673874663c	Error: Token jest niepoprawny
+20221109	10:51:25	c9988aaf-c183-4486-b25e-5c6ad4d0b100	Error: Nie jesteś zalogowany.
+20221109	10:51:27	ac0d96eb-2f04-40a6-8604-ed02f69be4c2	Error: Token jest niepoprawny
+20221109	10:51:27	1ae283ca-92bf-4360-a427-a23e796637aa	Error: Nie jesteś zalogowany.
+20221109	10:51:31	9875c1d7-a8c4-4402-88a4-8354dea79d61	Error: Token jest niepoprawny
+20221109	10:51:31	fb4e7aa7-63ed-48b5-8189-a6d7bff1bdbf	Error: Nie jesteś zalogowany.
+20221109	10:51:39	a31cd35c-16b7-439f-996e-1ecfc287da75	Error: Token jest niepoprawny
+20221109	10:54:40	5e6b0f8c-706b-4a41-bdc8-51e6e5da7a50	Error: Token jest niepoprawny
+20221109	11:00:21	1e0fd821-13db-4703-a614-f9287a3432c3	Error: Token jest niepoprawny
+20221109	11:06:01	1a523dcd-cba6-44a7-a891-2d209929c6ce	Error: Token jest niepoprawny
+20221109	11:06:01	b91ebebd-d558-4c95-af7a-7b19527f4711	Error: Nie jesteś zalogowany.
+20221109	11:06:02	6c08161e-764a-4373-9d1d-854279cfe076	Error: Token jest niepoprawny
+20221109	11:06:02	3c4afb18-05fd-477d-ba2a-2b8c19f8b6b4	Error: Nie jesteś zalogowany.
+20221109	11:06:04	a964bdd3-4b63-4e96-a7e9-b5d73184f9eb	Error: Token jest niepoprawny
+20221109	11:06:04	d09571f1-66cf-4cc4-88e6-b3972a2cc0e6	Error: Nie jesteś zalogowany.
+20221109	11:06:08	3090c6ee-67e2-4333-836e-17dd4e5b59d9	Error: Token jest niepoprawny
+20221109	11:06:08	9e6f3620-b902-4e0d-882f-c39c757d848b	Error: Nie jesteś zalogowany.
+20221109	11:06:11	cf5b5897-15b1-41ef-9668-24cffedcf90b	Error: Token jest niepoprawny
+20221109	11:06:11	8e964bb1-e9ad-4dcd-ae2a-ad1559608b61	Error: Nie jesteś zalogowany.
+20221109	11:06:31	86c7ee37-371b-4a8a-96ef-23ef348c44e8	Error: Token jest niepoprawny
+20221109	11:06:31	8cee9bef-b36f-4b99-9f17-53df90eda9b8	Error: Nie jesteś zalogowany.
+20221109	11:06:32	a829616c-b62b-4219-8ebf-fe3e16c5e6e9	Error: Token jest niepoprawny
+20221109	11:06:32	9b391e3a-03b1-46cb-9493-6063f9ff36de	Error: Nie jesteś zalogowany.
+20221109	11:06:34	5c4d2abd-5f27-464b-b8da-c12f46db52f0	Error: Token jest niepoprawny
+20221109	11:06:34	1d404648-ad2e-4cca-8e22-8b2987d10b2f	Error: Nie jesteś zalogowany.
+20221109	11:07:03	9801d8f3-78d5-4f7a-b5ec-10219663eb46	undefined: undefined
+20221109	11:07:24	560edb91-a733-4a52-a6f3-a6a73ad4e788	Error: Token jest niepoprawny
+20221109	11:07:24	a5ed5a53-15a0-477b-8226-b4a18801ad58	Error: Token jest niepoprawny
+20221109	11:07:24	1cfbc29d-9798-486e-b09c-11590faaa614	Error: Dostęp zabroniony.
+20221109	11:07:24	784dc106-066e-42e8-844a-c16702141f73	Error: Dostęp zabroniony.
+20221109	11:07:24	f77508c7-8abf-46f8-8779-c761585267e8	Error: Dostęp zabroniony.
+20221109	11:07:24	b007af12-ce83-4d05-902a-c74641e4d09c	Error: Dostęp zabroniony.
+20221109	11:07:24	3b257c19-007f-45cf-ba7b-6dcc3b229175	Error: Dostęp zabroniony.
+20221109	11:07:24	4d58320d-e189-479f-a064-24487ffc84e8	Error: Dostęp zabroniony.
+20221109	11:07:54	8bb86ac4-31eb-4d33-bacb-204c77e3b644	Error: Token jest niepoprawny
+20221109	11:07:54	50d845cb-17c2-45fb-b4f9-90aa742ce9c1	Error: Nie jesteś zalogowany.
+20221109	11:07:54	59c8aba3-dc89-4202-b18e-0714257da4eb	Error: Token jest niepoprawny
+20221109	11:07:54	1ea076f3-ad45-48ac-a05d-5045f0fc4085	Error: Dostęp zabroniony.
+20221109	11:07:54	e3f7ba96-f2cb-452f-af0e-5f0875f86dd5	Error: Dostęp zabroniony.
+20221109	11:07:54	14906840-3465-4c34-b087-188d0ce85be2	Error: Dostęp zabroniony.
+20221109	11:07:56	9f6f6c76-88bc-4fa9-bd36-eacbbafd37dd	Error: Token jest niepoprawny
+20221109	11:07:56	5af49e7b-2ce6-4e0b-b2f8-61042ff80439	Error: Nie jesteś zalogowany.
+20221109	11:08:00	f2701bdb-1304-4d45-b248-72700fa077f8	Error: Token jest niepoprawny
+20221109	11:08:00	ae148fcd-82dc-453a-9233-bacb8d0015e2	Error: Nie jesteś zalogowany.
+20221109	11:08:04	2d3c6bd8-6e38-4e35-a228-647a8186f5cb	Error: Token jest niepoprawny
+20221109	11:08:04	c2b3deae-bfe0-4f4b-ae74-186ac5449aa8	Error: Nie jesteś zalogowany.
+20221109	11:08:05	65819208-7fbd-419d-b733-8184298ec050	Error: Token jest niepoprawny
+20221109	11:08:05	716ec7c3-42c1-4a49-abe7-d0907209c902	Error: Nie jesteś zalogowany.
+20221109	11:08:07	49a746c6-8290-459c-849a-cb9ff4c3ff12	Error: Token jest niepoprawny
+20221109	11:08:07	65abe088-36cb-4d5d-a7e0-5cc2f00978bd	Error: Nie jesteś zalogowany.
+20221109	11:08:11	07cd58e8-9e45-4cd4-b921-f1f2380846ee	Error: Token jest niepoprawny
+20221109	11:08:11	b7afb9c6-d751-4ab6-8fe6-7605254f26c2	Error: Nie jesteś zalogowany.
+20221109	11:08:44	33de019f-4829-43a4-a438-89a6756372f5	Error: Token jest niepoprawny
+20221109	11:08:44	b2a801d3-7bf5-4937-8896-fbf0ee57d318	Error: Nie jesteś zalogowany.
+20221109	11:08:46	a0094520-c611-43a5-8a4c-ef289423fd8d	Error: Token jest niepoprawny
+20221109	11:08:46	d22bd4d6-064a-434c-9b4b-27f329949b6b	Error: Nie jesteś zalogowany.
+20221109	11:08:47	dc0a3af6-4352-45a8-a2f4-d0aa05464704	Error: Token jest niepoprawny
+20221109	11:08:47	eef8056a-3a74-4306-af80-6aa1650b5f62	Error: Nie jesteś zalogowany.
+20221109	11:08:48	56a1b2a5-e084-4a73-a491-7ca61e38d192	Error: Token jest niepoprawny
+20221109	11:08:48	547f2954-46c9-4b3a-8299-a62383d4a397	Error: Nie jesteś zalogowany.
+20221109	11:08:49	44c20b8d-e8b1-4a1b-a8d5-3cd26572e934	Error: Token jest niepoprawny
+20221109	11:08:49	8d0103ed-b995-42e2-8ad3-bea699db100a	Error: Nie jesteś zalogowany.
+20221109	11:08:51	6f5ea532-3a2c-4d8c-a4c8-d9fd47e375d4	Error: Token jest niepoprawny
+20221109	11:08:51	4041f129-6397-476a-a83b-5c73b4e1965b	Error: Nie jesteś zalogowany.
+20221109	11:08:56	dbaa1083-de8e-4f5d-a68b-499ee717c9d0	Error: Token jest niepoprawny
+20221109	11:08:56	15bd7aa5-946d-434f-97e4-6e0c3c861d49	Error: Nie jesteś zalogowany.
+20221109	11:09:35	abe9006b-e981-4263-8a56-c76e6342dbc3	Error: Token jest niepoprawny
+20221109	11:09:35	e3411adb-5ac4-4796-8a1f-821f3643c353	Error: Nie jesteś zalogowany.
+20221109	11:09:36	ba44f0bc-30e9-4a8b-af39-0819fa1c078d	Error: Token jest niepoprawny
+20221109	11:09:36	8051280f-480b-4474-b3c0-ea4fc19943d0	Error: Nie jesteś zalogowany.
+20221109	11:09:38	2d1eba1b-26b9-4ac6-8b95-c6d953af60d8	Error: Token jest niepoprawny
+20221109	11:09:38	065f54ed-4954-4d70-a2d1-63a3322abb5b	Error: Nie jesteś zalogowany.
+20221109	11:21:35	2f8ab813-ab22-4ff2-bf56-122b6cea682b	undefined: undefined
+20221109	11:21:48	353d91c9-68fb-46c1-95fb-e051bd2dac2d	Error: Token jest niepoprawny
+20221109	11:21:48	955aa275-e643-4f7b-bcc7-3f01f3c721ae	Error: Nie jesteś zalogowany.
+20221109	11:21:49	b74df305-a09a-463c-9bef-a25a48b7acca	Error: Token jest niepoprawny
+20221109	11:21:49	936b9a1b-76c6-4c35-916f-11510a8ab6ec	Error: Nie jesteś zalogowany.
+20221109	11:21:51	7cd9e6a5-4b53-4064-9a6a-a34b86bdb858	Error: Token jest niepoprawny
+20221109	11:21:51	18b7dc90-83a0-487e-b707-dc2a4feee3f3	Error: Nie jesteś zalogowany.
+20221109	11:21:55	f3f6576f-dd0d-4e1f-9a92-ec555d6886a7	Error: Token jest niepoprawny
+20221109	11:21:55	3f95d0c8-eabf-4d62-88fd-d05cd749ad76	Error: Nie jesteś zalogowany.
+20221109	11:22:02	62f8b404-c4af-4623-a00f-3f9b43befcf4	Error: Token jest niepoprawny
+20221109	11:22:02	85bd3731-7364-4589-a894-8aef9367ab4d	Error: Dostęp zabroniony.
+20221109	11:22:02	eb80c810-15fd-49de-980c-b8f89df749d3	Error: Dostęp zabroniony.
+20221109	11:22:02	1d12df0d-9a05-4a14-a51f-6055ec1a34ee	Error: Dostęp zabroniony.
+20221109	11:22:04	82c86911-8f7d-430b-b9b3-081fad46d56e	undefined: undefined
+20221109	11:22:15	8882727b-3aee-4d16-9f79-9e12b4ba00e2	Error: Token jest niepoprawny
+20221109	11:22:28	e0f32b1f-b8d1-4245-a865-a82f7336c30b	Error: Token jest niepoprawny
+20221109	11:22:28	33e43cb4-a061-4270-bdb6-765fd4fa4b42	Error: Dostęp zabroniony.
+20221109	11:22:28	f4f16c4c-db40-4cc9-8042-841e61308209	Error: Dostęp zabroniony.
+20221109	11:22:28	69243db9-4ea5-429a-87a8-8cce8aa4e5df	Error: Dostęp zabroniony.
+20221109	11:22:29	f5325f1d-5980-4427-8b26-a1dfca846a6c	Error: Token jest niepoprawny
+20221109	11:22:29	5cc9aac4-6a76-4433-9443-f544091664da	Error: Dostęp zabroniony.
+20221109	11:22:29	1813248f-06f5-4e23-890b-f1206ea11e8a	Error: Dostęp zabroniony.
+20221109	11:22:29	75983580-deee-4901-b5c4-05eb6ffce8ac	Error: Dostęp zabroniony.
+20221109	11:22:33	46211551-e28d-4f44-a74f-5ae8c94d21a7	Error: Token jest niepoprawny
+20221109	11:22:33	79948ffd-5f21-410b-bd63-17554dd5f0ab	Error: Dostęp zabroniony.
+20221109	11:22:33	84408b09-20c5-40b0-89db-fa3746d95c5e	Error: Dostęp zabroniony.
+20221109	11:22:33	11ac73b5-445b-4655-9678-3766fe2ca44f	Error: Dostęp zabroniony.
+20221109	11:22:37	3538caf6-3df6-411d-aaa7-9d1f2b15b856	Error: Token jest niepoprawny
+20221109	11:22:37	1a3b517f-5476-45ba-a7a7-ca83cca5950b	Error: Dostęp zabroniony.
+20221109	11:22:37	68b03206-265d-482c-859c-ec2d39e316b3	Error: Dostęp zabroniony.
+20221109	11:22:37	1461ebb0-bf44-4751-9c8b-80f75dc122c9	Error: Dostęp zabroniony.
+20221109	11:22:44	fd3f0c41-c8c6-4b99-9044-bab23ab29924	Error: Token jest niepoprawny
+20221109	11:22:44	d6b4985a-3d33-4693-9981-3f2901d27f88	Error: Dostęp zabroniony.
+20221109	11:22:44	83aee107-ab66-4170-83ec-b7afb9bfc20b	Error: Dostęp zabroniony.
+20221109	11:22:44	14b217d0-0a2b-49b2-85d0-1b424f5b1882	Error: Dostęp zabroniony.
+20221109	11:22:45	725cca68-c71d-42e2-b100-916f49192de0	Error: Token jest niepoprawny
+20221109	11:22:45	3c453c42-0bb6-41da-bf6a-01b80e586b54	Error: Dostęp zabroniony.
+20221109	11:22:45	e39c4344-43a2-48c4-90c0-2fdf84794c57	Error: Dostęp zabroniony.
+20221109	11:22:45	562a6527-f941-4cb0-8d70-8da1dfcc7add	Error: Dostęp zabroniony.
+20221109	11:22:47	8d8f675b-e945-4b7d-8bba-70913cc5e122	Error: Token jest niepoprawny
+20221109	11:22:47	d94af9db-745c-4edd-87b7-3da281478c8c	Error: Dostęp zabroniony.
+20221109	11:22:47	3c5c7629-26c6-48df-aeef-ce7012183744	Error: Dostęp zabroniony.
+20221109	11:22:47	6a5afb60-6341-4361-a450-7a370dfe23d3	Error: Dostęp zabroniony.
+20221109	11:22:56	6c8a1bc2-78db-4587-aa00-cf788d43e76c	Error: Token jest niepoprawny
+20221109	11:22:56	6d7c3c32-4892-46c4-bbcf-68e11aa1d587	Error: Dostęp zabroniony.
+20221109	11:22:56	e7756349-7533-4d27-9a60-63e96fe207ec	Error: Dostęp zabroniony.
+20221109	11:22:56	22f20ab3-e7b7-4fc9-9d94-48a7e7f2fece	Error: Dostęp zabroniony.
+20221109	11:22:57	c3e78151-dadf-4b1b-bd20-f397b24c77ac	Error: Token jest niepoprawny
+20221109	11:22:57	1accdd32-b2e7-4fdc-b893-9416aa3104e9	Error: Dostęp zabroniony.
+20221109	11:22:57	046cbfb5-a6c1-4161-ad60-91c9bb919c3d	Error: Dostęp zabroniony.
+20221109	11:22:57	27e1f16b-331b-4e10-b91c-c5492e8fb2e9	Error: Dostęp zabroniony.
+20221109	11:23:00	b7f54ba4-95d8-411a-b03d-405f2b0b6fc4	Error: Token jest niepoprawny
+20221109	11:23:00	de83811d-fad1-4a52-8d03-d5b8f59353fe	Error: Dostęp zabroniony.
+20221109	11:23:00	91cbfaca-236e-4ccc-af25-898fc46f4bf9	Error: Dostęp zabroniony.
+20221109	11:23:00	b9d681c7-32f1-46e0-83c3-6a8083f5e0b4	Error: Dostęp zabroniony.
+20221109	11:23:04	6c0359f5-7bd5-4167-88ac-5d46c3b76643	Error: Token jest niepoprawny
+20221109	11:23:04	08bf4865-d37b-49a6-a700-f8adac33f7b2	Error: Dostęp zabroniony.
+20221109	11:23:04	1bdda730-108d-4fb3-88fb-287ced084eb0	Error: Dostęp zabroniony.
+20221109	11:23:04	57704ae4-1b69-413a-84eb-41a80d1059f7	Error: Dostęp zabroniony.
+20221109	11:25:11	4511b03d-86bb-47e3-9a3f-a3d1bff18e83	Error: Token jest niepoprawny
+20221109	11:25:11	0a38f17e-3db1-4439-8f04-86bdb9002d20	Error: Dostęp zabroniony.
+20221109	11:25:11	7ab13e9c-9f22-4ddb-af63-9618c2780d9d	Error: Dostęp zabroniony.
+20221109	11:25:11	975fb5a1-d4ad-4194-bad6-f521a906d1d8	Error: Dostęp zabroniony.
+20221109	11:25:12	5742bd94-e388-408c-aa5f-7375a664dcde	Error: Token jest niepoprawny
+20221109	11:25:13	7bfa7dc4-7373-41a3-bfa6-942f844c81a1	Error: Dostęp zabroniony.
+20221109	11:25:13	f887c5c8-60ce-4226-8972-0d0858e0f907	Error: Dostęp zabroniony.
+20221109	11:25:13	08861440-5591-43e5-8d96-a80faa130717	Error: Dostęp zabroniony.
+20221109	11:25:15	54a299a8-4b93-4416-9830-677e093f35b6	Error: Token jest niepoprawny
+20221109	11:25:15	ff0c1c0c-4ec3-4f84-bf04-63d816724d4d	Error: Dostęp zabroniony.
+20221109	11:25:15	cc0bbf0a-d855-4d52-a354-50a55d2c5f82	Error: Dostęp zabroniony.
+20221109	11:25:15	05752e11-1633-4a67-b483-c436baf1e92c	Error: Dostęp zabroniony.
+20221109	11:25:19	af0f51c6-171f-4b11-95fa-ba62689d9541	Error: Token jest niepoprawny
+20221109	11:25:19	6538354f-6167-4afb-8e97-00c3f354e999	Error: Dostęp zabroniony.
+20221109	11:25:19	a2c0ecaa-5c2f-4572-8d99-ffccd22bc868	Error: Dostęp zabroniony.
+20221109	11:25:19	7521dd50-9580-45e1-a7dc-8d01a9ffa208	Error: Dostęp zabroniony.
+20221109	11:25:57	fa244e1c-8495-47f6-8379-9dccbae66745	Error: Token jest niepoprawny
+20221109	11:25:57	0a9ef52b-051c-4d1a-aac6-40d127948ef8	Error: Token jest niepoprawny
+20221109	11:25:57	d193690a-1350-4488-baea-df42011e8852	Error: Dostęp zabroniony.
+20221109	11:25:57	2cf71dcd-54db-455d-b7e1-fee8410b319d	Error: Dostęp zabroniony.
+20221109	11:25:57	afcc7c28-3e24-4d5d-95ae-79726f0571d9	Error: Dostęp zabroniony.
+20221109	11:25:57	fd3e70f4-f32d-4f4c-bd5d-00268ac6e643	Error: Dostęp zabroniony.
+20221109	11:25:57	1c8bf70c-5380-4a6c-895d-1e57709966f8	Error: Dostęp zabroniony.
+20221109	11:25:57	6bb5daaf-dd72-4676-887f-d66b6a86b343	Error: Dostęp zabroniony.
+20221109	11:26:19	154638de-de06-4111-aa5d-72b460ddf7c5	Error: Token jest niepoprawny
+20221109	11:26:19	e679b942-ef8f-4c55-a926-235b63258b45	Error: Token jest niepoprawny
+20221109	11:26:19	2eb64c69-3684-4070-a46b-6451b8435b6b	Error: Dostęp zabroniony.
+20221109	11:26:19	86ef5348-35d0-451d-a50e-f224ccc24f28	Error: Dostęp zabroniony.
+20221109	11:26:19	2c8c731e-8089-43ea-af48-0a78f4ffc301	Error: Dostęp zabroniony.
+20221109	11:26:19	7ddeb3ab-838b-4ff6-a02b-32cfa5472b7b	Error: Dostęp zabroniony.
+20221109	11:26:19	61051dca-985a-452c-aa68-42c41e08c9da	Error: Dostęp zabroniony.
+20221109	11:26:19	7f6ae5c6-9f3e-49ce-80bf-97de0ebb37b6	Error: Dostęp zabroniony.
+20221109	11:46:03	853ac1f1-3777-4dd4-8862-ad71280c8bfa	Error: Brak pliku graficznego.
+20221109	11:46:54	24e85313-94e6-4a89-a0b7-7ded15cf869d	Error: Brak pliku graficznego.
+20221109	11:48:32	4318b498-425a-45fc-a3a9-70220dae9e18	Error: Brak pliku graficznego.
+20221109	11:50:12	657e970a-4261-49ae-a69b-22b86f6ccb69	Error: Brak pliku graficznego.
+20221109	11:53:07	f971b791-a39a-42f6-9675-919afa68fed7	Error: Could not find this route.
+20221109	11:53:08	e38dbc43-931a-493a-812b-0b8794e43133	Error: Could not find this route.
+20221109	12:34:15	74d28450-82b1-45e0-b3ec-ba74916cee44	Error: Brak pliku graficznego.
+20221109	12:39:30	c52ecccb-0443-4026-a5d9-79bd8bda460f	Error: Nie udało zapisać danych, spróbuj ponownie.
+20221109	12:40:16	456660c1-5269-4a1d-b681-66c41c80d3de	Error: Nie udało zapisać danych, spróbuj ponownie.
+20221109	12:42:26	264e0ba5-4441-4f45-bc18-57e51c43a745	Error: Nie udało zapisać danych, spróbuj ponownie.
+20221109	12:43:23	4ab1b727-f69a-4960-ae4a-a635e74e343b	Error: Nie udało zapisać danych, spróbuj ponownie.
+20221109	13:02:34	ae553da0-537e-4364-935b-e632fbfcc4e7	Error: Nie udało zapisać danych, spróbuj ponownie.
+20221109	13:06:43	78947411-9472-4ed8-bfd9-c0e759f1e820	Error: Nie udało zapisać danych, spróbuj ponownie.
+20221109	14:13:45	442745c5-27de-4d6b-8669-f117132e29b9	Error: Nie masz dostępu do tych zasobów.
+20221109	21:55:11	77f21f84-548a-4809-bc70-44b6fa255b42	Error: Token jest niepoprawny
+20221109	21:55:11	56110c03-9a35-4553-8917-b80444382689	Error: Nie jesteś zalogowany.
+20221109	21:55:12	cab1f72a-fcc2-4905-a47d-2aeaf6b821c7	Error: Token jest niepoprawny
+20221109	21:55:12	ac395281-eda1-453f-aa87-ff2061495fe9	Error: Nie jesteś zalogowany.
+20221109	21:55:14	bf578b58-6c17-49e1-ad1c-301af39a5aa6	Error: Token jest niepoprawny
+20221109	21:55:14	4a5b7b60-82eb-4ed5-828d-0ce8570cba8a	Error: Nie jesteś zalogowany.
+20221109	21:55:18	e82fd8d8-f33a-4261-a147-e6d9e03780c6	Error: Token jest niepoprawny
+20221109	21:55:18	734659d6-84c5-425e-9905-072fd0bf5a47	Error: Nie jesteś zalogowany.

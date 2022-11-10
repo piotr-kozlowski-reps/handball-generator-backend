@@ -12,6 +12,12 @@ const createMulterStorage = (multer) => {
         case "/api/sponsors-bar":
           cb(null, path.join("images", "sponsors-bars"));
           return;
+        case "/api/background-image":
+          cb(null, path.join("images", "background-images"));
+          return;
+        case "/api/game-name":
+          cb(null, path.join("images", "game-names"));
+          return;
       }
     },
     filename: (req, file, cb) => {

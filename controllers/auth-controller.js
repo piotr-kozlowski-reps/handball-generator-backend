@@ -73,7 +73,7 @@ const authHandler = async (req, res, next) => {
       { userName: foundUser.userName },
       process.env.REFRESH_TOKEN_SECRET,
       {
-        expiresIn: "1d",
+        expiresIn: process.env.REFRESH_TOKEN_EXPIRATION,
       }
     );
   } catch (err) {
@@ -93,8 +93,8 @@ const authHandler = async (req, res, next) => {
   //secure cookie set
   res.cookie("jwt", refreshToken, {
     httpOnly: true,
-    // secure: true, //TODO: turn on for Browsers / off for ThunderClient
-    sameSite: "None",
+    secure: true, //TODO: turn on for Browsers / off for ThunderClient
+    sameSite: "none",
     maxAge: 24 * 60 * 60 * 1000,
   });
 

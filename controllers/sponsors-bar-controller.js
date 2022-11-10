@@ -3,8 +3,30 @@ const HttpError = require("../helpers/http-error");
 const SponsorsBar = require("../models/SponsorsBar");
 
 const getAllSponsorsBars = async (req, res, next) => {
-  res.status(200).json({ message: "getAllSponsorsBars" });
+  let sponsorsBars;
+  try {
+    sponsorsBars = await SponsorsBar.find();
+  } catch (err) {
+    return next(new HttpError("Błąd serwera, spróbuj ponownie.", 500));
+  }
+
+  console.log(sponsorsBars);
+
+  res.status(200).json(sponsorsBars);
 };
+
+// const getAllTeams = async (req, res, next) => {
+//   let teams;
+//   try {
+//     teams = await Team.find();
+//   } catch (err) {
+//     return next(new HttpError("Błąd serwera, spróbuj ponownie.", 500));
+//   }
+
+//   console.log(teams);
+
+//   res.status(200).json(teams);
+// };
 
 const getSponsorsBar = async (req, res, next) => {
   res.status(200).json({ message: "getSponsorsBar" });
@@ -28,7 +50,7 @@ const createSponsorsBar = async (req, res, next) => {
       )
     );
   }
-  console.log(foundSponsorsBar);
+  console.log({ foundSponsorsBar });
   if (foundSponsorsBar) {
     deleteFile(req.file.path);
     return next(
@@ -37,7 +59,7 @@ const createSponsorsBar = async (req, res, next) => {
   }
   const newSponsorBar = new SponsorsBar({
     barName,
-    sponsorsBarImageUrl: req.file.path,
+    sponsorsBarImage: req.file.path,
   });
   let result;
   try {
@@ -57,7 +79,38 @@ const updateSponsorsBar = async (req, res, next) => {
 };
 
 const deleteSponsorsBar = async (req, res, next) => {
-  res.status(200).json({ message: "deleteSponsorsBar" });
+  if (!req?.params?.id) {
+    return next(new HttpError("Wymagany ID paska sponsorów.", 400));
+  }
+
+  try {
+    const sponsorBar = await SponsorsBar.findOne({ _id: req.params.id }).exec();
+    if (!sponsorBar) {
+      return next(
+        new HttpError(`Nie ma paska sponsorów o ID: ${req.params.id}.`, 204)
+      );
+    }
+    try {
+      deleteFile(sponsorBar.sponsorsBarImage);
+    } catch (error) {
+      return next(
+        new HttpError(
+          `Błąd serwera, skasowanie pliku graficznego nie powiodło się.`,
+          500
+        )
+      );
+    }
+    ////TODO:  jeżeli skasowanie pliku się powiodło - skasuj wpis do bazy
+    const result = await sponsorBar.deleteOne();
+    res.json(result);
+  } catch (error) {
+    return next(
+      new HttpError(
+        `Błąd serwera, skasowanie paska sponsorów nie powiodło się.`,
+        500
+      )
+    );
+  }
 };
 
 module.exports = {

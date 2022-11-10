@@ -1,5 +1,5 @@
 const express = require("express");
-const sponsorsBarController = require("../controllers/sponsors-bar-controller");
+const backgroundImageController = require("../controllers/background-image-controller");
 const fileExtensionLimiter = require("../middleware/fileExtensionLimiter");
 const fileResolutionLimiter = require("../middleware/fileResolutionLimiter");
 const router = express.Router();
@@ -7,16 +7,16 @@ const router = express.Router();
 const filesPayloadExists = require("../middleware/filesPaylodExists");
 
 ////routes
-router.get("/", sponsorsBarController.getAllSponsorsBars);
-router.get("/:id", sponsorsBarController.getSponsorsBar);
+router.get("/", backgroundImageController.getAllBackgroundImages);
+router.get("/:id", backgroundImageController.getBackgroundImage);
 router.post(
   "/",
   filesPayloadExists,
   fileExtensionLimiter([".png", ".jpg", ".jpeg"]),
   fileResolutionLimiter,
-  sponsorsBarController.createSponsorsBar
+  backgroundImageController.createBackgroundImage
 );
-router.put("/", sponsorsBarController.updateSponsorsBar);
-router.delete("/:id", sponsorsBarController.deleteSponsorsBar);
+router.put("/", backgroundImageController.updateBackgroundImage);
+router.delete("/:id", backgroundImageController.deleteBackgroundImage);
 
 module.exports = router;

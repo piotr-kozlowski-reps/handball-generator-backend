@@ -4,7 +4,7 @@ const uniqueValidator = require("mongoose-unique-validator");
 const teamSchema = new mongoose.Schema({
   teamName: { type: String, required: true, unique: true },
   place: { type: String, required: true },
-  teamCrest: { type: String, required: true },
+  teamCrestImage: { type: String, required: true },
 });
 
 teamSchema.plugin(uniqueValidator);

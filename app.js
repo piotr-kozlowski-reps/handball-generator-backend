@@ -22,10 +22,13 @@ connectDB();
 app.use(logger);
 
 /** show request */
-app.use((req, res, next) => {
-  console.log(req);
-  next();
-});
+// app.use((req, res, next) => {
+//   console.log(req);
+//   next();
+// });
+
+/** static files server */
+app.use("/images", express.static(path.join(__dirname, "images")));
 
 //multer
 const multer = require("multer");
@@ -62,13 +65,23 @@ app.use("/api/logout", require("./routes/logout-routes"));
 app.use(verifyJWT);
 app.use(
   "/api/team",
-  upload.single("teamCrest"),
+  upload.single("teamCrestImage"),
   require("./routes/team-routes")
 );
 app.use(
   "/api/sponsors-bar",
-  upload.single("sponsorsBarImageUrl"),
+  upload.single("sponsorsBarImage"),
   require("./routes/sponsors-bar-routes")
+);
+app.use(
+  "/api/background-image",
+  upload.single("backgroundImage"),
+  require("./routes/background-image-routes")
+);
+app.use(
+  "/api/game-name",
+  upload.single("gameImage"),
+  require("./routes/game-name-routes")
 );
 
 /**  error handling */

@@ -7,7 +7,7 @@ const refreshTokenHandler = async (req, res, next) => {
   const cookies = req.cookies;
 
   if (!cookies?.jwt) {
-    console.log("w ");
+    console.log("nie ma cookiesa ");
     return next(new HttpError("Nie jesteś zalogowany.", 401));
   }
 
@@ -20,7 +20,7 @@ const refreshTokenHandler = async (req, res, next) => {
   } catch (err) {
     return next(new HttpError("Nie masz autoryzacji, spróbuj ponownie.", 500));
   }
-  if (!foundUser) return new HttpError("Dostęp zabroniony.", 403); //forbidden
+  if (!foundUser) return next(new HttpError("Dostęp zabroniony.", 403)); //forbidden
 
   /** Evaluate jwt */
   jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET, (err, decoded) => {
