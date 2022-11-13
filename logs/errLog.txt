@@ -505,3 +505,23 @@ Dopuszczalna wysokość pliku to: 10 px.
 20221109	21:55:14	4a5b7b60-82eb-4ed5-828d-0ce8570cba8a	Error: Nie jesteś zalogowany.
 20221109	21:55:18	e82fd8d8-f33a-4261-a147-e6d9e03780c6	Error: Token jest niepoprawny
 20221109	21:55:18	734659d6-84c5-425e-9905-072fd0bf5a47	Error: Nie jesteś zalogowany.
+20221111	19:52:48	41db1863-1a28-4594-b85e-ce4fb0d72c1a	Error: Nieoczekiwany błąd. Sprawdź swoje dane logowania i spróbuj ponownie.
+20221111	19:53:03	e54ba4d5-a50f-4184-b975-1c8cbd6ba9d9	Error: Nieoczekiwany błąd. Sprawdź swoje dane logowania i spróbuj ponownie.
+20221111	19:53:31	ddd60bfd-aa8e-44d4-85aa-778a3648accb	Error: Nieoczekiwany błąd. Sprawdź swoje dane logowania i spróbuj ponownie.
+20221111	20:10:22	dcf4b3ca-e51a-4edc-a77a-b01d4c5ffd7e	Error: Błąd serwera, spróbuj ponownie.
+20221111	20:11:20	69dd99ba-f09b-4fe6-83ac-b055e8996de4	Error: Błąd serwera, spróbuj ponownie.
+20221111	20:11:35	ff140f1d-0068-4d27-8ca4-39d493c5f85b	Error: Błąd serwera, spróbuj ponownie.
+20221111	20:12:02	bbf4fc0a-ea0f-48ea-9809-2ca33e169853	Error: Błąd serwera, spróbuj ponownie.
+20221111	20:12:40	db5ea7f5-ff90-4db0-8b7f-a0223537d971	Error: Błąd serwera, spróbuj ponownie.
+20221111	20:13:13	42f35b31-dfab-41a9-b9aa-2c73f8b302bf	Error: Błąd serwera, spróbuj ponownie.
+20221111	20:14:59	739d48c5-76f0-4776-98cc-1e69a9b7425a	Error: Nie ma rozgrywek o takim ID.
+20221111	20:15:25	c635cfe9-93b2-448c-8fb6-ca27adee7bb7	Error: Nie ma rozgrywek o takim ID.
+20221111	20:15:48	4b7ab0cb-3506-48c2-8a30-f54f19023b19	Error: Nie ma rozgrywek o takim ID.
+20221111	20:15:59	13de8d49-05fd-4d3e-a6c2-2940cf3e9a78	Error: Nie ma rozgrywek o takim ID.
+20221111	20:17:21	63b8905d-26ab-42b6-858a-20e110193bae	Error: Błąd serwera, spróbuj ponownie.
+20221111	20:18:12	66cfb40f-f3a6-4310-9f36-4c209d7bc0f1	Error: Nie masz dostępu do tych zasobów.
+20221111	22:51:35	fa699e55-f991-4aeb-984a-e7280d4c667c	Error: Could not find this route.
+20221111	22:51:40	501d4464-4106-494e-921d-011be2c03ddb	Error: Could not find this route.
+20221111	23:02:13	01fcaa4b-f6a1-4c31-ac45-0fd7a809ea3e	Error: Błąd serwera, spróbuj ponownie.
+20221111	23:03:25	9f2b4cde-f0dc-4e6c-8cd6-eef0fac56bc4	Error: Token jest niepoprawny
+20221111	23:13:26	97c6519d-2741-4c93-9706-fd165b526539	Error: Błąd serwera, spróbuj ponownie.

@@ -15,21 +15,23 @@ const getAllSponsorsBars = async (req, res, next) => {
   res.status(200).json(sponsorsBars);
 };
 
-// const getAllTeams = async (req, res, next) => {
-//   let teams;
-//   try {
-//     teams = await Team.find();
-//   } catch (err) {
-//     return next(new HttpError("Błąd serwera, spróbuj ponownie.", 500));
-//   }
-
-//   console.log(teams);
-
-//   res.status(200).json(teams);
-// };
-
 const getSponsorsBar = async (req, res, next) => {
-  res.status(200).json({ message: "getSponsorsBar" });
+  if (!req?.params?.id) {
+    return next(new HttpError("Wymagane ID belki sponsorów.", 400));
+  }
+
+  let sponsorsBar;
+  try {
+    sponsorsBar = await SponsorsBar.findOne({ _id: req.params.id });
+  } catch (err) {
+    return next(new HttpError("Błąd serwera, spróbuj ponownie.", 500));
+  }
+
+  if (!sponsorsBar) {
+    return next(new HttpError("Nie ma belki sponsorów o takim ID.", 204));
+  }
+
+  res.status(200).json({ sponsorsBar });
 };
 
 const createSponsorsBar = async (req, res, next) => {

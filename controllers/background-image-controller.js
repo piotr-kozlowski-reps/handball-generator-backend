@@ -15,8 +15,27 @@ const getAllBackgroundImages = async (req, res, next) => {
 };
 
 const getBackgroundImage = async (req, res, next) => {
-  res.status(200).json({ message: "getBackgroundImage" });
+  if (!req?.params?.id) {
+    return next(new HttpError("Wymagane ID tła.", 400));
+  }
+
+  let backgroundImage;
+  try {
+    backgroundImage = await BackgroundImage.findOne({ _id: req.params.id });
+  } catch (err) {
+    return next(new HttpError("Błąd serwera, spróbuj ponownie.", 500));
+  }
+
+  if (!backgroundImage) {
+    return next(new HttpError("Nie ma tła o takim ID.", 204));
+  }
+
+  res.status(200).json({ backgroundImage });
 };
+
+// const getGameName = async (req, res, next) => {
+
+// };
 
 const createBackgroundImage = async (req, res, next) => {
   const { backgroundImageName } = req.body;

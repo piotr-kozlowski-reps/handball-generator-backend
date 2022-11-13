@@ -14,8 +14,32 @@ const getAllTeams = async (req, res, next) => {
 };
 
 const getTeam = async (req, res, next) => {
-  res.status(200).json({ message: "getTeam" });
+  if (!req?.params?.id) {
+    return next(new HttpError("Wymagane ID drużyny.", 400));
+  }
+
+  //TODO: w każdym getJednaRzecz i DELETE - dodatkowy if dla ilości znaków w id
+
+  let team;
+  try {
+    team = await Team.findOne({ _id: req.params.id });
+  } catch (err) {
+    return next(new HttpError("Błąd serwera, spróbuj ponownie.", 500));
+  }
+
+  if (!team) {
+    return next(new HttpError("Nie ma drużyny o takim ID.", 204));
+  }
+
+  res.status(200).json({ team });
 };
+
+//   if (!gameName) {
+//     return next(new HttpError("Nie ma rozgrywek o takim ID.", 204));
+//   }
+
+//   res.status(200).json({ gameName });
+// };
 
 const createTeam = async (req, res, next) => {
   const { teamName, place } = req.body;

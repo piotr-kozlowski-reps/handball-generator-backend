@@ -14,7 +14,22 @@ const getAllGameNames = async (req, res, next) => {
 };
 
 const getGameName = async (req, res, next) => {
-  res.status(200).json({ message: "getGameName" });
+  if (!req?.params?.id) {
+    return next(new HttpError("Wymagany ID rodzaju rozgrywek.", 400));
+  }
+
+  let gameName;
+  try {
+    gameName = await GameName.findOne({ _id: req.params.id });
+  } catch (err) {
+    return next(new HttpError("Błąd serwera, spróbuj ponownie.", 500));
+  }
+
+  if (!gameName) {
+    return next(new HttpError("Nie ma rozgrywek o takim ID.", 204));
+  }
+
+  res.status(200).json({ gameName });
 };
 
 const createGameName = async (req, res, next) => {
