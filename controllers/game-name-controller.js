@@ -1,6 +1,8 @@
-const deleteFile = require("../helpers/deleteFIle");
+const deleteFile = require("../helpers/deleteFile");
 const HttpError = require("../helpers/http-error");
 const GameName = require("../models/GameName");
+const { DELETE_FILE_RESPONSE } = require("../config/deleteFileResponse");
+const { checkMongoIdLength } = require("../utils/checkMongoIDLength");
 
 const getAllGameNames = async (req, res, next) => {
   let gameNames;
@@ -16,6 +18,10 @@ const getAllGameNames = async (req, res, next) => {
 const getGameName = async (req, res, next) => {
   if (!req?.params?.id) {
     return next(new HttpError("Wymagany ID rodzaju rozgrywek.", 400));
+  }
+
+  if (!checkMongoIdLength(req.params.id)) {
+    return next(new HttpError("Podane ID ma złą formę.", 400));
   }
 
   let gameName;
@@ -84,6 +90,11 @@ const deleteGameName = async (req, res, next) => {
     return next(new HttpError("Wymagany ID rodzaju rozgrywek.", 400));
   }
 
+  if (!checkMongoIdLength(req.params.id)) {
+    return next(new HttpError("Podane ID ma złą formę.", 400));
+  }
+
+  let fileDeletedResponse;
   try {
     const gameName = await GameName.findOne({
       _id: req.params.id,
@@ -94,7 +105,7 @@ const deleteGameName = async (req, res, next) => {
       );
     }
     try {
-      deleteFile(gameName.gameImage);
+      fileDeletedResponse = deleteFile(gameName.gameImage);
     } catch (error) {
       return next(
         new HttpError(
@@ -103,7 +114,16 @@ const deleteGameName = async (req, res, next) => {
         )
       );
     }
-    ////TODO:  jeżeli skasowanie plików się powiodło - skasuj wpis do bazy
+
+    if (fileDeletedResponse === DELETE_FILE_RESPONSE.fileUnDeleted) {
+      return next(
+        new HttpError(
+          `Błąd serwera, skasowanie pliku graficznego rozgrywek nie powiodło się.`,
+          500
+        )
+      );
+    }
+
     const result = await gameName.deleteOne();
     res.json(result);
   } catch (error) {

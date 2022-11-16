@@ -525,3 +525,153 @@ Dopuszczalna wysokość pliku to: 10 px.
 20221111	23:02:13	01fcaa4b-f6a1-4c31-ac45-0fd7a809ea3e	Error: Błąd serwera, spróbuj ponownie.
 20221111	23:03:25	9f2b4cde-f0dc-4e6c-8cd6-eef0fac56bc4	Error: Token jest niepoprawny
 20221111	23:13:26	97c6519d-2741-4c93-9706-fd165b526539	Error: Błąd serwera, spróbuj ponownie.
+20221114	14:12:51	07dffd70-d764-4ff1-8ac8-8f9ecf886193	Error: Nazwa rozgrywek już istnieje.
+20221114	14:26:57	d26d3219-4421-4583-9d64-0564fe34ae42	Error: Nazwa rozgrywek już istnieje.
+20221114	14:27:08	a991b655-9538-4630-ac76-c4d998f0bf5a	Error: Nazwa rozgrywek już istnieje.
+20221114	14:27:42	4209c4ca-6395-4348-bf14-f3ed67fd1295	Error: Nazwa rozgrywek już istnieje.
+20221114	15:42:30	115654bf-c35f-400c-9df6-1ad2ed1fbaaa	Error: Nazwa rozgrywek już istnieje.
+20221114	15:42:51	6310943c-3147-480b-9cdd-ce27110c7917	Error: Nazwa rozgrywek już istnieje.
+20221114	15:43:00	1547a45a-98ec-4197-bcf5-fc3d95ed4d2b	Error: Token jest niepoprawny
+20221114	15:43:00	21d8c8a0-deff-4b67-8d4b-6efeacfc5eb1	Error: Token jest niepoprawny
+20221114	15:43:00	e39b7199-fff5-4cac-b1dc-9fbad2342dcc	Error: Token jest niepoprawny
+20221114	15:43:00	b3e1f7f5-3fce-4770-a350-f2dc2cfb823b	Error: Nie jesteś zalogowany.
+20221114	15:43:00	b7f4890d-d2d8-402f-8d36-b805aae6d5d1	Error: Nie jesteś zalogowany.
+20221114	15:43:00	65e20aff-a63b-48e3-a50f-c7fef3aae1de	Error: Nie jesteś zalogowany.
+20221114	15:43:01	ecd60411-1ca9-413c-8947-1849c848aad3	Error: Token jest niepoprawny
+20221114	15:43:01	649cb4b7-2263-4d3a-a642-285e85e51c0d	Error: Token jest niepoprawny
+20221114	15:43:01	6d6de7c0-967b-4960-a024-1ec2916ff4bb	Error: Token jest niepoprawny
+20221114	15:43:01	3345f7a1-15ca-42c0-b5a4-f19128e212a5	Error: Nie jesteś zalogowany.
+20221114	15:43:01	5536bbac-e596-4dc2-94ab-ff68f5fe6040	Error: Nie jesteś zalogowany.
+20221114	15:43:01	dc02bde0-1f6c-4aed-9b11-da895795bdf7	Error: Nie jesteś zalogowany.
+20221114	15:43:06	0f8be079-e2c1-4300-8882-cb530b5df3c9	Error: Token jest niepoprawny
+20221114	15:43:06	bfdb8688-f4e9-4ac6-9ba2-193c9c3497c6	Error: Nie masz dostępu do tych zasobów.
+20221114	15:43:06	37d53585-cd83-4fd1-afda-b31473ae3eac	Error: Nie masz dostępu do tych zasobów.
+20221114	15:43:06	1105537d-4fd5-4998-ac04-a14711c41c66	Error: Nie jesteś zalogowany.
+20221114	15:43:07	42508236-8d12-4e12-a7db-e7b80bd99b88	Error: Token jest niepoprawny
+20221114	15:43:07	2af5052a-acbe-4a02-869e-b389fe4b995a	Error: Nie jesteś zalogowany.
+20221114	15:43:07	03d85746-857a-45d6-9149-6b52914330f8	Error: Token jest niepoprawny
+20221114	15:43:07	f7685637-04ae-4f30-aa78-2b67be0ff536	Error: Nie jesteś zalogowany.
+20221114	15:43:10	2268f88c-ec9d-4a6d-a8e7-9c34cf815dd8	Error: Nie masz dostępu do tych zasobów.
+20221114	15:43:10	fb2e6099-b488-424a-af20-690d958334a3	Error: Nie masz dostępu do tych zasobów.
+20221114	15:54:57	09244b6e-e1c1-41ee-a405-eb53d95de3bb	Error: Błąd serwera, skasowanie rozgrywek nie powiodło się.
+20221114	15:55:40	391986c9-d00c-43e6-9a33-0346c0813295	Error: Nie ma rozgrywek o ID: 63638bf16fb001fc5f038b24.
+20221114	16:09:38	3ffeb5ec-926f-42f7-a2e1-3cab2a962c36	Error: Podane ID ma złą formę.
+20221114	16:09:57	2d51a68a-e0c5-4d49-befb-c98c9e8844cc	Error: Podane ID ma złą formę.
+20221114	16:10:45	7d993f8a-a177-492e-a074-d2d05aef9ffd	Error: Podane ID ma złą formę.
+20221114	16:11:14	77dd0354-6547-411d-94bf-c5b626253c1c	Error: Podane ID ma złą formę.
+20221114	16:11:55	fcc09691-431b-42fd-988b-ea00c0f088b4	Error: Podane ID ma złą formę.
+20221114	16:13:42	ebaa19a7-751a-46c0-8da0-a311bbd606d6	Error: Could not find this route.
+20221114	16:13:47	cb4ba5d4-5bac-4c98-b912-34a678a6c801	Error: Podane ID ma złą formę.
+20221114	16:14:01	725d5611-da3b-4000-9476-3bff10f048a8	Error: Nie ma tła o ID: 636b90412661108ef325acaf.
+20221114	16:16:15	47d80e71-3cc6-468c-89a4-1a1b7fe01e46	Error: Token jest niepoprawny
+20221114	16:16:24	9b09d070-4583-4771-8f72-a0e603d56cbb	Error: Token jest niepoprawny
+20221114	16:16:43	e6be68c9-881e-4052-81e0-a708fd386fef	Error: Podane ID ma złą formę.
+20221114	16:16:50	519b6f1c-53e6-4d3b-824e-9e1d421972fa	Error: Nie ma rozgrywek o ID: 63638bf16fb001fc5f038b23.
+20221114	16:17:49	f32af73a-8df3-4ff2-8cc0-c09291becb5c	Error: Podane ID ma złą formę.
+20221114	16:18:12	7b61abcf-bc45-4c8c-b7ef-1ac4affae41a	Error: Token jest niepoprawny
+20221114	16:18:18	9e157f0f-c1ae-4d72-9eb3-dd9af54bbd68	Error: Token jest niepoprawny
+20221114	16:18:22	d436ed58-6176-44fb-8f4e-4539a27b1bb7	Error: Token jest niepoprawny
+20221114	16:18:36	a7984b91-7e64-4851-9270-763b02a90fea	Error: Podane ID ma złą formę.
+20221114	16:19:10	a49a9935-d2b4-4f0e-99c2-275c2221f808	Error: Nie ma paska sponsorów o ID: 636a68b5cf54bef3294d150d.
+20221114	16:20:36	d3b3830f-e5e1-452a-9bf0-1099f2ada0aa	Error: Podane ID ma złą formę.
+20221114	16:21:02	bcd11297-7023-4167-8061-2bfb1fa93fdb	Error: Podane ID ma złą formę.
+20221114	16:21:15	b0eff306-c8db-4ff5-9759-4086ba3a3cb9	Error: Nie ma drużyny o ID: 636a561066e6dab701d6d04a.
+20221114	16:45:33	a81342ff-062c-4ccf-ba78-1e0e2475c496	Error: Nie ma rozgrywek o ID: 63638bf16fb001fc5f038b23.
+20221114	16:53:05	057ab6e8-8c93-4f61-a970-7bd5945876ca	Error: Nazwa rozgrywek już istnieje.
+20221114	16:53:22	b8678b9f-d36a-404a-8c6c-89ba3f0ca8f1	Error: Nazwa rozgrywek już istnieje.
+20221114	16:53:57	9fddd1d3-23f4-4204-8a4b-3c108691c27c	Error: Nazwa rozgrywek już istnieje.
+20221115	08:29:13	746f40f4-2458-4154-bdec-25b2f47934e6	Error: Nie ma drużyny o takim ID.
+20221115	08:29:32	a6acce06-e1ed-4a95-a5ff-aca07cb2c0f2	Error: Malformed part header
+20221115	08:29:45	5afc6182-8f5a-4494-8b50-af52e7b0525e	Error: Malformed part header
+20221115	08:30:13	b47c804e-1cc6-4004-ac28-2e17bd7d473d	Error: Malformed part header
+20221115	08:30:39	ba6439c9-0003-47f9-b36f-2a8e81ebdd84	Error: Malformed part header
+20221116	08:07:16	0921522d-0120-4fa1-a03e-b50cb3be5680	Error: Nazwa rozgrywek już istnieje.
+20221116	08:30:55	41f2ef4e-99c3-43a5-941b-ad058a591428	Error: Token jest niepoprawny
+20221116	08:31:06	6bdf8f84-6aea-48dd-9130-9bf8ed479ed0	Error: Token jest niepoprawny
+20221116	08:31:06	e95474dd-6601-4e82-8d1a-7a7c47deca41	Error: Token jest niepoprawny
+20221116	08:31:06	46080328-d911-4bdb-b15f-72a2e4e6d765	Error: Token jest niepoprawny
+20221116	08:31:48	f9097f08-1797-43c7-b1c8-0f0f00811aa0	Error: Token jest niepoprawny
+20221116	08:32:50	1ec7961a-d6c9-458e-b772-61dfe1542d08	Error: Token jest niepoprawny
+20221116	08:33:06	15ffafea-2164-4ee9-b909-e201895dcbc3	Error: Token jest niepoprawny
+20221116	08:33:06	60674bc3-919f-40aa-aa3e-0e119744cc40	Error: Token jest niepoprawny
+20221116	08:33:06	7f7ceb1f-fd69-4635-9670-a532b0c650ea	Error: Token jest niepoprawny
+20221116	08:33:18	10893e28-c4e4-47cc-a5cd-0bbb8950ec11	Error: Token jest niepoprawny
+20221116	08:33:18	ec3c365e-0f4f-4826-928e-5e8fc7712c2f	Error: Token jest niepoprawny
+20221116	08:33:18	f4216d8e-969a-4626-bac9-d7c5f098bed2	Error: Token jest niepoprawny
+20221116	09:57:44	a16940b0-6c0d-4150-8b07-afda28f3206c	Error: Token jest niepoprawny
+20221116	09:57:44	770d34b9-e29e-40ed-b1ed-8caa1cbe69fe	Error: Token jest niepoprawny
+20221116	09:57:44	e656c663-5801-438c-95f5-6d793fd5b200	Error: Token jest niepoprawny
+20221116	09:58:14	122a65a3-460f-47b0-9a0c-7a518d72fcad	Error: Nie jesteś zalogowany.
+20221116	09:58:14	a1ff2200-ad42-4fe7-9d05-4dff40a1bac7	Error: Nie jesteś zalogowany.
+20221116	10:02:01	9ff362b3-9c9f-409f-a8b5-c9d83edd6b93	Error: Token jest niepoprawny
+20221116	10:02:19	50ce389f-44d2-4a8a-9aa7-767279140bb2	Error: Token jest niepoprawny
+20221116	10:02:36	acc69163-85ae-480c-a725-4f14c28ac023	Error: Token jest niepoprawny
+20221116	10:03:07	0b3c27e9-7009-4107-8e97-c4cd0292dfb9	Error: Token jest niepoprawny
+20221116	10:03:51	01aae912-8480-4459-a530-6c165bc25ace	Error: Nie jesteś zalogowany.
+20221116	10:03:51	1f829e98-9ed1-4a1e-bbdb-f8905584e0da	Error: Nie jesteś zalogowany.
+20221116	10:05:00	0ab1867f-b65e-4bb7-853b-07a834d9d81f	Error: Nie jesteś zalogowany.
+20221116	10:05:00	e96bdf53-5735-4b24-8604-f3882dbfea40	Error: Nie jesteś zalogowany.
+20221116	10:05:42	3271cf55-3a18-4738-95ca-7296f47fc25f	Error: Nie jesteś zalogowany.
+20221116	10:05:42	6c4e344f-3edf-4a73-9641-9eb1cbf18446	Error: Nie jesteś zalogowany.
+20221116	10:08:09	e0dbb8b3-6379-45a9-9686-2ef1c28c7176	Error: Nie jesteś zalogowany.
+20221116	10:08:09	0373176e-47a5-4a38-b9d2-50f783da3afc	Error: Nie jesteś zalogowany.
+20221116	10:47:12	b7602de5-30c0-430c-bea2-882d5f2c3762	Error: Token jest niepoprawny
+20221116	10:47:33	aa17cb43-19d8-4dfc-b0a2-75653f9b56c8	Error: Token jest niepoprawny
+20221116	10:47:33	43d96e16-33c5-46d3-ae31-1a4ad5143b23	Error: Token jest niepoprawny
+20221116	10:47:33	a553499c-441d-4feb-b596-90460ed65ab7	Error: Token jest niepoprawny
+20221116	10:47:45	b03caca7-b4fb-4e7d-b04e-bcb26cbe55a0	Error: Token jest niepoprawny
+20221116	10:47:45	bede5048-0f85-45a8-8e8d-09dea12d50ab	Error: Dostęp zabroniony.
+20221116	10:47:45	672699e9-cf31-4a26-b188-3b1ad3ff54f7	Error: Dostęp zabroniony.
+20221116	10:47:45	5bab0a6f-e83c-4749-8f2f-2b69d4ee5e3e	Error: Dostęp zabroniony.
+20221116	10:47:46	950015c0-2d00-4621-b74a-0bdeb818a717	Error: Token jest niepoprawny
+20221116	10:47:46	5b62c1fc-0f19-42cf-943e-fabc8e82b440	Error: Dostęp zabroniony.
+20221116	10:47:46	1d07c0f1-03e0-4b23-99be-7f769093c067	Error: Dostęp zabroniony.
+20221116	10:47:46	55b29681-497d-461f-9fde-379ecb7d98a4	Error: Dostęp zabroniony.
+20221116	10:47:48	518783c3-23f8-468d-8f69-6996b1116a39	Error: Token jest niepoprawny
+20221116	10:47:48	ed3923b9-f34d-4f90-9dce-c024b1d4a2ad	Error: Dostęp zabroniony.
+20221116	10:47:48	61f15d78-e9a0-479b-9a7a-49c86db4f49f	Error: Dostęp zabroniony.
+20221116	10:47:48	dbef0056-9e16-47e3-bb17-3f187905c030	Error: Dostęp zabroniony.
+20221116	10:47:52	3a8ee133-89a9-40cd-b228-f8936ce11d05	Error: Token jest niepoprawny
+20221116	10:47:52	22c762a2-f756-42cb-a5f1-e9ef16a839ae	Error: Dostęp zabroniony.
+20221116	10:47:53	803edfb9-2c4f-4248-a945-d0f2f11c404e	Error: Dostęp zabroniony.
+20221116	10:47:53	52882159-07e6-40ba-bb45-43f2b8340e98	Error: Dostęp zabroniony.
+20221116	11:16:11	a1a5c2d6-1d72-4145-a58c-ad8b33a699f2	undefined: undefined
+20221116	11:56:10	7b9307af-967f-431d-b195-8fb213552089	undefined: undefined
+20221116	11:56:20	b5afbd10-e490-41e0-99a6-eac62ec0f4a1	Error: Nie jesteś zalogowany.
+20221116	11:56:20	7f3da3d9-8989-40b9-a0eb-e820e546f031	Error: Nie jesteś zalogowany.
+20221116	12:10:18	406a1045-1578-48c1-b03d-9d3aa253836a	Error: Błąd serwera, skasowanie drużyny nie powiodło się.
+20221116	12:21:54	7cffd1cd-a9d1-4d0d-824a-ff53601d3aeb	Error: Błąd serwera, skasowanie drużyny nie powiodło się.
+20221116	12:23:14	515ee252-af00-471c-9b52-d2ce26f8e526	Error: Błąd serwera, skasowanie drużyny nie powiodło się.
+20221116	12:24:45	a6d4c4bc-171c-49df-93b0-a44d736e35ca	Error: Błąd serwera, skasowanie drużyny nie powiodło się.
+20221116	12:25:39	0a40d43d-970d-4c1e-9ac9-75cbaed8cce9	Error: Błąd serwera, skasowanie drużyny nie powiodło się.
+20221116	12:26:51	b2c11107-47db-46e1-8b10-e314b9699875	Error: Błąd serwera, skasowanie drużyny nie powiodło się.
+20221116	12:30:48	b0a52014-ec68-418a-baaf-3e44d384e0d6	Error: Błąd serwera, skasowanie drużyny nie powiodło się.
+20221116	12:32:38	0214d063-a025-47f1-9e15-f94505e15230	Error: Drużyna już istnieje.
+20221116	12:37:48	ff1845b8-8084-4ba8-ae18-f832c41434ff	Error: Drużyna już istnieje.
+20221116	12:38:58	5df566b2-b2dc-4d33-bd78-3568e2892554	Error: Drużyna już istnieje.
+20221116	12:40:24	304fee0f-1a3a-4213-82a0-520792d0500a	Error: Nie jesteś zalogowany.
+20221116	12:40:24	a5bb38c1-b94d-4629-81d1-c135450880f8	Error: Nie jesteś zalogowany.
+20221116	12:40:55	6b706ec6-41bf-4c0f-a5f7-d989eb3814d5	Error: Drużyna już istnieje.
+20221116	12:41:59	9bfe4732-b911-4e9a-9308-133c267858e8	Error: Drużyna już istnieje.
+20221116	12:42:07	e4a6b76c-d50f-4e67-aab3-0db5058b0db5	Error: Drużyna już istnieje.
+20221116	12:42:20	e265098b-e649-4489-a34d-23d56443b178	Error: Drużyna już istnieje.
+20221116	12:42:44	510dd265-2d9c-49a4-a7bc-c025acd427fc	Error: Drużyna już istnieje.
+20221116	12:44:04	85219731-ee2e-4d47-b83d-4cec0b2d524a	Error: Drużyna już istnieje.
+20221116	12:44:17	1e999e30-6228-4f1a-843e-92ee74082d1e	Error: Drużyna już istnieje.
+20221116	12:44:23	b10e2399-e7d5-440e-8023-20821931c128	Error: Drużyna już istnieje.
+20221116	12:50:00	4b14fa75-503a-4f41-ab66-99b047ac742b	Error: Nazwa rozgrywek już istnieje.
+20221116	12:50:17	ade5cb81-61c8-42b3-9c02-f895206d4f99	Error: Nazwa rozgrywek już istnieje.
+20221116	12:53:41	adbed4ea-e119-45a5-af4e-1cf0b61a3f0f	Error: Belka sponsorów o takiej nazwie już istnieje.
+20221116	12:55:11	b5986ba6-be5a-4b85-ad67-f35428d73290	Error: Belka sponsorów o takiej nazwie już istnieje.
+20221116	14:29:04	36a958da-cd16-4c84-9549-d52c8c8da404	Error: Plik tła o takiej nazwie już istnieje.
+20221116	14:30:01	b47ce300-f402-4c99-b071-2d102f4fdbb1	Error: Nie udało zapisać danych, spróbuj ponownie.
+20221116	14:32:41	dac37f08-1318-48ad-b7fe-c083093483a6	Error: Nie udało zapisać danych, spróbuj ponownie.
+20221116	14:51:24	9107a0d7-3236-4d4e-91f0-7912f34cf4eb	Error: Nie udało zapisać danych, spróbuj ponownie.
+20221116	14:54:07	d1917fda-9373-40b1-97bf-7be175a55d68	Error: Nie udało zapisać danych, spróbuj ponownie.
+20221116	14:58:13	07836eaf-dae3-42d4-8438-4ef816a83c86	Error: Nie udało zapisać danych, spróbuj ponownie.
+20221116	15:00:32	df2b5b5d-605d-4fe5-bbfc-6a8f8b3fa7a9	Error: Nie udało zapisać danych, spróbuj ponownie.
+20221116	15:02:40	69474148-ec71-43d1-abb1-d2796dedfa16	Error: Nie udało zapisać danych, spróbuj ponownie.
+20221116	15:04:49	07fbb603-1771-4bb2-b60e-9ca0f99e23fe	Error: Nie udało zapisać danych, spróbuj ponownie.
+20221116	15:05:37	9c1fa57b-a320-4fb1-bac7-c25ac459ebc4	Error: Nie udało zapisać danych, spróbuj ponownie.
+20221116	15:06:40	b8bf0153-f582-4e28-a0f0-c0460d2225ea	Error: Nie udało zapisać danych, spróbuj ponownie.
+20221116	15:20:12	1ad73324-bdff-4769-b3de-8d35cfca61c4	undefined: undefined

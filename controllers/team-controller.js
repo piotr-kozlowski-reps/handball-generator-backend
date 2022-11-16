@@ -1,6 +1,8 @@
 const deleteFile = require("../helpers/deleteFIle");
 const HttpError = require("../helpers/http-error");
 const Team = require("../models/Team");
+const { DELETE_FILE_RESPONSE } = require("../config/deleteFileResponse");
+const { checkMongoIdLength } = require("../utils/checkMongoIDLength");
 
 const getAllTeams = async (req, res, next) => {
   let teams;
@@ -18,7 +20,9 @@ const getTeam = async (req, res, next) => {
     return next(new HttpError("Wymagane ID drużyny.", 400));
   }
 
-  //TODO: w każdym getJednaRzecz i DELETE - dodatkowy if dla ilości znaków w id
+  if (!checkMongoIdLength(req.params.id)) {
+    return next(new HttpError("Podane ID ma złą formę.", 400));
+  }
 
   let team;
   try {
@@ -64,8 +68,6 @@ const createTeam = async (req, res, next) => {
     );
   }
 
-  console.log(foundTeam);
-
   if (foundTeam) {
     deleteFile(req.file.path);
     return next(new HttpError("Drużyna już istnieje.", 400));
@@ -100,13 +102,20 @@ const deleteTeam = async (req, res, next) => {
     return next(new HttpError("Wymagany ID drużyny.", 400));
   }
 
+  if (!checkMongoIdLength(req.params.id)) {
+    return next(new HttpError("Podane ID ma złą formę.", 400));
+  }
+
+  let fileDeletedResponse;
   try {
     const team = await Team.findOne({ _id: req.params.id }).exec();
     if (!team) {
       return next(new HttpError(`Nie ma drużyny o ID: ${req.params.id}.`, 204));
     }
+
+    //delete file
     try {
-      deleteFile(team.teamCrest);
+      fileDeletedResponse = deleteFile(team.teamCrestImage);
     } catch (error) {
       return next(
         new HttpError(
@@ -115,10 +124,20 @@ const deleteTeam = async (req, res, next) => {
         )
       );
     }
-    ////TODO:  jeżeli skasowanie pliku się powiodło - skasuj wpis do bazy
+
+    if (fileDeletedResponse === DELETE_FILE_RESPONSE.fileUnDeleted) {
+      return next(
+        new HttpError(
+          `Błąd serwera, skasowanie pliku graficznego rozgrywek nie powiodło się.`,
+          500
+        )
+      );
+    }
+
     const result = await team.deleteOne(); //{ _id: req.body.id }
     res.json(result);
   } catch (error) {
+    console.log(error);
     return next(
       new HttpError(`Błąd serwera, skasowanie drużyny nie powiodło się.`, 500)
     );

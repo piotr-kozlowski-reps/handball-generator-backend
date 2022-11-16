@@ -1,6 +1,8 @@
+const { DELETE_FILE_RESPONSE } = require("../config/deleteFileResponse");
 const deleteFile = require("../helpers/deleteFIle");
 const HttpError = require("../helpers/http-error");
 const SponsorsBar = require("../models/SponsorsBar");
+const { checkMongoIdLength } = require("../utils/checkMongoIDLength");
 
 const getAllSponsorsBars = async (req, res, next) => {
   let sponsorsBars;
@@ -18,6 +20,10 @@ const getAllSponsorsBars = async (req, res, next) => {
 const getSponsorsBar = async (req, res, next) => {
   if (!req?.params?.id) {
     return next(new HttpError("Wymagane ID belki sponsorów.", 400));
+  }
+
+  if (!checkMongoIdLength(req.params.id)) {
+    return next(new HttpError("Podane ID ma złą formę.", 400));
   }
 
   let sponsorsBar;
@@ -85,6 +91,11 @@ const deleteSponsorsBar = async (req, res, next) => {
     return next(new HttpError("Wymagany ID paska sponsorów.", 400));
   }
 
+  if (!checkMongoIdLength(req.params.id)) {
+    return next(new HttpError("Podane ID ma złą formę.", 400));
+  }
+
+  let fileDeletedResponse;
   try {
     const sponsorBar = await SponsorsBar.findOne({ _id: req.params.id }).exec();
     if (!sponsorBar) {
@@ -92,8 +103,10 @@ const deleteSponsorsBar = async (req, res, next) => {
         new HttpError(`Nie ma paska sponsorów o ID: ${req.params.id}.`, 204)
       );
     }
+
+    //deleting file
     try {
-      deleteFile(sponsorBar.sponsorsBarImage);
+      fileDeletedResponse = deleteFile(sponsorBar.sponsorsBarImage);
     } catch (error) {
       return next(
         new HttpError(
@@ -102,7 +115,16 @@ const deleteSponsorsBar = async (req, res, next) => {
         )
       );
     }
-    ////TODO:  jeżeli skasowanie pliku się powiodło - skasuj wpis do bazy
+    if (fileDeletedResponse === DELETE_FILE_RESPONSE.fileUnDeleted) {
+      return next(
+        new HttpError(
+          `Błąd serwera, skasowanie pliku graficznego rozgrywek nie powiodło się.`,
+          500
+        )
+      );
+    }
+
+    ////response
     const result = await sponsorBar.deleteOne();
     res.json(result);
   } catch (error) {
