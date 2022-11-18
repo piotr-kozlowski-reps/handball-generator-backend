@@ -675,3 +675,41 @@ Dopuszczalna wysokość pliku to: 10 px.
 20221116	15:05:37	9c1fa57b-a320-4fb1-bac7-c25ac459ebc4	Error: Nie udało zapisać danych, spróbuj ponownie.
 20221116	15:06:40	b8bf0153-f582-4e28-a0f0-c0460d2225ea	Error: Nie udało zapisać danych, spróbuj ponownie.
 20221116	15:20:12	1ad73324-bdff-4769-b3de-8d35cfca61c4	undefined: undefined
+20221118	13:42:22	6f16fe05-1322-4f57-a068-7c8c46afece8	Error: Nie jesteś zalogowany.
+20221118	13:42:22	385d666f-19df-4025-8a4c-93bec7bd9d91	Error: Nie jesteś zalogowany.
+20221118	13:43:56	d156fd48-fdbf-4b30-bff4-e2c34f66465b	Error: Nie jesteś zalogowany.
+20221118	13:43:56	d8408157-ef31-43c4-940b-508df30153f0	Error: Nie jesteś zalogowany.
+20221118	13:52:35	4238490b-145d-4849-aeb6-dc582160afea	Error: Nie jesteś zalogowany.
+20221118	13:52:35	7175a838-0742-4a6c-8952-1f24e3de0340	Error: Nie jesteś zalogowany.
+20221118	14:06:03	922b72cf-bcd0-4dd9-858d-9fd891ee0ffe	Error: Nie jesteś zalogowany.
+20221118	14:06:03	365cc718-537f-4ef2-ac79-33155dece559	Error: Nie jesteś zalogowany.
+20221118	14:24:12	136daf86-417f-45c4-b789-5420ccc86868	Error: Nie jesteś zalogowany.
+20221118	14:24:12	29ba552d-2bf6-4ca2-85ec-70b24e6a706c	Error: Nie jesteś zalogowany.
+20221118	14:24:32	a42fb4e0-1f7e-4f0b-91e5-7ee3b2ceca50	Error: Nie jesteś zalogowany.
+20221118	14:24:32	d0ba9f75-dc29-4eab-b6b5-156ec41082b4	Error: Nie jesteś zalogowany.
+20221118	14:24:57	71fa74d1-e2bc-4f33-b405-a983f8bd42a8	Error: Nie jesteś zalogowany.
+20221118	14:24:57	3664f50f-4b55-4d05-a91d-8c80b54883ff	Error: Nie jesteś zalogowany.
+20221118	14:25:05	f7c12c85-a0df-481c-870b-a5d74d23e86b	Error: Nie jesteś zalogowany.
+20221118	14:25:05	865b2880-27d5-49a7-8d04-cc1ba36e7312	Error: Nie jesteś zalogowany.
+20221118	15:27:12	4fdbd9a2-f9e5-4cd0-aea7-79502d0748c1	Error: Nie jesteś zalogowany.
+20221118	15:27:12	c99808d7-2182-432a-91eb-c96b33852028	Error: Nie jesteś zalogowany.
+20221118	15:27:33	8015a6ca-5aaa-4863-9370-bc6ea784dde4	Error: Nie jesteś zalogowany.
+20221118	15:27:33	974abe70-915a-44f6-ab4d-f67d4f4e754a	Error: Nie jesteś zalogowany.
+20221118	15:27:53	6e343b5d-552e-48a9-8c86-0fb9fdc74119	Error: Nie jesteś zalogowany.
+20221118	15:27:53	75fd6b7e-242c-4169-8d57-4e1150021ab8	Error: Nie jesteś zalogowany.
+20221118	15:28:40	1f81d8b4-6a69-435a-b4f2-8fc2f3ad6930	Error: Nie jesteś zalogowany.
+20221118	15:28:40	56b8c231-e433-4640-9568-3710e8be9c6f	Error: Nie jesteś zalogowany.
+20221118	15:29:08	5d4c346f-c289-49a4-820d-d4dcd04eb15c	Error: Nie jesteś zalogowany.
+20221118	15:29:08	0d77ec36-4bce-4dfa-9137-5d9dd8be383a	Error: Nie jesteś zalogowany.
+20221118	15:29:41	e2626d8e-f5b7-4b27-bd9b-eb5895c1aba4	Error: Nie jesteś zalogowany.
+20221118	15:29:41	723dbec4-27dd-470d-9585-b807b395cb97	Error: Nie jesteś zalogowany.
+20221118	15:29:56	5bf5e70f-2d59-47df-a9b6-69ee40d7f7fe	Error: Nie jesteś zalogowany.
+20221118	15:29:56	9394bec0-f949-4335-9945-65c388680e6d	Error: Nie jesteś zalogowany.
+20221118	15:30:14	77384d5c-cab2-4650-8dde-dd879b148e56	Error: Nie jesteś zalogowany.
+20221118	15:30:14	698e72f6-ce2f-4de9-8f0f-5cda0c977c4c	Error: Nie jesteś zalogowany.
+20221118	15:30:27	6d737b0b-d236-4c39-ba7b-ddffa7de43f4	Error: Nie jesteś zalogowany.
+20221118	15:30:27	bce7e7ce-32cd-4c07-b7b3-ce5cc690e680	Error: Nie jesteś zalogowany.
+20221118	17:52:48	229ec2f2-74d6-4821-b8e0-a1a158ffa576	Error: Nie jesteś zalogowany.
+20221118	17:52:48	b1ff0683-0fe6-4576-85d6-40e2d426a7d3	Error: Nie jesteś zalogowany.
+20221118	18:01:34	ec60fda2-df93-4bf0-9e29-0cc74ff08b71	Error: Nie jesteś zalogowany.
+20221118	18:01:34	868a3dfd-1581-4fd1-aa43-be11e880b3ca	Error: Nie jesteś zalogowany.
