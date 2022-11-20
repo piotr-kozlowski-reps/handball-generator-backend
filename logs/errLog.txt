@@ -713,3 +713,9 @@ Dopuszczalna wysokość pliku to: 10 px.
 20221118	17:52:48	b1ff0683-0fe6-4576-85d6-40e2d426a7d3	Error: Nie jesteś zalogowany.
 20221118	18:01:34	ec60fda2-df93-4bf0-9e29-0cc74ff08b71	Error: Nie jesteś zalogowany.
 20221118	18:01:34	868a3dfd-1581-4fd1-aa43-be11e880b3ca	Error: Nie jesteś zalogowany.
+20221118	20:56:52	062e5841-e6d9-4fb1-8f63-70363dd0f377	Error: Nie jesteś zalogowany.
+20221118	20:56:52	57228317-5680-4b43-a12a-6c0f0ea5f0f4	Error: Nie jesteś zalogowany.
+20221119	21:23:39	f0c36033-e5d3-4a8c-9935-0cf990ef409a	Error: Nie jesteś zalogowany.
+20221119	21:23:39	ee04cfe9-e686-4d41-925c-79fd29b3e2a4	Error: Nie jesteś zalogowany.
+20221119	21:23:40	b343e71d-74aa-4538-9c76-90b9bb917298	Error: Nie jesteś zalogowany.
+20221119	21:23:40	727c627a-748c-4c03-8904-350b3dd1d580	Error: Nie jesteś zalogowany.

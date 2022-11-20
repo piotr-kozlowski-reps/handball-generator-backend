@@ -38,13 +38,6 @@ const getTeam = async (req, res, next) => {
   res.status(200).json({ team });
 };
 
-//   if (!gameName) {
-//     return next(new HttpError("Nie ma rozgrywek o takim ID.", 204));
-//   }
-
-//   res.status(200).json({ gameName });
-// };
-
 const createTeam = async (req, res, next) => {
   const { teamName, place } = req.body;
 
