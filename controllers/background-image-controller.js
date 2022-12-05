@@ -44,6 +44,41 @@ const getBackgroundImage = async (req, res, next) => {
 // };
 
 const createBackgroundImage = async (req, res, next) => {
+  // console.log(req.files);
+
+  //   files: [
+  //   {
+  //     fieldname: 'backgroundImages',
+  //     originalname: 'sklad_uklad_lista_wyjazd.jpg',
+  //     encoding: '7bit',
+  //     mimetype: 'image/jpeg',
+  //     destination: 'images\\background-images',
+  //     filename: 'sklad_uklad_lista_wyjazd___20221205-200933.jpg',
+  //     path: 'images\\background-images\\sklad_uklad_lista_wyjazd___20221205-200933.jpg',
+  //     size: 66654
+  //   },
+  //   {
+  //     fieldname: 'backgroundImages',
+  //     originalname: 'sklad_uklad_lista_wyjazd_thumbnail.jpg',
+  //     encoding: '7bit',
+  //     mimetype: 'image/jpeg',
+  //     destination: 'images\\background-images',
+  //     filename: 'sklad_uklad_lista_wyjazd_thumbnail___20221205-200933.jpg',
+  //     path: 'images\\background-images\\sklad_uklad_lista_wyjazd_thumbnail___20221205-200933.jpg',
+  //     size: 34060
+  //   },
+  //   {
+  //     fieldname: 'backgroundImages',
+  //     originalname: 'sklad_uklad_wyjazd.jpg',
+  //     encoding: '7bit',
+  //     mimetype: 'image/jpeg',
+  //     destination: 'images\\background-images',
+  //     filename: 'sklad_uklad_wyjazd___20221205-200933.jpg',
+  //     path: 'images\\background-images\\sklad_uklad_wyjazd___20221205-200933.jpg',
+  //     size: 403415
+  //   }
+  // ],
+
   const { backgroundImageName } = req.body;
   if (!backgroundImageName)
     return res.status(400).json({ message: "Nazwa tła jest wymagana." });

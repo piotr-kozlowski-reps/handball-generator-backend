@@ -725,3 +725,39 @@ Dopuszczalna wysokość pliku to: 10 px.
 20221129	19:23:49	1efc142b-2d7f-4fed-a873-7fb334ac2303	Error: Nie jesteś zalogowany.
 20221130	15:27:45	c47bae0b-db6b-4649-8956-b07ac8635f98	Error: Nie jesteś zalogowany.
 20221130	15:27:45	66414fe8-0356-412f-ac11-73cbcb21fc50	Error: Nie jesteś zalogowany.
+20221201	16:01:35	a3ae939d-5bcb-4cb7-abbf-04b39e9aa96c	Error: Nie jesteś zalogowany.
+20221201	16:01:35	63389323-fb7d-4c9c-912c-5ce2004c4edd	Error: Nie jesteś zalogowany.
+20221202	20:23:50	322343a2-34a2-495a-b83a-d114b8a412d9	Error: Nie jesteś zalogowany.
+20221202	20:23:50	554155cd-b963-4f49-a818-cd1d83e97294	Error: Nie jesteś zalogowany.
+20221202	21:09:31	c8b80bdf-b6ff-4340-be78-3758c59579a0	Error: Brak pliku graficznego.
+20221203	15:35:31	ea25a7e3-280c-405c-a7b7-ce6ed25a0dff	Error: Token jest niepoprawny
+20221203	16:06:38	2d59397d-3d72-4a2c-9c8a-b67d13e152fd	Error: Brak pliku graficznego.
+20221203	17:38:00	9de70090-ed27-4629-9ce4-bff54e8116a0	Error: Obrazek musi być plikiem o rozszerzeniu: .png
+20221203	17:38:14	7432c90d-11a2-415e-93ce-318b0331117a	Error: Obrazek musi być plikiem o rozszerzeniu: .png
+20221203	18:23:46	6365e3f1-f384-483f-8c82-abfec05a5255	Error: Nie jesteś zalogowany.
+20221203	18:23:46	11773acb-80e6-4f23-bd17-4217857b5826	Error: Nie jesteś zalogowany.
+20221204	19:56:36	3a37fec9-6ab1-4d70-a287-9e1af5e27571	Error: Token jest niepoprawny
+20221204	19:56:52	7a6e34db-8ea8-4cc1-b59a-0d050ce4ea9f	Error: Malformed part header
+20221204	19:59:22	8fb51911-fbb6-4d51-ae34-0fe98f6c1dde	Error: Malformed part header
+20221204	20:03:26	43a68eaa-f2bd-4597-9b68-351fa23974c3	Error: Malformed part header
+20221204	20:04:26	0290a42d-496a-4b74-94c1-844849fb822b	Error: Brak pliku graficznego.
+20221204	20:05:11	bae91869-3b1c-49aa-9f05-4b4433999e82	Error: Brak pliku graficznego.
+20221204	20:05:12	9b2d069d-8193-4b34-9ab2-188c67579b61	Error: Brak pliku graficznego.
+20221204	20:05:21	48485edd-5d94-477c-98fd-94b64849805e	Error: Brak pliku graficznego.
+20221204	20:05:34	e68c0ffb-d253-4e25-92ad-c5cf5699a1f3	Error: Drużyna już istnieje.
+20221204	20:06:15	f8a97e50-590e-49fc-b3c1-6c5741718f02	Error: Malformed part header
+20221204	20:12:44	4f4e572b-2c48-411e-825e-6b3b16c6bda7	Error: Nie jesteś zalogowany.
+20221204	20:12:44	ca892420-b5d8-42db-8ea4-095b08b5c08b	Error: Nie jesteś zalogowany.
+20221204	20:12:52	3b553e37-a4ac-4823-a768-ecc7d46ecc04	Error: Nie jesteś zalogowany.
+20221204	20:12:52	41734209-0749-44f3-a5aa-7ea02cea0f34	Error: Nie jesteś zalogowany.
+20221204	20:47:50	48fe7e90-7b59-41b0-95fd-5403ce030d53	Error: Brak pliku graficznego.
+20221204	20:48:59	1a85d43f-30d1-4ac9-a3a0-3b02b42f6247	Error: Brak pliku graficznego.
+20221204	20:49:37	e18ea0f1-621c-4878-a7e5-f536209eb5ce	Error: Brak pliku graficznego.
+20221204	20:50:04	cb24d33f-94da-4b76-8462-6e55df5fc6bc	Error: Brak pliku graficznego.
+20221205	19:48:28	b31d07b6-f66e-4cd8-a78f-41e75320bd9c	Error: Nie jesteś zalogowany.
+20221205	19:48:28	0156e8a0-f820-4813-8b90-e7cd8fb77f07	Error: Nie jesteś zalogowany.
+20221205	19:59:06	63949c96-780e-4f0d-825c-422f50b475c4	Error: Brak pliku graficznego.
+20221205	20:03:29	99f57d8a-c471-4ad2-8176-9704324c017f	Error: Brak pliku graficznego.
+20221205	20:04:59	8dd7ab26-2e5b-4efd-b56b-a5f071a66dd8	MulterError: Unexpected field
+20221205	20:08:33	f2f65210-791d-4539-8c3c-22554a3d6cff	Error: Brak pliku graficznego.
+20221205	21:03:13	bb462773-6df8-4804-b971-03125aac2f31	Error: Brak pliku/ów graficznych.

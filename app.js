@@ -75,7 +75,7 @@ app.use(
 );
 app.use(
   "/api/background-image",
-  upload.single("backgroundImage"),
+  upload.array("backgroundImages"),
   require("./routes/background-image-routes")
 );
 app.use(

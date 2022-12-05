@@ -13,7 +13,7 @@ router.post(
   "/",
   filesPayloadExists,
   fileExtensionLimiter([".png", ".jpg", ".jpeg"]),
-  fileResolutionLimiter,
+  // fileResolutionLimiter,
   backgroundImageController.createBackgroundImage
 );
 router.put("/", backgroundImageController.updateBackgroundImage);
