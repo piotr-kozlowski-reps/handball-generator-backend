@@ -4,7 +4,7 @@ const { format } = require("date-fns");
 const createMulterStorage = (multer) => {
   return multer.diskStorage({
     destination: (req, file, cb) => {
-      console.log("originalUrl: ", req.originalUrl);
+      // console.log("originalUrl: ", req.originalUrl);
       switch (req.originalUrl) {
         case "/api/team":
           cb(null, path.join("images", "team-crests"));
@@ -21,7 +21,7 @@ const createMulterStorage = (multer) => {
       }
     },
     filename: (req, file, cb) => {
-      console.log(file);
+      // console.log(file);
       cb(null, createFileName(file));
     },
   });

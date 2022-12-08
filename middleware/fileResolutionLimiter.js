@@ -1,6 +1,6 @@
 const sharp = require("sharp");
-const deleteFile = require("../helpers/deleteFIle");
-const HttpError = require("../helpers/http-error");
+const deleteFile = require("../utils/deleteFIle");
+const HttpError = require("../utils/http-error");
 
 const fileResolutionLimiter = async (req, res, next) => {
   const image = await sharp(req.file.path);

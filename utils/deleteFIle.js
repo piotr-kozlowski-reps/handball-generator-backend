@@ -3,6 +3,16 @@ const { logEvents } = require("../middleware/logEvents");
 const { ERROR_LOGGER } = require("../config/loggerFilesNames");
 const { DELETE_FILE_RESPONSE } = require("../config/deleteFileResponse");
 
+const deleteFiles = (filesPathArray) => {
+  console.log({ filesPathArray });
+  const result = [];
+  filesPathArray.forEach((filePath) => {
+    const deleteResult = deleteFile(filePath);
+    result.push(deleteResult);
+  });
+  return result;
+};
+
 const deleteFile = (filePath) => {
   console.log(`deleting file: ${filePath}`);
 
@@ -19,4 +29,4 @@ const deleteFile = (filePath) => {
   return DELETE_FILE_RESPONSE.fileNotFound;
 };
 
-module.exports = deleteFile;
+module.exports = { deleteFiles };

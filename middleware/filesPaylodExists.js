@@ -1,4 +1,4 @@
-const HttpError = require("../helpers/http-error");
+const HttpError = require("../utils/http-error");
 
 const filesPayloadExists = (req, res, next) => {
   if (!req.file && !req.files) {

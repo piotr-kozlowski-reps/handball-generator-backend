@@ -1,9 +1,9 @@
 const { DELETE_FILE_RESPONSE } = require("../config/deleteFileResponse");
-const deleteFile = require("../helpers/deleteFIle");
-const HttpError = require("../helpers/http-error");
+const { deleteFiles } = require("../utils/deleteFIle");
+const HttpError = require("../utils/http-error");
 const BackgroundImage = require("../models/BackgroundImage");
 const { checkMongoIdLength } = require("../utils/checkMongoIDLength");
-const { createThumbnail } = require("../utils/createThumbnail");
+const { createThumbnails } = require("../utils/createThumbnail");
 
 const getAllBackgroundImages = async (req, res, next) => {
   let backgrounds;
@@ -79,63 +79,72 @@ const createBackgroundImage = async (req, res, next) => {
   //   }
   // ],
 
-  const { backgroundImageName } = req.body;
-  if (!backgroundImageName)
-    return res.status(400).json({ message: "Nazwa tła jest wymagana." });
+  /////////TODO
+  // const { backgroundImageName } = req.body;
+  // if (!backgroundImageName)
+  //   return res.status(400).json({ message: "Nazwa tła jest wymagana." });
 
-  let foundBackground;
-  try {
-    foundBackground = await BackgroundImage.findOne({
-      backgroundImageName: backgroundImageName,
-    });
-  } catch (err) {
-    return next(
-      new HttpError(
-        "Nie udało się zweryfikować czy plik tła już istnieje, spróbuj ponownie.",
-        500
-      )
-    );
-  }
-  if (foundBackground) {
-    deleteFile(req.file.path);
-    return next(new HttpError("Plik tła o takiej nazwie już istnieje.", 400));
-  }
+  // let foundBackground;
+  // try {
+  //   foundBackground = await BackgroundImage.findOne({
+  //     backgroundImageName: backgroundImageName,
+  //   });
+  // } catch (err) {
+  //   return next(
+  //     new HttpError(
+  //       "Nie udało się zweryfikować czy plik tła już istnieje, spróbuj ponownie.",
+  //       500
+  //     )
+  //   );
+  // }
+  // if (foundBackground) {
+  //   deleteFile(req.file.path);
+  //   return next(new HttpError("Plik tła o takiej nazwie już istnieje.", 400));
+  // }
+  /////////TODO
 
   //thumbnail creation
   let resultOfThumbnailCreation;
   try {
-    resultOfThumbnailCreation = await createThumbnail(req.file.path);
+    resultOfThumbnailCreation = await createThumbnails(req.files);
   } catch (error) {
-    deleteFile(req.file.path);
+    deleteFiles(req.file.path);
     return next(
       new HttpError("Nie udało się stworzyć minimalki pliku tła.", 500)
     );
   }
+
+  console.log(resultOfThumbnailCreation);
 
   // if failed delete original file and thumbnail
-  if (
-    !resultOfThumbnailCreation.newThumbnail &&
-    resultOfThumbnailCreation.thumbnailName
-  ) {
-    deleteFile(req.file.path);
-    deleteFile(resultOfThumbnailCreation.thumbnailNames);
+  if (!resultOfThumbnailCreation || resultOfThumbnailCreation.length < 1) {
+    deleteFiles(req.files.map((file) => file.path));
+    deleteFiles(
+      resultOfThumbnailCreation.map((thumbnail) => thumbnail.thumbnailPath)
+    );
     return next(
       new HttpError("Nie udało się stworzyć minimalki pliku tła.", 500)
     );
   }
 
-  // if failed with both object values delete only original file
+  ////////////////////////////
+
+  // if any of returned object from thumbnails creation lacks newThumbnail/thumbnailPath properties
+  //-> hence something went wrong
+  //->  delete all original files
+  //-> delete all well created thumbnails
+
   if (
     !resultOfThumbnailCreation.newThumbnail &&
     !resultOfThumbnailCreation.thumbnailName
   ) {
-    deleteFile(req.file.path);
+    // deleteFile(req.file.path); //TODO
     return next(
       new HttpError("Nie udało się stworzyć minimalki pliku tła.", 500)
     );
   }
 
-  console.log({ resultOfThumbnailCreation });
+  // console.log({ resultOfThumbnailCreation });
 
   const newBackgroundImage = new BackgroundImage({
     backgroundImageName,
@@ -147,7 +156,7 @@ const createBackgroundImage = async (req, res, next) => {
   let result;
   try {
     result = await newBackgroundImage.save();
-    console.log(result);
+    // console.log(result);
   } catch (err) {
     console.log(err);
     deleteFile(req.file.path);

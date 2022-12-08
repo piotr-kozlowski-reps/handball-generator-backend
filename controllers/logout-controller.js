@@ -1,6 +1,6 @@
 const bcrypt = require("bcryptjs");
 const User = require("../models/User");
-const HttpError = require("../helpers/http-error");
+const HttpError = require("../utils/http-error");
 const jwt = require("jsonwebtoken");
 
 const logoutHandler = async (req, res, next) => {

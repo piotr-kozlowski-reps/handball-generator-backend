@@ -1,15 +1,14 @@
 const sharp = require("sharp");
 const path = require("path");
-const HttpError = require("../helpers/http-error");
+const HttpError = require("./http-error");
 
 const createThumbnails = async (filePaths) => {
-  const result = []; //?
+  const result = [];
   try {
-    filePaths.forEach(async (path) => {
-      const resultThumbnailInfo = await createThumbnail(path); //?
-      console.log(resultThumbnailInfo); //?
+    for (let i = 0; i < filePaths.length; i++) {
+      const resultThumbnailInfo = await createThumbnail(filePaths[i].path);
       result.push(resultThumbnailInfo);
-    });
+    }
   } catch (error) {
     console.error(error);
   }
@@ -25,7 +24,7 @@ const createThumbnail = async (filePath) => {
     .toLowerCase();
 
   //thumbnail name
-  const thumbnailName = `${directoriesPath}${fileNameWithoutExtension}__thumbnail.jpg`;
+  const thumbnailPath = `${directoriesPath}${fileNameWithoutExtension}__thumbnail.jpg`;
 
   //create thumbnail
   let newThumbnail;
@@ -38,12 +37,12 @@ const createThumbnail = async (filePath) => {
         background: { r: 0, g: 0, b: 0, alpha: 0.5 },
       })
       .toFormat("jpg", { quality: 30 })
-      .toFile(thumbnailName);
+      .toFile(thumbnailPath);
   } catch (error) {
     console.error(error);
   }
 
-  return { newThumbnail, thumbnailName };
+  return { newThumbnail, thumbnailPath };
 };
 
 module.exports = { createThumbnails };

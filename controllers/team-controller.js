@@ -1,5 +1,5 @@
-const deleteFile = require("../helpers/deleteFIle");
-const HttpError = require("../helpers/http-error");
+const deleteFile = require("../utils/deleteFIle");
+const HttpError = require("../utils/http-error");
 const Team = require("../models/Team");
 const { DELETE_FILE_RESPONSE } = require("../config/deleteFileResponse");
 const { checkMongoIdLength } = require("../utils/checkMongoIDLength");

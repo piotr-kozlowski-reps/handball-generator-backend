@@ -761,3 +761,19 @@ Dopuszczalna wysokość pliku to: 10 px.
 20221205	20:04:59	8dd7ab26-2e5b-4efd-b56b-a5f071a66dd8	MulterError: Unexpected field
 20221205	20:08:33	f2f65210-791d-4539-8c3c-22554a3d6cff	Error: Brak pliku graficznego.
 20221205	21:03:13	bb462773-6df8-4804-b971-03125aac2f31	Error: Brak pliku/ów graficznych.
+20221208	17:50:43	5dcd5c6b-7fea-4dbf-a8a1-b6227858e7ee	Error: Nie jesteś zalogowany.
+20221208	17:50:43	c6896906-e099-4d6e-a36e-b5a6025c4df7	Error: Nie jesteś zalogowany.
+20221208	18:24:38	183d8c31-a739-4b95-8dbd-20527d23f25a	Error: Nie udało się zweryfikować czy plik tła już istnieje, spróbuj ponownie.
+20221208	18:45:40	420126e3-67cf-4ee9-a0c4-ab33c1360a4f	Error: Nie udało się stworzyć minimalki pliku tła.
+20221208	18:45:55	d347a182-35a4-41e7-880c-30afb40183dd	Error: Nie udało się stworzyć minimalki pliku tła.
+20221208	18:46:50	d3b432ff-b6b8-4133-ab6c-fb1fd8812b0b	Error: Nie udało się stworzyć minimalki pliku tła.
+20221208	18:47:35	d3a524bf-ec38-4812-804b-862ad3507205	Error: Nie udało się stworzyć minimalki pliku tła.
+20221208	18:48:14	58a76065-5dbe-4b36-bdaf-48e0f7765e76	Error: Nie udało się stworzyć minimalki pliku tła.
+20221208	18:48:39	8a84ace8-37b4-40e6-9791-60f5a2ed07cb	Error: Nie udało się stworzyć minimalki pliku tła.
+20221208	18:49:26	fe2183ad-91e9-4883-8344-5ef1b2bd1d55	Error: Nie udało się stworzyć minimalki pliku tła.
+20221208	18:50:18	0f603662-81ab-4e6d-b870-243cd92030c2	Error: Nie udało się stworzyć minimalki pliku tła.
+20221208	18:50:38	8e53c8b5-299d-41e5-bc2e-67e5d34cc4e6	Error: Nie udało się stworzyć minimalki pliku tła.
+20221208	18:52:23	06d83fba-d4cc-4315-a5bf-5b73a76508e1	Error: Nie udało się stworzyć minimalki pliku tła.
+20221208	18:53:31	f0adbf8c-e0cf-4acd-a5e5-b772bcc44d79	Error: Nie udało się stworzyć minimalki pliku tła.
+20221208	18:54:34	dd2616cf-0df9-4693-b0a4-7308aa524562	Error: Nie udało się stworzyć minimalki pliku tła.
+20221208	18:55:43	7a70a57d-d2c2-452b-945b-fb41d9720a2a	Error: Nie udało się stworzyć minimalki pliku tła.

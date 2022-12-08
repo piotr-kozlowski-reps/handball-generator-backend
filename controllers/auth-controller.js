@@ -1,6 +1,6 @@
 const bcrypt = require("bcryptjs");
 const User = require("../models/User");
-const HttpError = require("../helpers/http-error");
+const HttpError = require("../utils/http-error");
 const jwt = require("jsonwebtoken");
 
 const authHandler = async (req, res, next) => {
@@ -88,7 +88,7 @@ const authHandler = async (req, res, next) => {
   //update user in DB with refreshToken
   foundUser.refreshToken = refreshToken;
   const result = await foundUser.save();
-  console.log(result);
+  // console.log(result);
 
   //secure cookie set
   res.cookie("jwt", refreshToken, {

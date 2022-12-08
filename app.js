@@ -7,7 +7,7 @@ const cookieParser = require("cookie-parser");
 const path = require("path");
 const { createMulterStorage } = require("./config/createMulterStorage");
 
-const HttpError = require("./helpers/http-error");
+const HttpError = require("./utils/http-error");
 const { logger } = require("./middleware/logEvents");
 const connectDB = require("./config/bdConn");
 const credentials = require("./middleware/credentials");

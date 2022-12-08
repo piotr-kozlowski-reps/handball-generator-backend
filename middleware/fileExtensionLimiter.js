@@ -1,14 +1,14 @@
 const path = require("path");
-const deleteFile = require("../helpers/deleteFIle");
-const HttpError = require("../helpers/http-error");
+const deleteFile = require("../utils/deleteFIle");
+const HttpError = require("../utils/http-error");
 
 const fileExtensionLimiter = (allowedExtensionsArray) => {
   return (req, res, next) => {
     const file = req.file;
     const files = req.files;
 
-    console.log({ file });
-    console.log({ files });
+    // console.log({ file });
+    // console.log({ files });
 
     let isAllowed = true;
     if (file) {
