@@ -1,4 +1,4 @@
-const { format } = require("date-fns");
+import { format } from "date-fns";
 const { v4: uuid } = require("uuid");
 const { REQUEST_LOGGER } = require("../config/loggerFilesNames");
 
