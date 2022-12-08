@@ -2,6 +2,20 @@ const sharp = require("sharp");
 const path = require("path");
 const HttpError = require("../helpers/http-error");
 
+const createThumbnails = async (filePaths) => {
+  const result = []; //?
+  try {
+    filePaths.forEach(async (path) => {
+      const resultThumbnailInfo = await createThumbnail(path); //?
+      console.log(resultThumbnailInfo); //?
+      result.push(resultThumbnailInfo);
+    });
+  } catch (error) {
+    console.error(error);
+  }
+  return result;
+};
+
 const createThumbnail = async (filePath) => {
   const fileNameFull = path.basename(filePath);
   const directoriesPath = filePath.replace(fileNameFull, "");
@@ -32,4 +46,4 @@ const createThumbnail = async (filePath) => {
   return { newThumbnail, thumbnailName };
 };
 
-module.exports = { createThumbnail };
+module.exports = { createThumbnails };
