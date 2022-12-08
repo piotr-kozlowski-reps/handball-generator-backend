@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const { logEvents } = require("../middleware/logEvents");
+import mongoose from "mongoose";
+import { logEvents } from "../middleware/logEvents";
 const { ERROR_LOGGER } = require("./loggerFilesNames");
 
 const connectDB = async () => {
@@ -17,4 +17,6 @@ const connectDB = async () => {
   }
 };
 
-module.exports = connectDB;
+export default connectDB;
+
+// module.exports = connectDB;
