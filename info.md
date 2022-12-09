@@ -4,3 +4,6 @@ package.json dla jsa:
 "dev": "nodemon -L app.js",
 "start": "node app.js"
 },
+
+// ACCESS_TOKEN_EXPIRATION=300m
+// REFRESH_TOKEN_EXPIRATION=1d

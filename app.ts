@@ -4,95 +4,97 @@ const app: Express = express();
 import dotenv from "dotenv";
 dotenv.config();
 
-// const cors = require("cors");
+import cors from "cors";
 import mongoose from "mongoose";
-// const cookieParser = require("cookie-parser");
-// const path = require("path");
-// const { createMulterStorage } = require("./config/createMulterStorage");
+import cookieParser from "cookie-parser";
+import path from "path";
+import { createMulterStorage } from "./config/createMulterStorage";
 
-// const HttpError = require("./utils/http-error");
-// const { logger } = require("./middleware/logEvents");
+import HttpError from "./utils/http-error";
+import { logger } from "./middleware/logEvents";
 import connectDB from "./config/bdConn";
 // const credentials = require("./middleware/credentials");
 // const allowedOrigins = require("./config/allowedOrigins");
-// const errorHandler = require("./middleware/errorHandler");
-// const verifyJWT = require("./middleware/verifyJWT");
+import errorHandler from "./middleware/errorHandler";
+import verifyJWT from "./middleware/verifyJWT";
+
+import authRoutes from "./routes/auth-routes";
+import refreshRoutes from "./routes/refresh-routes";
+import logoutRoutes from "./routes/logout-routes";
+import teamRoutes from "./routes/team-routes";
+import backgroundImage from "./routes/background-image-routes";
 
 // /** connect to MongoDB */
 connectDB();
 
 // /** custom middleware logger */
-// app.use(logger);
+app.use(logger);
 
-// /** show request */
-// // app.use((req, res, next) => {
-// //   console.log(req);
-// //   next();
-// // });
+/** show request middleware - just consol.log it when needed*/
+// app.use((req, res, next) => {
+//   console.log(req);
+//   next();
+// });
 
 // /** static files server */
-// app.use("/images", express.static(path.join(__dirname, "images")));
+app.use("/images", express.static(path.join(__dirname, "images")));
 
-// //multer
-// const multer = require("multer");
-// const storage = createMulterStorage(multer);
-// const upload = multer({ storage: storage });
+//multer
+import multer from "multer";
+const storage = createMulterStorage(multer);
+const upload = multer({ storage: storage });
 
-// /**  custom handler ->  options credentials add when request from allowOrigins array - needs to be before CORS() */
-// // app.use(credentials);
-// //TODO: nie działało mi w chromie podczas developmentu - nie wiem dlaczego
+/**  custom handler ->  options credentials add when request from allowOrigins array - needs to be before CORS() */
+// app.use(credentials);
+//TODO: nie działało mi w chromie podczas developmentu - nie wiem dlaczego
 
-// /**  Cross Origin Resource Sharing */
-// let corsConfig = {
-//   origin: true,
-//   credentials: true,
-// };
-// app.use(cors(corsConfig));
-// app.options("*", cors(corsConfig));
+/**  Cross Origin Resource Sharing */
+let corsConfig = {
+  origin: true,
+  credentials: true,
+};
+app.use(cors(corsConfig));
+app.options("*", cors(corsConfig));
 
-// /** express middleware to handle urlencoded form data */
-// app.use(express.urlencoded({ extended: true }));
+/** express middleware to handle urlencoded form data */
+app.use(express.urlencoded({ extended: true }));
 
-// /** express middleware for json data */
-// app.use(express.json());
+/** express middleware for json data */
+app.use(express.json());
 
-// /** middleware for cookies */
-// app.use(cookieParser());
+/** middleware for cookies */
+app.use(cookieParser());
 
-// /** free accessed routes */
-// app.use("/api/auth", require("./routes/auth-routes"));
-// app.use("/api/refresh", require("./routes/refresh-routes"));
-// app.use("/api/logout", require("./routes/logout-routes"));
+/** free accessed routes */
+app.use("/api/auth", authRoutes);
+app.use("/api/refresh", refreshRoutes);
+app.use("/api/logout", logoutRoutes);
 
-// /** protected routes */
-// app.use(verifyJWT);
-// app.use(
-//   "/api/team",
-//   upload.single("teamCrestImage"),
-//   require("./routes/team-routes")
-// );
+/** protected routes */
+app.use(verifyJWT);
+app.use("/api/team", upload.single("teamCrestImage"), teamRoutes);
 // app.use(
 //   "/api/sponsors-bar",
 //   upload.single("sponsorsBarImage"),
 //   require("./routes/sponsors-bar-routes")
 // );
-// app.use(
-//   "/api/background-image",
-//   upload.array("backgroundImages"),
-//   require("./routes/background-image-routes")
-// );
+app.use(
+  "/api/background-image",
+  upload.array("backgroundImages"),
+  backgroundImage
+);
 // app.use(
 //   "/api/game-name",
 //   upload.single("gameImage"),
 //   require("./routes/game-name-routes")
 // );
 
-// /**  error handling */
-// app.use((req, res, next) => {
-//   return next(new HttpError("Could not find this route.", 404));
-// });
+/**  error handling */
+app.use((req, res, next) => {
+  return next(new HttpError("Could not find this route.", 404));
+});
 
-// app.use(errorHandler);
+app.use(errorHandler);
 
 // /** listener */
 mongoose.connection.once("open", () => {

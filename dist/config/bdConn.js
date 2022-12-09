@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
 const logEvents_1 = require("../middleware/logEvents");
-const { ERROR_LOGGER } = require("./loggerFilesNames");
+const loggerFilesNames_1 = require("./loggerFilesNames");
 const connectDB = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         yield mongoose_1.default.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.qujvakl.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`, {
@@ -23,9 +23,9 @@ const connectDB = () => __awaiter(void 0, void 0, void 0, function* () {
         });
     }
     catch (err) {
-        (0, logEvents_1.logEvents)(err.message, ERROR_LOGGER);
+        const error = err;
+        (0, logEvents_1.logEvents)(error.message || "Problem with connection with mongoDB.", loggerFilesNames_1.ERROR_LOGGER);
         console.error(err);
     }
 });
 exports.default = connectDB;
-// module.exports = connectDB;

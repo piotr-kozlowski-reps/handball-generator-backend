@@ -761,6 +761,7 @@ Dopuszczalna wysokość pliku to: 10 px.
 20221205	20:04:59	8dd7ab26-2e5b-4efd-b56b-a5f071a66dd8	MulterError: Unexpected field
 20221205	20:08:33	f2f65210-791d-4539-8c3c-22554a3d6cff	Error: Brak pliku graficznego.
 20221205	21:03:13	bb462773-6df8-4804-b971-03125aac2f31	Error: Brak pliku/ów graficznych.
+<<<<<<< HEAD
 20221208	17:50:43	5dcd5c6b-7fea-4dbf-a8a1-b6227858e7ee	Error: Nie jesteś zalogowany.
 20221208	17:50:43	c6896906-e099-4d6e-a36e-b5a6025c4df7	Error: Nie jesteś zalogowany.
 20221208	18:24:38	183d8c31-a739-4b95-8dbd-20527d23f25a	Error: Nie udało się zweryfikować czy plik tła już istnieje, spróbuj ponownie.
@@ -777,3 +778,13 @@ Dopuszczalna wysokość pliku to: 10 px.
 20221208	18:53:31	f0adbf8c-e0cf-4acd-a5e5-b772bcc44d79	Error: Nie udało się stworzyć minimalki pliku tła.
 20221208	18:54:34	dd2616cf-0df9-4693-b0a4-7308aa524562	Error: Nie udało się stworzyć minimalki pliku tła.
 20221208	18:55:43	7a70a57d-d2c2-452b-945b-fb41d9720a2a	Error: Nie udało się stworzyć minimalki pliku tła.
+=======
+20221206	07:56:19	45a111db-c88e-40d6-824f-40b7cfdafd17	Error: Nie jesteś zalogowany.
+20221206	07:56:19	bf0e4f35-5c93-4405-a9f4-6175f7f695a5	Error: Nie jesteś zalogowany.
+20221206	07:58:46	a10dd99a-5d13-4d63-80d7-f33ae38c7701	Error: Nie jesteś zalogowany.
+20221206	07:58:46	c88b4b61-562a-40c2-b4b4-5dd400f61cf5	Error: Nie jesteś zalogowany.
+20221206	08:07:19	037b1116-eba1-42b4-b1b4-2c7dcceaf1ec	Error: Nie jesteś zalogowany.
+20221206	08:07:19	dda7ae9e-c837-4b3f-bd7b-50949c65b15e	Error: Nie jesteś zalogowany.
+20221206	08:18:53	952c64e3-f649-4b54-a854-07fe0ab2c333	Error: Nie jesteś zalogowany.
+20221206	08:18:53	e8c6fc0d-f9d1-4850-9d92-c4ca3c2d855c	Error: Nie jesteś zalogowany.
+>>>>>>> ea7768e (update ...)

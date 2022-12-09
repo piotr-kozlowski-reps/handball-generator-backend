@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
+import mongoose, { ConnectOptions } from "mongoose";
 import { logEvents } from "../middleware/logEvents";
-const { ERROR_LOGGER } = require("./loggerFilesNames");
+import { ERROR_LOGGER } from "./loggerFilesNames";
 
 const connectDB = async () => {
   try {
@@ -9,14 +9,17 @@ const connectDB = async () => {
       {
         useUnifiedTopology: true,
         useNewUrlParser: true,
-      }
+      } as ConnectOptions
     );
   } catch (err) {
-    logEvents(err.message, ERROR_LOGGER);
+    const error: any = err;
+    logEvents(
+      error.message || "Problem with connection with mongoDB.",
+      ERROR_LOGGER
+    );
+
     console.error(err);
   }
 };
 
 export default connectDB;
-
-// module.exports = connectDB;

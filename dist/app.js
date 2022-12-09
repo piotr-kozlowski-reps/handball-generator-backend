@@ -7,80 +7,77 @@ const express_1 = __importDefault(require("express"));
 const app = (0, express_1.default)();
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-// const cors = require("cors");
+const cors_1 = __importDefault(require("cors"));
 const mongoose_1 = __importDefault(require("mongoose"));
-// const cookieParser = require("cookie-parser");
-// const path = require("path");
-// const { createMulterStorage } = require("./config/createMulterStorage");
-// const HttpError = require("./utils/http-error");
-// const { logger } = require("./middleware/logEvents");
+const cookie_parser_1 = __importDefault(require("cookie-parser"));
+const path_1 = __importDefault(require("path"));
+const createMulterStorage_1 = require("./config/createMulterStorage");
+const http_error_1 = __importDefault(require("./utils/http-error"));
+const logEvents_1 = require("./middleware/logEvents");
 const bdConn_1 = __importDefault(require("./config/bdConn"));
 // const credentials = require("./middleware/credentials");
 // const allowedOrigins = require("./config/allowedOrigins");
-// const errorHandler = require("./middleware/errorHandler");
-// const verifyJWT = require("./middleware/verifyJWT");
+const errorHandler_1 = __importDefault(require("./middleware/errorHandler"));
+const verifyJWT_1 = __importDefault(require("./middleware/verifyJWT"));
+const auth_routes_1 = __importDefault(require("./routes/auth-routes"));
+const refresh_routes_1 = __importDefault(require("./routes/refresh-routes"));
+const logout_routes_1 = __importDefault(require("./routes/logout-routes"));
+const team_routes_1 = __importDefault(require("./routes/team-routes"));
+const background_image_routes_1 = __importDefault(require("./routes/background-image-routes"));
 // /** connect to MongoDB */
 (0, bdConn_1.default)();
 // /** custom middleware logger */
-// app.use(logger);
-// /** show request */
-// // app.use((req, res, next) => {
-// //   console.log(req);
-// //   next();
-// // });
+app.use(logEvents_1.logger);
+/** show request middleware - just consol.log it when needed*/
+// app.use((req, res, next) => {
+//   console.log(req);
+//   next();
+// });
 // /** static files server */
-// app.use("/images", express.static(path.join(__dirname, "images")));
-// //multer
-// const multer = require("multer");
-// const storage = createMulterStorage(multer);
-// const upload = multer({ storage: storage });
-// /**  custom handler ->  options credentials add when request from allowOrigins array - needs to be before CORS() */
-// // app.use(credentials);
-// //TODO: nie działało mi w chromie podczas developmentu - nie wiem dlaczego
-// /**  Cross Origin Resource Sharing */
-// let corsConfig = {
-//   origin: true,
-//   credentials: true,
-// };
-// app.use(cors(corsConfig));
-// app.options("*", cors(corsConfig));
-// /** express middleware to handle urlencoded form data */
-// app.use(express.urlencoded({ extended: true }));
-// /** express middleware for json data */
-// app.use(express.json());
-// /** middleware for cookies */
-// app.use(cookieParser());
-// /** free accessed routes */
-// app.use("/api/auth", require("./routes/auth-routes"));
-// app.use("/api/refresh", require("./routes/refresh-routes"));
-// app.use("/api/logout", require("./routes/logout-routes"));
-// /** protected routes */
-// app.use(verifyJWT);
-// app.use(
-//   "/api/team",
-//   upload.single("teamCrestImage"),
-//   require("./routes/team-routes")
-// );
+app.use("/images", express_1.default.static(path_1.default.join(__dirname, "images")));
+//multer
+const multer_1 = __importDefault(require("multer"));
+const storage = (0, createMulterStorage_1.createMulterStorage)(multer_1.default);
+const upload = (0, multer_1.default)({ storage: storage });
+/**  custom handler ->  options credentials add when request from allowOrigins array - needs to be before CORS() */
+// app.use(credentials);
+//TODO: nie działało mi w chromie podczas developmentu - nie wiem dlaczego
+/**  Cross Origin Resource Sharing */
+let corsConfig = {
+    origin: true,
+    credentials: true,
+};
+app.use((0, cors_1.default)(corsConfig));
+app.options("*", (0, cors_1.default)(corsConfig));
+/** express middleware to handle urlencoded form data */
+app.use(express_1.default.urlencoded({ extended: true }));
+/** express middleware for json data */
+app.use(express_1.default.json());
+/** middleware for cookies */
+app.use((0, cookie_parser_1.default)());
+/** free accessed routes */
+app.use("/api/auth", auth_routes_1.default);
+app.use("/api/refresh", refresh_routes_1.default);
+app.use("/api/logout", logout_routes_1.default);
+/** protected routes */
+app.use(verifyJWT_1.default);
+app.use("/api/team", upload.single("teamCrestImage"), team_routes_1.default);
 // app.use(
 //   "/api/sponsors-bar",
 //   upload.single("sponsorsBarImage"),
 //   require("./routes/sponsors-bar-routes")
 // );
-// app.use(
-//   "/api/background-image",
-//   upload.array("backgroundImages"),
-//   require("./routes/background-image-routes")
-// );
+app.use("/api/background-image", upload.array("backgroundImages"), background_image_routes_1.default);
 // app.use(
 //   "/api/game-name",
 //   upload.single("gameImage"),
 //   require("./routes/game-name-routes")
 // );
-// /**  error handling */
-// app.use((req, res, next) => {
-//   return next(new HttpError("Could not find this route.", 404));
-// });
-// app.use(errorHandler);
+/**  error handling */
+app.use((req, res, next) => {
+    return next(new http_error_1.default("Could not find this route.", 404));
+});
+app.use(errorHandler_1.default);
 // /** listener */
 mongoose_1.default.connection.once("open", () => {
     console.log("Connected to MongoDB");

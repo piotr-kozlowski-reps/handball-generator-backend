@@ -1,10 +1,10 @@
-const { createThumbnail } = require("../createThumbnail");
+const { createThumbnails } = require("../createThumbnail");
 
 describe("createThumbnail", () => {
   it("should  create thumbnail and return it's new path (with __thumnbnail added) ", async () => {
-    let result1 = await createThumbnail(
-      "images\\background-images\\sklad_uklad_lista_wyjazd___20221116-131732.jpg"
-    );
+    let result1 = await createThumbnails([
+      "images\\background-images\\sklad_uklad_lista_wyjazd___20221116-131732.jpg",
+    ]);
     expect(result1).toEqual({
       newThumbnail: undefined,
       thumbnailName:

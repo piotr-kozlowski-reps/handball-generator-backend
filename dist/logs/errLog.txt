@@ -1,0 +1,148 @@
+20221209	10:01:37	c518e632-689f-47d7-9323-541da7ee6dad	querySrv ENOTFOUND _mongodb._tcp.cluster0.qujvakl.mongodb.ne
+20221209	15:14:55	cc7fe238-1d31-482b-adf5-e3a76b27a235	Error: Niepoprawne dane, spróbuj raz jeszcze.
+20221209	15:15:00	67d3d933-042d-4c54-bd15-5093d053ace1	Error: Niepoprawne dane, spróbuj raz jeszcze.
+20221209	15:15:04	bfa376fa-00a7-434d-8dce-1a2f227d3fe5	Error: Nie jesteś zalogowany.
+20221209	15:16:23	62aff1ba-934c-43ee-8a44-b525e2421705	Error: Nie jesteś zalogowany.
+20221209	15:16:23	d088acfc-e8a0-4403-840c-e18d10de0fe6	Error: Nie jesteś zalogowany.
+20221209	15:21:49	08e33488-6b83-40fa-8590-72c722bc47da	Error: Could not find this route.
+20221209	15:21:49	c4fa81af-17fc-47c0-b67a-a609c0a2ef2b	Error: Could not find this route.
+20221209	15:21:49	2d92079c-6ce9-4a5e-870c-0dcfe95147d0	Error: Could not find this route.
+20221209	15:21:50	1c3bd83e-7574-4906-b660-b39a5afb478e	Error: Could not find this route.
+20221209	15:21:50	d0269fdc-03a8-4f4d-b472-ab20b92e0b61	Error: Could not find this route.
+20221209	15:21:50	ed9b9c95-cdb6-4f0c-9292-7d21a2e95117	Error: Could not find this route.
+20221209	15:21:52	81291ea9-6eff-4c41-88ae-7f4569061852	Error: Could not find this route.
+20221209	15:21:52	11d4fd2b-c987-4d3f-9ea9-01547191feca	Error: Could not find this route.
+20221209	15:21:52	cde07ea4-6211-4363-87e2-d728413ee6f2	Error: Could not find this route.
+20221209	15:34:13	9f3325c0-04c3-4492-b317-eb987d417ba1	Error: Nie masz dostępu do tych zasobów.
+20221209	15:34:30	b7b5dc65-d89f-48df-933b-81ae31b3b3b2	Error: Nie masz dostępu do tych zasobów.
+20221209	15:34:48	3fd69f5d-0afa-4639-9c6b-7f0ed5a3d0a1	Error: Nie jesteś zalogowany.
+20221209	15:34:48	e348a4a5-7ca0-4256-9f1d-0f20593929e7	Error: Nie jesteś zalogowany.
+20221209	15:35:00	057afa94-62c6-4e6c-882c-18885def0800	Error: Could not find this route.
+20221209	15:35:01	27cb0a3b-54d8-4734-80ce-3f6a13226a96	Error: Could not find this route.
+20221209	15:35:03	c020c92c-71fe-4705-825e-fa6d8e1971e0	Error: Could not find this route.
+20221209	15:35:07	672d8dac-19ea-45b0-9cdf-4d102f80046a	Error: Could not find this route.
+20221209	15:36:18	c263f22c-b44d-4718-a62b-bca4483b47cd	Error: Could not find this route.
+20221209	15:36:19	ae08fab5-8a0d-4f38-85cb-5736c305afa2	Error: Could not find this route.
+20221209	15:36:21	ad4955d4-b3a3-42bb-a566-9a8645f7f872	Error: Could not find this route.
+20221209	15:36:25	202e8838-e1b5-4270-b303-3653c28fb6af	Error: Could not find this route.
+20221209	15:36:50	e1a0e723-7904-4720-90c3-4d65e7e43a14	Error: Could not find this route.
+20221209	15:36:51	9ed24c87-4ec1-42e7-aa9d-39e38e16ad52	Error: Could not find this route.
+20221209	15:36:53	0ba683f7-e86f-479a-87c1-a114e0093c25	Error: Could not find this route.
+20221209	15:36:58	b93bc8c0-c879-467f-a1ca-46e4e2eb9de9	Error: Could not find this route.
+20221209	15:37:02	989f4c85-27e6-4e11-a9cf-8d5377e56997	Error: Nie jesteś zalogowany.
+20221209	15:37:02	5ef1aecf-2bcd-4974-8272-331417c530dc	Error: Nie jesteś zalogowany.
+20221209	15:37:24	a683cd87-9563-499a-8a0a-d8611db4b7db	Error: Could not find this route.
+20221209	15:37:25	11971d5c-e58e-4477-81e8-1037f1c503c4	Error: Could not find this route.
+20221209	15:37:27	c21806c0-75f5-45e4-972c-8bf1e59fd82d	Error: Could not find this route.
+20221209	15:37:31	d462fedb-037e-47b1-90c0-49378ca982f0	Error: Could not find this route.
+20221209	15:39:01	4b864926-2fed-44bf-af62-b75cace8887f	Error: Could not find this route.
+20221209	15:39:03	f2d359ec-40d1-4937-abe3-60d9454bc1bc	Error: Could not find this route.
+20221209	15:39:05	85b9f80d-dcfc-41fc-b559-96c02b8d02da	Error: Could not find this route.
+20221209	15:39:09	a709470b-9e68-4c8f-b5a1-fd6a5e5ec894	Error: Could not find this route.
+20221209	16:10:41	7ecf4dc9-6100-4a3b-96de-16235386ac32	Error: Token jest niepoprawny
+20221209	16:16:54	27864aca-5be9-4eea-b73a-aad22cc3b8fc	Error: Token jest niepoprawny
+20221209	16:18:02	5f02022a-64be-4e72-8227-7401f739c963	Error: Dostęp zabroniony.
+20221209	16:18:02	f6389cc3-fbc9-4806-beb3-0a75ebcaa476	Error: Dostęp zabroniony.
+20221209	16:18:08	07eba313-65a1-49d6-9556-609862d1028a	Error: Nie masz dostępu do tych zasobów.
+20221209	16:18:08	64000932-e0de-4a8a-9a81-b78d4b097215	Error: Nie masz dostępu do tych zasobów.
+20221209	16:18:08	0bfaea41-ed4a-4443-8e23-636c04672cdc	Error: Nie masz dostępu do tych zasobów.
+20221209	16:18:08	20466e7b-88a7-4e43-8d62-468a40ea3dea	Error: Nie masz dostępu do tych zasobów.
+20221209	16:18:08	30dfc50c-7ee9-425f-88f2-2c800b07e958	Error: Nie masz dostępu do tych zasobów.
+20221209	16:18:08	8da87d3c-ae61-450a-b3ae-96e70bc5f265	Error: Nie masz dostępu do tych zasobów.
+20221209	16:18:08	9411b935-2f7c-41f7-ae68-70da1930eb51	Error: Nie masz dostępu do tych zasobów.
+20221209	16:18:31	de18a479-de30-4994-8f04-988a5c3bd2d7	Error: Nie masz dostępu do tych zasobów.
+20221209	16:18:31	f2e43f44-b90d-4877-b559-bf7d4f3507dd	Error: Nie masz dostępu do tych zasobów.
+20221209	16:18:31	2f9b6fe5-1b9f-483a-afa8-2d3b9f3f7ea2	Error: Nie masz dostępu do tych zasobów.
+20221209	16:18:31	d52cec0b-8345-407a-a781-1930286aaabf	Error: Nie masz dostępu do tych zasobów.
+20221209	16:18:31	eac78b36-2d07-4000-ab5e-2f5033843ef7	Error: Nie masz dostępu do tych zasobów.
+20221209	16:18:31	6b69643b-e1c7-4c94-ad3d-fdbf21083812	Error: Nie masz dostępu do tych zasobów.
+20221209	16:18:31	83c5c437-1252-4bb9-90a5-5ae3180ecf79	Error: Nie masz dostępu do tych zasobów.
+20221209	16:18:36	269ebb68-5bc6-4e5a-ad40-3ed5a4a41ebd	Error: Nie masz dostępu do tych zasobów.
+20221209	16:18:36	0e696aac-994c-4daf-9cce-6ba518120d4e	Error: Nie masz dostępu do tych zasobów.
+20221209	16:18:36	b2d53fa5-3f0c-475b-8e33-813c3d0e5fce	Error: Nie masz dostępu do tych zasobów.
+20221209	16:18:36	3c6c8967-0929-4eac-ade8-813ff2897788	Error: Nie masz dostępu do tych zasobów.
+20221209	16:18:36	e48caa87-a9de-4e41-91bd-1f7239c6c06d	Error: Nie masz dostępu do tych zasobów.
+20221209	16:18:36	ec9e73eb-81ef-423f-bb75-eca6100f543c	Error: Nie masz dostępu do tych zasobów.
+20221209	16:18:36	52f5d856-3995-46eb-80ae-1bda3eec2a45	Error: Nie masz dostępu do tych zasobów.
+20221209	16:19:30	56f32fe3-7acb-4582-8a64-fc39d691dc1a	Error: Nie masz dostępu do tych zasobów.
+20221209	16:19:30	5a114f6a-ee1e-42c1-8daf-6bb75f887405	Error: Nie masz dostępu do tych zasobów.
+20221209	16:19:30	f5492d3a-d45c-4cce-b159-f2b69e6dd920	Error: Nie masz dostępu do tych zasobów.
+20221209	16:19:30	297b8baf-1801-4c78-a4be-2c21ab8a7acd	Error: Nie masz dostępu do tych zasobów.
+20221209	16:19:30	797ca1d5-17f3-4e13-a34a-eca2d3e769b1	Error: Nie masz dostępu do tych zasobów.
+20221209	16:19:30	77e1d900-4c5f-4f10-b3ac-9f2f3219e466	Error: Nie masz dostępu do tych zasobów.
+20221209	16:19:30	ce0721f1-0ac3-48cc-895f-fedf8b0e450a	Error: Nie masz dostępu do tych zasobów.
+20221209	16:19:30	e9996610-9a0d-4c4d-a751-631357709f64	Error: Token jest niepoprawny
+20221209	16:20:18	9505e6e0-968f-4ce4-ae77-da05d6547ea8	Error: Nie masz dostępu do tych zasobów.
+20221209	16:20:18	c5d376a1-0cf1-451c-a6db-c3bff0c7e7fc	Error: Nie masz dostępu do tych zasobów.
+20221209	16:20:18	12018d98-c7b6-471d-945c-93a450244588	Error: Nie masz dostępu do tych zasobów.
+20221209	16:20:18	ee416ce3-73b4-407e-86d6-761867845b9b	Error: Nie masz dostępu do tych zasobów.
+20221209	16:20:18	f4769b32-c0a7-4c85-9b97-58613a73caac	Error: Nie masz dostępu do tych zasobów.
+20221209	16:20:18	3f1fd92f-5d0a-4396-bf9d-3be4fd8f46cf	Error: Nie masz dostępu do tych zasobów.
+20221209	16:20:18	f854d936-064c-4a97-83c3-246c021ba2d9	Error: Nie masz dostępu do tych zasobów.
+20221209	16:20:43	da99ca16-fa0b-44c3-831d-6a742b516bdd	Error: Nie masz dostępu do tych zasobów.
+20221209	16:20:43	36ac9626-0c46-4e37-9dc7-707835ba11ee	Error: Nie masz dostępu do tych zasobów.
+20221209	16:20:43	167afe33-c3f7-4e45-ae9e-c2c98bbea9a8	Error: Nie masz dostępu do tych zasobów.
+20221209	16:20:43	2a68760b-fd79-4deb-b9f6-09d0ea01a7a4	Error: Nie masz dostępu do tych zasobów.
+20221209	16:20:43	d023d8d9-57cb-4470-b732-3203c2280cc6	Error: Nie masz dostępu do tych zasobów.
+20221209	16:20:43	d755dd00-56b6-4808-bb32-aa942e04a2a5	Error: Nie masz dostępu do tych zasobów.
+20221209	16:20:43	75a11f17-e4c3-43d3-ae25-9029ffb774fb	Error: Nie masz dostępu do tych zasobów.
+20221209	16:20:43	ff9d590c-78d5-4d64-8a5f-54cd45271382	Error: Token jest niepoprawny
+20221209	16:22:15	386c8db8-cba5-478b-b743-d691fafa3766	Error: Nie masz dostępu do tych zasobów.
+20221209	16:22:15	0b9ac59a-59d3-404e-8a9f-2866c4ac5413	Error: Nie masz dostępu do tych zasobów.
+20221209	16:22:15	b542a575-069e-4b15-aa64-a0b96e8b01b9	Error: Nie masz dostępu do tych zasobów.
+20221209	16:22:15	1009b68a-cbe3-404d-9b42-470e1d2eebe4	Error: Nie masz dostępu do tych zasobów.
+20221209	16:22:15	d079ce7e-1ee2-4c2c-9cbb-b202f8d181f5	Error: Nie masz dostępu do tych zasobów.
+20221209	16:22:15	ab87408a-7e42-48f0-86b5-ac017cf7e722	Error: Nie masz dostępu do tych zasobów.
+20221209	16:22:15	5f26d0ff-3107-4b84-b37d-06e4f1a61941	Error: Nie masz dostępu do tych zasobów.
+20221209	16:32:12	60a689fd-8f7e-498e-8925-8a715f9288f8	Error: Nie jesteś zalogowany.
+20221209	16:32:13	26b9f558-7c23-480b-a21b-b1b1cb6244fc	Error: Nie jesteś zalogowany.
+20221209	16:32:25	ff20350a-f5c9-49a6-8480-2fb1e4530e81	Error: Nie masz dostępu do tych zasobów.
+20221209	16:32:25	6e2672b7-c111-40d9-99b9-58df064a0637	Error: Nie masz dostępu do tych zasobów.
+20221209	16:32:25	66840f42-3410-4b61-a6e0-4685652e8c0d	Error: Nie masz dostępu do tych zasobów.
+20221209	16:32:25	201c1105-df13-4d97-ac44-38d0c145b059	Error: Nie masz dostępu do tych zasobów.
+20221209	16:32:25	fe66006b-3ff7-404a-a364-40587396de75	Error: Nie masz dostępu do tych zasobów.
+20221209	16:32:25	14935df9-3fde-40b0-a554-461e0c6929fc	Error: Nie masz dostępu do tych zasobów.
+20221209	16:32:25	8c320dad-e0c6-4c52-bd87-f26e6aae56e0	Error: Nie masz dostępu do tych zasobów.
+20221209	16:36:58	b378ba10-0af6-4c84-9544-c1396a2be0ce	Error: Nie masz dostępu do tych zasobów.
+20221209	16:37:05	32431471-47cb-4735-9158-c0b07498fd36	Error: Nie masz dostępu do tych zasobów.
+20221209	16:37:05	ab8f34f4-12f2-4ee3-89f8-9d320a099ff7	Error: Nie masz dostępu do tych zasobów.
+20221209	16:37:05	8774fb73-be65-4efe-b274-e9fed67c8294	Error: Nie masz dostępu do tych zasobów.
+20221209	16:37:05	bc610898-1faa-400f-8d5a-59cc321f2025	Error: Nie masz dostępu do tych zasobów.
+20221209	16:37:05	67c2b685-f30b-40a5-bda4-9b75d4a650f3	Error: Nie masz dostępu do tych zasobów.
+20221209	16:37:05	ea3bcab0-52f4-4681-a6e1-1305b877947e	Error: Nie masz dostępu do tych zasobów.
+20221209	16:37:05	644b38fb-0c34-47cd-b7f9-1b80e9cb5b0a	Error: Nie masz dostępu do tych zasobów.
+20221209	16:38:44	412b3da0-2fc0-4690-bd42-b53e39d36861	Error: Nie masz dostępu do tych zasobów.
+20221209	16:47:48	c9ef68a5-924f-49a8-82a3-50577cdee944	Error: Nie masz dostępu do tych zasobów.
+20221209	16:47:48	67bff0af-a697-44da-9c3d-09d1dfe5c88d	Error: Nie masz dostępu do tych zasobów.
+20221209	16:47:48	baa5f9a9-d865-4e70-b42a-744d799d237b	Error: Nie masz dostępu do tych zasobów.
+20221209	16:47:48	f4671ca8-99eb-4215-a320-f953eea96cc9	Error: Nie masz dostępu do tych zasobów.
+20221209	16:47:48	2d31dc67-b790-4a5e-afdf-5a28e941facb	Error: Nie masz dostępu do tych zasobów.
+20221209	16:47:48	1db7f407-898f-46ba-9271-be8a6ca214ac	Error: Nie masz dostępu do tych zasobów.
+20221209	16:47:48	1310a883-0ef4-4072-b00d-017056c8855e	Error: Nie masz dostępu do tych zasobów.
+20221209	16:50:16	8b3c1202-f22b-49ff-9843-42ed92af5411	Error: Nie jesteś zalogowany.
+20221209	16:50:16	0c4616ba-f6c1-4902-8de1-8ec1930da05c	Error: Nie jesteś zalogowany.
+20221209	16:50:19	add73a9d-0b33-4bb4-968d-62cda891a2f4	Error: Nie masz dostępu do tych zasobów.
+20221209	16:50:19	bf9169e9-c65e-45d7-933b-d706c53f8a03	Error: Nie masz dostępu do tych zasobów.
+20221209	16:50:19	91f5656f-594a-413e-934f-cad2f2e57135	Error: Nie masz dostępu do tych zasobów.
+20221209	16:50:19	9500e02b-d3af-465d-92a7-be10b4e14572	Error: Nie masz dostępu do tych zasobów.
+20221209	16:50:19	8e2e54d6-6d07-4e0b-8aed-4a282b2bfebc	Error: Nie masz dostępu do tych zasobów.
+20221209	16:50:19	eebad6ba-5082-44dc-b2f1-07bb837acd38	Error: Nie masz dostępu do tych zasobów.
+20221209	16:50:19	8c92b642-1fef-4468-8ee8-1a2216424aed	Error: Nie masz dostępu do tych zasobów.
+20221209	16:50:29	03ac21a2-404a-477d-8c7d-1d1a9b52e5ab	Error: Nie jesteś zalogowany.
+20221209	16:50:29	fe33127e-8950-4d49-9e3e-76f8e2ea0df4	Error: Nie jesteś zalogowany.
+20221209	16:50:31	7153b61b-4e17-4b91-8371-0d8775af81f4	Error: Nie masz dostępu do tych zasobów.
+20221209	16:50:31	8e8183c8-8ed7-4999-80cb-14c8f27345aa	Error: Nie masz dostępu do tych zasobów.
+20221209	16:50:31	288bfcf5-8cc7-4165-97b2-763df0708107	Error: Nie masz dostępu do tych zasobów.
+20221209	16:50:31	d74af86f-37dd-4399-a63d-237d8553ea66	Error: Nie masz dostępu do tych zasobów.
+20221209	16:50:31	d46368b3-d9a7-4d12-9db3-0c5428575262	Error: Nie masz dostępu do tych zasobów.
+20221209	16:50:31	780ecb3b-3669-4267-8110-cdfe57165504	Error: Nie masz dostępu do tych zasobów.
+20221209	16:50:31	7b86bbca-4371-45f9-ac0e-f1c201cb43d4	Error: Nie masz dostępu do tych zasobów.
+20221209	16:51:17	dc496f36-bad8-47f7-a75b-05d7ed6714e8	Error: Nie jesteś zalogowany.
+20221209	16:51:17	b508c78b-5eaa-4970-b226-61383bccef10	Error: Nie jesteś zalogowany.
+20221209	17:03:15	1a197bbf-f80c-4818-bbb2-110901c490d8	Error: Could not find this route.
+20221209	17:03:45	f2323486-e47a-4cfd-a501-ac9f08ace5b9	Error: Nie ma tła o takim ID.
+20221209	17:04:03	99876ee8-ca94-4555-9e3b-9ddaeea13c6d	Error: Nie ma tła o takim ID.
+20221209	17:05:31	211d2536-226f-49df-9827-541c13fa23b1	Error: Nie ma tła o takim ID.
+20221209	17:06:09	e9295f31-527d-4eee-acde-0b4935fe2e15	Error: Nie ma tła o takim ID.
+20221209	17:06:20	f793b61a-6f97-4f53-9045-dd4df41fc204	Error: Nie ma tła o takim ID.
+20221209	17:06:39	c5c24876-39da-4ed7-b97d-d643c50202eb	Error: Nie ma tła o takim ID.
