@@ -2,7 +2,7 @@ import bcrypt from "bcryptjs";
 import User from "../models/User";
 import HttpError from "../utils/http-error";
 import jwt from "jsonwebtoken";
-import EnvironmentalVariablesUtil from "../utils/EnvironmentalVariablesUtil";
+import EnvironmentalVariablesUtil from "../utils/EnvironmentalVariablesUtils";
 import { Request, Response, NextFunction } from "express";
 
 export const authHandler = async (

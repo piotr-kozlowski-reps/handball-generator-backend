@@ -16,7 +16,7 @@ exports.refreshTokenHandler = void 0;
 const User_1 = __importDefault(require("../models/User"));
 const http_error_1 = __importDefault(require("../utils/http-error"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
-const EnvironmentalVariablesUtil_1 = __importDefault(require("../utils/EnvironmentalVariablesUtil"));
+const EnvironmentalVariablesUtils_1 = __importDefault(require("../utils/EnvironmentalVariablesUtils"));
 const refreshTokenHandler = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     const cookies = req.cookies;
     if (!(cookies === null || cookies === void 0 ? void 0 : cookies.jwt)) {
@@ -35,7 +35,7 @@ const refreshTokenHandler = (req, res, next) => __awaiter(void 0, void 0, void 0
     if (!foundUser)
         return next(new http_error_1.default("Dostęp zabroniony.", 403)); //forbidden
     /** Evaluate jwt */
-    jsonwebtoken_1.default.verify(refreshToken, EnvironmentalVariablesUtil_1.default.getRefreshTokenSecret(), (err, decoded) => {
+    jsonwebtoken_1.default.verify(refreshToken, EnvironmentalVariablesUtils_1.default.getRefreshTokenSecret(), (err, decoded) => {
         if (err || !foundUser || foundUser.userName !== decoded.userName)
             return next(new http_error_1.default("Dostęp zabroniony.", 403)); //forbidden
         const roles = Object.values(foundUser.roles).filter(Boolean);
@@ -44,7 +44,7 @@ const refreshTokenHandler = (req, res, next) => __awaiter(void 0, void 0, void 0
                 userName: decoded.userName,
                 roles,
             },
-        }, EnvironmentalVariablesUtil_1.default.getAccessTokenSecret(), { expiresIn: process.env.ACCESS_TOKEN_EXPIRATION });
+        }, EnvironmentalVariablesUtils_1.default.getAccessTokenSecret(), { expiresIn: process.env.ACCESS_TOKEN_EXPIRATION });
         //final response
         res.json({ roles, accessToken });
     });

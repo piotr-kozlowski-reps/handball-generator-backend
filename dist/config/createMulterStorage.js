@@ -18,7 +18,8 @@ const createMulterStorage = (multer) => {
                     cb(null, path_1.default.join("images", "sponsors-bars"));
                     return;
                 case "/api/background-image":
-                    cb(null, path_1.default.join("images", "background-images"));
+                    // cb(null, path.join("images", "background-images"));
+                    cb(null, path_1.default.join("dist", "images", "background-images"));
                     return;
                 case "/api/game-name":
                     cb(null, path_1.default.join("images", "game-names"));

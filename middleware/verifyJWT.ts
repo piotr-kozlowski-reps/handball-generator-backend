@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import HttpError from "../utils/http-error";
 import { Request, Response, NextFunction } from "express";
-import EnvironmentalVariablesUtil from "../utils/EnvironmentalVariablesUtil";
+import EnvironmentalVariablesUtil from "../utils/EnvironmentalVariablesUtils";
 
 const verifyJWT = (
   req: Request & { user?: string; roles?: number[] },

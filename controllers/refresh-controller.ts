@@ -4,7 +4,7 @@ import HttpError from "../utils/http-error";
 import jwt from "jsonwebtoken";
 import { Request, Response, NextFunction } from "express";
 import { TUser } from "../utils/app.types";
-import EnvironmentalVariablesUtil from "../utils/EnvironmentalVariablesUtil";
+import EnvironmentalVariablesUtil from "../utils/EnvironmentalVariablesUtils";
 
 export const refreshTokenHandler = async (
   req: Request,

@@ -146,3 +146,60 @@
 20221209	17:06:09	e9295f31-527d-4eee-acde-0b4935fe2e15	Error: Nie ma tła o takim ID.
 20221209	17:06:20	f793b61a-6f97-4f53-9045-dd4df41fc204	Error: Nie ma tła o takim ID.
 20221209	17:06:39	c5c24876-39da-4ed7-b97d-d643c50202eb	Error: Nie ma tła o takim ID.
+20221209	20:02:53	d93eccf1-6693-43b8-82b5-570dd5562a4c	Error: Nie ma tła o takim ID.
+20221209	20:03:41	f69ca6ad-e613-4b42-9900-1d85f0fd3528	Error: Malformed part header
+20221209	20:08:24	c73b7999-82fe-46bc-9718-37a480df0eab	Error: Malformed part header
+20221209	20:13:00	c61cad52-628f-44b3-a4a5-f9f0c005d551	Error: Nie masz dostępu do tych zasobów.
+20221209	20:16:08	67607e6e-ec88-404d-ae1d-4fe27b7d4961	Error: Nie masz dostępu do tych zasobów.
+20221209	20:16:36	c238e350-ed19-422d-b20f-c933be1345fa	Error: Nie masz dostępu do tych zasobów.
+20221209	21:18:46	a5a2527b-14c6-4578-bfbd-e8150cc94360	Error: Unexpected end of form
+20221209	22:29:12	c835d0e7-dbdc-4de4-9f43-5efec9223720	Error: Obrazek musi być plikiem o rozszerzeniu: .png,.jpg,.jpeg
+20221209	22:55:46	2edc1c85-3071-4581-a983-dbdc13d7dfe2	Error: Obrazek musi być plikiem o rozszerzeniu: .png,.jpg,.jpeg
+20221210	15:16:01	0a85c170-a8f8-487c-b7f6-41855380c87b	Error: Któryś z plików ma zbyt duże wymiary.
+Dopuszczalna szerokość pliku to: 10 px.
+Dopuszczalna wysokość pliku to: 10 px.
+20221210	15:16:15	8479b2e0-98ad-4600-9222-eb105735ffeb	Error: Któryś z plików ma zbyt duże wymiary.
+Dopuszczalna szerokość pliku to: 10 px.
+Dopuszczalna wysokość pliku to: 10 px.
+20221210	15:16:20	5358df1a-6a50-4a72-b837-e5b38c20a6bc	Error: Któryś z plików ma zbyt duże wymiary.
+Dopuszczalna szerokość pliku to: 10 px.
+Dopuszczalna wysokość pliku to: 10 px.
+20221210	19:49:22	43a4e0e3-e370-4b20-bafc-c28b8a8688da	Error: Obrazek musi być plikiem o rozszerzeniu: .png,.jpg,.jpeg
+20221210	19:50:17	e7ca4dd2-b7cc-462a-a663-20503e7ae67b	Error: W przesłanych plikach znajdowały się pliki o tej samej nazwie.
+20221210	19:50:34	2a9ad28f-654e-4c9e-be5e-7c993a7a98a9	Error: W przesłanych plikach znajdowały się pliki o tej samej nazwie.
+20221210	20:43:24	40806141-0296-4dcb-9b56-19cc65d7b6e7	Error: Nie udało się zweryfikować czy pliki tła już istnieją, spróbuj ponownie.
+20221210	20:46:47	d6761239-b03e-4c8c-8669-bab6fcb2d96c	Error: Nie udało się zweryfikować czy pliki tła już istnieją, spróbuj ponownie.
+20221210	20:47:02	e6ad4912-d4e4-4621-b329-c32f5f86e933	Error: W przesłanych plikach znajdowały się pliki o tej samej nazwie.
+20221210	22:15:27	810b704c-0383-4c4f-a367-8a9c6cebb96b	Error: W przesłanych plikach znajdowały się pliki o tej samej nazwie.
+20221210	22:16:32	76493fd8-aad3-4bae-acd6-d0268779fef7	Error: Nie udało się zweryfikować czy pliki tła już istnieją, spróbuj ponownie.
+20221211	13:34:27	ef07abee-8b9d-42c2-8bad-c78576a48284	Error: Token jest niepoprawny
+20221211	13:34:38	16234b21-626d-45ea-9e2d-7089c5463cc7	Error: W przesłanych plikach znajdowały się pliki o tej samej nazwie.
+20221211	18:42:51	8ce733f8-1232-4fe4-a5f0-0dc46290dcd3	Error: Token jest niepoprawny
+20221211	18:54:30	1e5c6860-ba7a-4e3c-a716-99515feff769	Error: Przesłane pliki tła o takiej/takich nazwach już istnieją w bazie danych.
+20221211	18:55:04	8a0c4f34-f53b-481c-b957-b73959462450	Error: Przesłane pliki tła o takiej/takich nazwach już istnieją w bazie danych.
+20221211	18:56:43	e1c7b789-6eb9-493c-a2c2-e7ba3e7b5a26	Error: Przesłane pliki tła o takiej/takich nazwach już istnieją w bazie danych.
+20221211	19:06:02	73fde2ee-0ec2-42d9-9e9d-72001f746fd1	Error: Przesłane pliki tła o takiej/takich nazwach już istnieją w bazie danych.
+20221211	19:06:55	87cfd3d1-81d4-4977-9105-502930acb2ff	Error: Przesłane pliki tła o takiej/takich nazwach już istnieją w bazie danych.
+20221211	19:22:55	89e41ec9-10c9-4e47-bf73-5c54b7ea5617	Error: Token jest niepoprawny
+20221211	19:23:15	3971d023-9056-4e05-9b4d-14b4a68a13a2	Error: Could not find this route.
+20221211	19:23:48	0a97881b-5e5d-47b5-b547-82eb7afe2d87	Error: Podane ID ma złą formę.
+20221211	19:37:36	58189eb4-7db3-45b6-b903-99ee416045cd	Error: Przesłane pliki tła o takiej/takich nazwach już istnieją w bazie danych.
+20221211	19:40:03	5d7c8c3f-c8c4-4da2-8b83-7552f7e65558	Error: Błąd serwera, skasowanie plików graficznych nie powiodło się.
+20221211	21:44:59	2a6cf4ac-0754-485a-a3c9-fbf422e0d7a3	Error: Nie jesteś zalogowany.
+20221211	21:44:59	f92770b9-7714-48b7-909c-0c9fbe887ad7	Error: Nie jesteś zalogowany.
+20221211	21:45:44	3c50861e-834c-4209-ac4e-81aedea6fa50	Error: Nie masz dostępu do tych zasobów.
+20221211	21:45:44	daa2dce7-9504-4960-87c0-f19bce79070a	Error: Nie masz dostępu do tych zasobów.
+20221211	21:45:44	be697bb0-8771-4d9c-a515-e3c2d73e36de	Error: Nie masz dostępu do tych zasobów.
+20221211	21:53:11	e228d471-53bd-40d5-a8f5-f18ddfad2835	Error: Nie masz dostępu do tych zasobów.
+20221211	21:53:11	037f7b59-4cb5-4ece-aced-155a4bcf8330	Error: Nie masz dostępu do tych zasobów.
+20221211	21:53:11	d0a1d34c-9080-495e-9257-7fb617741dec	Error: Nie masz dostępu do tych zasobów.
+20221211	22:10:07	217b9db4-5fbe-43c7-8034-ca2df46e33b6	Error: Przesłane pliki tła o takiej/takich nazwach już istnieją w bazie danych.
+20221211	22:10:48	eb4a7325-7114-4212-b644-2ce31ace1557	Error: Nie masz dostępu do tych zasobów.
+20221211	22:10:48	8deaa02b-aafb-4bf8-84ee-dfed0a7ba9ae	Error: Nie masz dostępu do tych zasobów.
+20221211	22:10:48	43ce8130-ee6d-4c76-afc5-df7abe5ea4bb	Error: Nie masz dostępu do tych zasobów.
+20221211	22:10:48	7713edad-de35-40dc-ade9-106ced05e552	Error: Nie masz dostępu do tych zasobów.
+20221211	22:11:59	0d9ffa23-d12e-43fb-bd67-1af58908bbad	Error: Przesłane pliki tła o takiej/takich nazwach już istnieją w bazie danych.
+20221211	22:12:26	976cb292-081f-497e-a11b-c54e54868e33	Error: Could not find this route.
+20221211	22:12:50	0e97e0f7-d87b-435f-94b0-90b402386c19	Error: Could not find this route.
+20221211	22:12:51	27ef0fad-6f6c-427f-986f-5e46d2b829e7	Error: Could not find this route.
+20221211	22:12:53	4a033c44-068b-4d45-9131-d641b44ba694	Error: Could not find this route.

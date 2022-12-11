@@ -1,7 +1,6 @@
 import path from "path";
 import { format } from "date-fns";
-import { DiskStorageOptions, Multer } from "multer";
-import { Request, Response, NextFunction } from "express";
+import { Request } from "express";
 
 type DestinationCallback = (error: Error | null, destination: string) => void;
 type FileNameCallback = (error: Error | null, filename: string) => void;
@@ -22,7 +21,9 @@ export const createMulterStorage = (multer: any) => {
           cb(null, path.join("images", "sponsors-bars"));
           return;
         case "/api/background-image":
-          cb(null, path.join("images", "background-images"));
+          // cb(null, path.join("images", "background-images"));
+          cb(null, path.join("dist", "images", "background-images"));
+
           return;
         case "/api/game-name":
           cb(null, path.join("images", "game-names"));

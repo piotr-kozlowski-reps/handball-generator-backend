@@ -3,7 +3,18 @@
 import HttpError from "../utils/http-error";
 import BackgroundImage from "../models/BackgroundImage";
 import { Request, Response, NextFunction } from "express";
-import { checkMongoIdLength } from "../utils/checkMongoIDLength";
+import MongoDBUtils from "../utils/MongoDBUtils";
+import OverallUtils from "../utils/OverallUtils";
+import ImageFilesUtils from "../utils/ImageFilesUtils";
+import {
+  IImageProcessingError,
+  TBackgroundImage,
+  TDeleteFileResponse,
+  TProcessedImageFile,
+  TUnprocessedImageResponse,
+} from "../utils/app.types";
+import { Model } from "mongoose";
+
 // const { createThumbnails } = require("../utils/createThumbnail");
 
 export const getAllBackgroundImages = async (
@@ -30,7 +41,7 @@ export const getBackgroundImage = async (
     return next(new HttpError("Wymagane ID tła.", 400));
   }
 
-  if (!checkMongoIdLength(req.params.id)) {
+  if (!MongoDBUtils.checkMongoIdLength(req.params.id)) {
     return next(new HttpError("Podane ID ma złą formę.", 400));
   }
 
@@ -48,196 +59,211 @@ export const getBackgroundImage = async (
   res.status(200).json({ backgroundImage });
 };
 
-// const createBackgroundImage = async (req, res, next) => {
-//   // console.log(req.files);
+export const createBackgroundImages = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  const finalProcessedImagesArray: TBackgroundImage[] = [];
+  const finalUnprocessedImagesArray: TUnprocessedImageResponse[] = [];
 
-//   //   files: [
-//   //   {
-//   //     fieldname: 'backgroundImages',
-//   //     originalname: 'sklad_uklad_lista_wyjazd.jpg',
-//   //     encoding: '7bit',
-//   //     mimetype: 'image/jpeg',
-//   //     destination: 'images\\background-images',
-//   //     filename: 'sklad_uklad_lista_wyjazd___20221205-200933.jpg',
-//   //     path: 'images\\background-images\\sklad_uklad_lista_wyjazd___20221205-200933.jpg',
-//   //     size: 66654
-//   //   },
-//   //   {
-//   //     fieldname: 'backgroundImages',
-//   //     originalname: 'sklad_uklad_lista_wyjazd_thumbnail.jpg',
-//   //     encoding: '7bit',
-//   //     mimetype: 'image/jpeg',
-//   //     destination: 'images\\background-images',
-//   //     filename: 'sklad_uklad_lista_wyjazd_thumbnail___20221205-200933.jpg',
-//   //     path: 'images\\background-images\\sklad_uklad_lista_wyjazd_thumbnail___20221205-200933.jpg',
-//   //     size: 34060
-//   //   },
-//   //   {
-//   //     fieldname: 'backgroundImages',
-//   //     originalname: 'sklad_uklad_wyjazd.jpg',
-//   //     encoding: '7bit',
-//   //     mimetype: 'image/jpeg',
-//   //     destination: 'images\\background-images',
-//   //     filename: 'sklad_uklad_wyjazd___20221205-200933.jpg',
-//   //     path: 'images\\background-images\\sklad_uklad_wyjazd___20221205-200933.jpg',
-//   //     size: 403415
-//   //   }
-//   // ],
+  let filesArray: Express.Multer.File[] | undefined = req.files as
+    | Express.Multer.File[]
+    | undefined;
 
-//   /////////TODO
-//   // const { backgroundImageName } = req.body;
-//   // if (!backgroundImageName)
-//   //   return res.status(400).json({ message: "Nazwa tła jest wymagana." });
+  if (!filesArray || filesArray?.length < 1) {
+    return next(new HttpError("Musisz przesłać choć jeden plik tła.", 400));
+  }
 
-//   // let foundBackground;
-//   // try {
-//   //   foundBackground = await BackgroundImage.findOne({
-//   //     backgroundImageName: backgroundImageName,
-//   //   });
-//   // } catch (err) {
-//   //   return next(
-//   //     new HttpError(
-//   //       "Nie udało się zweryfikować czy plik tła już istnieje, spróbuj ponownie.",
-//   //       500
-//   //     )
-//   //   );
-//   // }
-//   // if (foundBackground) {
-//   //   deleteFile(req.file.path);
-//   //   return next(new HttpError("Plik tła o takiej nazwie już istnieje.", 400));
-//   // }
-//   /////////TODO
+  //generate backgroundImageName from names of files
+  const backgroundImageNamesArray: string[] = filesArray.map((file) => {
+    return file.originalname.split(".")[0];
+  });
+  if (OverallUtils.checkIfArrayHasDuplicates(backgroundImageNamesArray)) {
+    deleteFiles(filesArray);
+    return next(
+      new HttpError(
+        "W przesłanych plikach znajdowały się pliki o tej samej nazwie.",
+        400
+      )
+    );
+  }
 
-//   //thumbnail creation
-//   let resultOfThumbnailCreation;
-//   try {
-//     resultOfThumbnailCreation = await createThumbnails(req.files);
-//   } catch (error) {
-//     deleteFiles(req.file.path);
-//     return next(
-//       new HttpError("Nie udało się stworzyć minimalki pliku tła.", 500)
-//     );
-//   }
+  //check if any of backgroundImageNames exist already in Database
+  let foundBackgrounds: TBackgroundImage[] = [];
+  try {
+    for (let i = 0; i < backgroundImageNamesArray.length; i++) {
+      const foundBackgroundInDB = await BackgroundImage.findOne({
+        backgroundImageName: backgroundImageNamesArray[i],
+      });
+      if (foundBackgroundInDB) foundBackgrounds.push(foundBackgroundInDB);
+    }
+  } catch (err) {
+    deleteFiles(filesArray);
+    return next(
+      new HttpError(
+        "Nie udało się zweryfikować czy pliki tła już istnieją, spróbuj ponownie.",
+        500
+      )
+    );
+  }
 
-//   console.log(resultOfThumbnailCreation);
+  if (foundBackgrounds.length > 0) {
+    const filesToBeProcessedFurtherArray: Express.Multer.File[] = [];
+    const fileDuplicatesArray: Express.Multer.File[] = [];
+    const duplicateImagesNames = foundBackgrounds.map(
+      (background) => background.backgroundImageName
+    );
 
-//   // if failed delete original file and thumbnail
-//   if (!resultOfThumbnailCreation || resultOfThumbnailCreation.length < 1) {
-//     deleteFiles(req.files.map((file) => file.path));
-//     deleteFiles(
-//       resultOfThumbnailCreation.map((thumbnail) => thumbnail.thumbnailPath)
-//     );
-//     return next(
-//       new HttpError("Nie udało się stworzyć minimalki pliku tła.", 500)
-//     );
-//   }
+    filesArray.forEach((file) => {
+      const imageName = file.originalname.split(".")[0];
 
-//   ////////////////////////////
+      duplicateImagesNames.includes(imageName)
+        ? fileDuplicatesArray.push(file)
+        : filesToBeProcessedFurtherArray.push(file);
+    });
 
-//   // if any of returned object from thumbnails creation lacks newThumbnail/thumbnailPath properties
-//   //-> hence something went wrong
-//   //->  delete all original files
-//   //-> delete all well created thumbnails
+    finalUnprocessedImagesArray.push(
+      ...fileDuplicatesArray.map((image) => ({
+        fileName: image.originalname,
+        error: IImageProcessingError.NAME_ALREADY_IN_DATABASE,
+      }))
+    );
 
-//   if (
-//     !resultOfThumbnailCreation.newThumbnail &&
-//     !resultOfThumbnailCreation.thumbnailName
-//   ) {
-//     // deleteFile(req.file.path); //TODO
-//     return next(
-//       new HttpError("Nie udało się stworzyć minimalki pliku tła.", 500)
-//     );
-//   }
+    filesArray = filesArray.filter(
+      (image) => !fileDuplicatesArray.includes(image)
+    );
 
-//   // console.log({ resultOfThumbnailCreation });
+    //delete duplicates and send response if no files left
+    deleteFiles(fileDuplicatesArray);
+    if (filesArray.length < 1) {
+      return next(
+        new HttpError(
+          "Przesłane pliki tła o takiej/takich nazwach już istnieją w bazie danych.",
+          500
+        )
+      );
+    }
+  }
 
-//   const newBackgroundImage = new BackgroundImage({
-//     backgroundImageName,
-//     backgroundImage: req.file.path,
-//     backgroundImageThumbnail: resultOfThumbnailCreation.thumbnailName,
-//   });
+  //create all thumbnails
+  const { processedImages, unprocessedImages } =
+    await ImageFilesUtils.createThumbnails(filesArray);
 
-//   //deleting database document
-//   let result;
-//   try {
-//     result = await newBackgroundImage.save();
-//     // console.log(result);
-//   } catch (err) {
-//     console.log(err);
-//     deleteFile(req.file.path);
-//     deleteFile(resultOfThumbnailCreation.thumbnailName);
-//     return next(
-//       new HttpError("Nie udało zapisać danych, spróbuj ponownie.", 500)
-//     );
-//   }
-//   //final response
-//   res.status(201).json({ result });
-// };
+  //delete images if their thumbnails were unprocessed
+  if (unprocessedImages.length > 0) {
+    deleteFiles(unprocessedImages);
+    finalUnprocessedImagesArray.push(
+      ...unprocessedImages.map((image) => ({
+        fileName: image.originalname,
+        error: IImageProcessingError.THUMBNAIL_CREATION_FAILURE,
+      }))
+    );
+  }
 
-// const updateBackgroundImage = async (req, res, next) => {
-//   res.status(200).json({ message: "updateBackgroundImage" });
-// };
+  //create BackgroundImagesObjects
+  const backgroundImagesObjects = processedImages.map((image) => {
+    return new BackgroundImage<TBackgroundImage>({
+      backgroundImageName: image.originalname.split(".")[0],
+      backgroundImage: image.path,
+      backgroundImageThumbnail: image.thumbnailPath,
+    });
+  });
+  let result;
+  try {
+    result = await BackgroundImage.insertMany(backgroundImagesObjects);
+    finalProcessedImagesArray.push(...result);
+  } catch (error) {
+    console.error(error);
+    deleteFiles(processedImages);
+    await BackgroundImage.deleteMany(backgroundImagesObjects);
+    finalUnprocessedImagesArray.push(
+      ...processedImages.map((image) => ({
+        fileName: image.originalname,
+        error: IImageProcessingError.DATABASE_CREATION_DOCUMENT_ERROR,
+      }))
+    );
+  }
 
-// const deleteBackgroundImage = async (req, res, next) => {
-//   if (!req?.params?.id) {
-//     return next(new HttpError("Wymagany ID pliku tła.", 400));
-//   }
+  res.status(finalProcessedImagesArray.length > 0 ? 201 : 500).json({
+    processedImages: finalProcessedImagesArray,
+    unprocessedImages: finalUnprocessedImagesArray,
+  });
+};
 
-//   if (!checkMongoIdLength(req.params.id)) {
-//     return next(new HttpError("Podane ID ma złą formę.", 400));
-//   }
+export const updateBackgroundImage = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  res.status(500).json({ message: "updateBackgroundImage - not Implemented" });
+};
 
-//   let fileDeletedResponse;
-//   let fileThumbnailDeletedResponse;
-//   try {
-//     const backgroundImage = await BackgroundImage.findOne({
-//       _id: req.params.id,
-//     }).exec();
-//     if (!backgroundImage) {
-//       return next(new HttpError(`Nie ma tła o ID: ${req.params.id}.`, 204));
-//     }
+export const deleteBackgroundImage = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  if (!req?.params?.id) {
+    return next(new HttpError("Wymagany ID pliku tła.", 400));
+  }
 
-//     //deleting file
-//     try {
-//       fileDeletedResponse = deleteFile(backgroundImage.backgroundImage);
-//       fileThumbnailDeletedResponse = deleteFile(
-//         backgroundImage.backgroundImageThumbnail
-//       );
-//     } catch (error) {
-//       return next(
-//         new HttpError(
-//           `Błąd serwera, skasowanie plików graficznych nie powiodło się.`,
-//           500
-//         )
-//       );
-//     }
+  if (!MongoDBUtils.checkMongoIdLength(req.params.id)) {
+    return next(new HttpError("Podane ID ma złą formę.", 400));
+  }
 
-//     if (
-//       fileDeletedResponse === DELETE_FILE_RESPONSE.fileUnDeleted ||
-//       fileThumbnailDeletedResponse === DELETE_FILE_RESPONSE.fileUnDeleted
-//     ) {
-//       return next(
-//         new HttpError(
-//           `Błąd serwera, skasowanie pliku graficznego rozgrywek nie powiodło się.`,
-//           500
-//         )
-//       );
-//     }
+  let filesDeletedResponse: TDeleteFileResponse[];
+  try {
+    const backgroundImage = await BackgroundImage.findOne({
+      _id: req.params.id,
+    }).exec();
 
-//     //response
-//     const result = await backgroundImage.deleteOne();
-//     res.json(result);
-//   } catch (error) {
-//     return next(
-//       new HttpError(`Błąd serwera, skasowanie tła nie powiodło się.`, 500)
-//     );
-//   }
-// };
+    if (!backgroundImage) {
+      return next(new HttpError(`Nie ma tła o ID: ${req.params.id}.`, 204));
+    }
 
-// module.exports = {
-//   getAllBackgroundImages,
-//   getBackgroundImage,
-//   createBackgroundImage,
-//   updateBackgroundImage,
-//   deleteBackgroundImage,
-// };
+    //deleting file
+    try {
+      filesDeletedResponse = ImageFilesUtils.deleteFilesWithPathsArrayArgument([
+        backgroundImage.backgroundImage,
+        backgroundImage.backgroundImageThumbnail,
+      ]);
+    } catch (error) {
+      return next(
+        new HttpError(
+          `Błąd serwera, skasowanie plików graficznych nie powiodło się.`,
+          500
+        )
+      );
+    }
+
+    console.log({ filesDeletedResponse });
+    //if couldn't delete file for any reason - inform that in response
+    if (filesDeletedResponse.includes("FILE_UNDELETED")) {
+      return next(
+        new HttpError(
+          `Błąd serwera, skasowanie pliku tła nie powiodło się.`,
+          500
+        )
+      );
+    }
+
+    //response
+    const result = await backgroundImage.deleteOne();
+    res.json(result);
+  } catch (error) {
+    return next(
+      new HttpError(
+        `Błąd serwera, połączenie z bazą danych nie powiodło się.`,
+        500
+      )
+    );
+  }
+};
+
+////private
+function deleteFiles(arrayOfFiles: Express.Multer.File[]) {
+  const result =
+    ImageFilesUtils.deleteFilesWithFilesArrayArgument(arrayOfFiles);
+  return result;
+}

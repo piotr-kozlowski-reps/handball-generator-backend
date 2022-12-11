@@ -17,7 +17,7 @@ const bcryptjs_1 = __importDefault(require("bcryptjs"));
 const User_1 = __importDefault(require("../models/User"));
 const http_error_1 = __importDefault(require("../utils/http-error"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
-const EnvironmentalVariablesUtil_1 = __importDefault(require("../utils/EnvironmentalVariablesUtil"));
+const EnvironmentalVariablesUtils_1 = __importDefault(require("../utils/EnvironmentalVariablesUtils"));
 const authHandler = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     // /** Encrypted password generator for temporary password*/
     // //start
@@ -67,9 +67,9 @@ const authHandler = (req, res, next) => __awaiter(void 0, void 0, void 0, functi
                 userName,
                 roles,
             },
-        }, EnvironmentalVariablesUtil_1.default.getAccessTokenSecret(), { expiresIn: EnvironmentalVariablesUtil_1.default.getAccessTokenExpiration() });
-        refreshToken = jsonwebtoken_1.default.sign({ userName: foundUser.userName }, EnvironmentalVariablesUtil_1.default.getRefreshTokenSecret(), {
-            expiresIn: EnvironmentalVariablesUtil_1.default.getRefreshTokenExpiration(),
+        }, EnvironmentalVariablesUtils_1.default.getAccessTokenSecret(), { expiresIn: EnvironmentalVariablesUtils_1.default.getAccessTokenExpiration() });
+        refreshToken = jsonwebtoken_1.default.sign({ userName: foundUser.userName }, EnvironmentalVariablesUtils_1.default.getRefreshTokenSecret(), {
+            expiresIn: EnvironmentalVariablesUtils_1.default.getRefreshTokenExpiration(),
         });
     }
     catch (err) {
