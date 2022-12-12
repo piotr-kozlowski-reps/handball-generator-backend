@@ -1,5 +1,3 @@
-// const { DELETE_FILE_RESPONSE } = require("../config/deleteFileResponse");
-// const { deleteFiles } = require("../utils/deleteFIle");
 import HttpError from "../utils/http-error";
 import BackgroundImage from "../models/BackgroundImage";
 import { Request, Response, NextFunction } from "express";
@@ -10,10 +8,8 @@ import {
   IImageProcessingError,
   TBackgroundImage,
   TDeleteFileResponse,
-  TProcessedImageFile,
   TUnprocessedImageResponse,
 } from "../utils/app.types";
-import { Model } from "mongoose";
 
 // const { createThumbnails } = require("../utils/createThumbnail");
 
@@ -80,7 +76,7 @@ export const createBackgroundImages = async (
     return file.originalname.split(".")[0];
   });
   if (OverallUtils.checkIfArrayHasDuplicates(backgroundImageNamesArray)) {
-    deleteFiles(filesArray);
+    const result = ImageFilesUtils.deleteFiles(filesArray);
     return next(
       new HttpError(
         "W przesłanych plikach znajdowały się pliki o tej samej nazwie.",
@@ -99,7 +95,7 @@ export const createBackgroundImages = async (
       if (foundBackgroundInDB) foundBackgrounds.push(foundBackgroundInDB);
     }
   } catch (err) {
-    deleteFiles(filesArray);
+    const result = ImageFilesUtils.deleteFiles(filesArray);
     return next(
       new HttpError(
         "Nie udało się zweryfikować czy pliki tła już istnieją, spróbuj ponownie.",
@@ -135,7 +131,7 @@ export const createBackgroundImages = async (
     );
 
     //delete duplicates and send response if no files left
-    deleteFiles(fileDuplicatesArray);
+    const result = ImageFilesUtils.deleteFiles(fileDuplicatesArray);
     if (filesArray.length < 1) {
       return next(
         new HttpError(
@@ -152,7 +148,7 @@ export const createBackgroundImages = async (
 
   //delete images if their thumbnails were unprocessed
   if (unprocessedImages.length > 0) {
-    deleteFiles(unprocessedImages);
+    const result = ImageFilesUtils.deleteFiles(unprocessedImages);
     finalUnprocessedImagesArray.push(
       ...unprocessedImages.map((image) => ({
         fileName: image.originalname,
@@ -175,7 +171,7 @@ export const createBackgroundImages = async (
     finalProcessedImagesArray.push(...result);
   } catch (error) {
     console.error(error);
-    deleteFiles(processedImages);
+    const result = ImageFilesUtils.deleteFiles(processedImages);
     await BackgroundImage.deleteMany(backgroundImagesObjects);
     finalUnprocessedImagesArray.push(
       ...processedImages.map((image) => ({
@@ -224,7 +220,7 @@ export const deleteBackgroundImage = async (
 
     //deleting file
     try {
-      filesDeletedResponse = ImageFilesUtils.deleteFilesWithPathsArrayArgument([
+      filesDeletedResponse = ImageFilesUtils.deleteFiles([
         backgroundImage.backgroundImage,
         backgroundImage.backgroundImageThumbnail,
       ]);
@@ -260,10 +256,3 @@ export const deleteBackgroundImage = async (
     );
   }
 };
-
-////private
-function deleteFiles(arrayOfFiles: Express.Multer.File[]) {
-  const result =
-    ImageFilesUtils.deleteFilesWithFilesArrayArgument(arrayOfFiles);
-  return result;
-}

@@ -13,8 +13,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteBackgroundImage = exports.updateBackgroundImage = exports.createBackgroundImages = exports.getBackgroundImage = exports.getAllBackgroundImages = void 0;
-// const { DELETE_FILE_RESPONSE } = require("../config/deleteFileResponse");
-// const { deleteFiles } = require("../utils/deleteFIle");
 const http_error_1 = __importDefault(require("../utils/http-error"));
 const BackgroundImage_1 = __importDefault(require("../models/BackgroundImage"));
 const MongoDBUtils_1 = __importDefault(require("../utils/MongoDBUtils"));
@@ -66,7 +64,7 @@ const createBackgroundImages = (req, res, next) => __awaiter(void 0, void 0, voi
         return file.originalname.split(".")[0];
     });
     if (OverallUtils_1.default.checkIfArrayHasDuplicates(backgroundImageNamesArray)) {
-        deleteFiles(filesArray);
+        const result = ImageFilesUtils_1.default.deleteFiles(filesArray);
         return next(new http_error_1.default("W przesłanych plikach znajdowały się pliki o tej samej nazwie.", 400));
     }
     //check if any of backgroundImageNames exist already in Database
@@ -81,7 +79,7 @@ const createBackgroundImages = (req, res, next) => __awaiter(void 0, void 0, voi
         }
     }
     catch (err) {
-        deleteFiles(filesArray);
+        const result = ImageFilesUtils_1.default.deleteFiles(filesArray);
         return next(new http_error_1.default("Nie udało się zweryfikować czy pliki tła już istnieją, spróbuj ponownie.", 500));
     }
     if (foundBackgrounds.length > 0) {
@@ -100,7 +98,7 @@ const createBackgroundImages = (req, res, next) => __awaiter(void 0, void 0, voi
         })));
         filesArray = filesArray.filter((image) => !fileDuplicatesArray.includes(image));
         //delete duplicates and send response if no files left
-        deleteFiles(fileDuplicatesArray);
+        const result = ImageFilesUtils_1.default.deleteFiles(fileDuplicatesArray);
         if (filesArray.length < 1) {
             return next(new http_error_1.default("Przesłane pliki tła o takiej/takich nazwach już istnieją w bazie danych.", 500));
         }
@@ -109,7 +107,7 @@ const createBackgroundImages = (req, res, next) => __awaiter(void 0, void 0, voi
     const { processedImages, unprocessedImages } = yield ImageFilesUtils_1.default.createThumbnails(filesArray);
     //delete images if their thumbnails were unprocessed
     if (unprocessedImages.length > 0) {
-        deleteFiles(unprocessedImages);
+        const result = ImageFilesUtils_1.default.deleteFiles(unprocessedImages);
         finalUnprocessedImagesArray.push(...unprocessedImages.map((image) => ({
             fileName: image.originalname,
             error: app_types_1.IImageProcessingError.THUMBNAIL_CREATION_FAILURE,
@@ -130,7 +128,7 @@ const createBackgroundImages = (req, res, next) => __awaiter(void 0, void 0, voi
     }
     catch (error) {
         console.error(error);
-        deleteFiles(processedImages);
+        const result = ImageFilesUtils_1.default.deleteFiles(processedImages);
         yield BackgroundImage_1.default.deleteMany(backgroundImagesObjects);
         finalUnprocessedImagesArray.push(...processedImages.map((image) => ({
             fileName: image.originalname,
@@ -165,7 +163,7 @@ const deleteBackgroundImage = (req, res, next) => __awaiter(void 0, void 0, void
         }
         //deleting file
         try {
-            filesDeletedResponse = ImageFilesUtils_1.default.deleteFilesWithPathsArrayArgument([
+            filesDeletedResponse = ImageFilesUtils_1.default.deleteFiles([
                 backgroundImage.backgroundImage,
                 backgroundImage.backgroundImageThumbnail,
             ]);
@@ -187,8 +185,3 @@ const deleteBackgroundImage = (req, res, next) => __awaiter(void 0, void 0, void
     }
 });
 exports.deleteBackgroundImage = deleteBackgroundImage;
-////private
-function deleteFiles(arrayOfFiles) {
-    const result = ImageFilesUtils_1.default.deleteFilesWithFilesArrayArgument(arrayOfFiles);
-    return result;
-}

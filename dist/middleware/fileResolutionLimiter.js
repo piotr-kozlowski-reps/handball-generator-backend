@@ -36,7 +36,7 @@ const fileResolutionLimiter = (req, res, next) => __awaiter(void 0, void 0, void
         }
     }
     if (!isAllowed) {
-        ImageFilesUtils_1.default.deleteFilesWithFilesArrayArgument(filesArrayToBePossiblyDeleted);
+        ImageFilesUtils_1.default.deleteFiles(filesArrayToBePossiblyDeleted);
         return next(new http_error_1.default(`Któryś z plików ma zbyt duże wymiary.\nDopuszczalna szerokość pliku to: ${EnvironmentalVariablesUtils_1.default.getImageWidthLimiter()} px.\nDopuszczalna wysokość pliku to: ${EnvironmentalVariablesUtils_1.default.getImageHeightLimiter()} px.`, 400));
     }
     function checkIfFileSuitsSizeLimits(file) {
@@ -64,7 +64,7 @@ const fileResolutionLimiter = (req, res, next) => __awaiter(void 0, void 0, void
         });
     }
     function deleteFilesAndReturnError(filesPathsArray) {
-        ImageFilesUtils_1.default.deleteFilesWithFilesArrayArgument(filesPathsArray);
+        ImageFilesUtils_1.default.deleteFiles(filesPathsArray);
         return next(new http_error_1.default(`Herb ma zbyt duże wymiary.\nDopuszczalna szerokość pliku to: ${EnvironmentalVariablesUtils_1.default.getImageWidthLimiter()} px.\nDopuszczalna wysokość pliku to: ${EnvironmentalVariablesUtils_1.default.getImageHeightLimiter()} px.`, 400));
     }
     next();

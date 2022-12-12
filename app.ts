@@ -72,7 +72,7 @@ app.use("/api/logout", logoutRoutes);
 
 /** protected routes */
 app.use(verifyJWT);
-app.use("/api/team", upload.single("teamCrestImage"), teamRoutes);
+app.use("/api/team", upload.array("teamCrestImage"), teamRoutes);
 // app.use(
 //   "/api/sponsors-bar",
 //   upload.single("sponsorsBarImage"),

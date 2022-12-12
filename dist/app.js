@@ -61,7 +61,7 @@ app.use("/api/refresh", refresh_routes_1.default);
 app.use("/api/logout", logout_routes_1.default);
 /** protected routes */
 app.use(verifyJWT_1.default);
-app.use("/api/team", upload.single("teamCrestImage"), team_routes_1.default);
+app.use("/api/team", upload.array("teamCrestImage"), team_routes_1.default);
 // app.use(
 //   "/api/sponsors-bar",
 //   upload.single("sponsorsBarImage"),

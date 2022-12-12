@@ -1,9 +1,9 @@
-// const deleteFile = require("../utils/deleteFIle");
 import HttpError from "../utils/http-error";
 import Team from "../models/Team";
-import DELETE_FILE_RESPONSE from "../config/deleteFileResponse";
 import { Request, Response, NextFunction } from "express";
-// const { checkMongoIdLength } = require("../utils/checkMongoIDLength");
+import MongoDBUtils from "../utils/MongoDBUtils";
+import { TDeleteFileResponse } from "../utils/app.types";
+import ImageFilesUtils from "../utils/ImageFilesUtils";
 
 export const getAllTeams = async (
   req: Request,
@@ -20,28 +20,32 @@ export const getAllTeams = async (
   res.status(200).json(teams);
 };
 
-// const getTeam = async (req, res, next) => {
-//   if (!req?.params?.id) {
-//     return next(new HttpError("Wymagane ID drużyny.", 400));
-//   }
+export const getTeam = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  if (!req?.params?.id) {
+    return next(new HttpError("Wymagane ID drużyny.", 400));
+  }
 
-//   if (!checkMongoIdLength(req.params.id)) {
-//     return next(new HttpError("Podane ID ma złą formę.", 400));
-//   }
+  if (!MongoDBUtils.checkMongoIdLength(req.params.id)) {
+    return next(new HttpError("Podane ID ma złą formę.", 400));
+  }
 
-//   let team;
-//   try {
-//     team = await Team.findOne({ _id: req.params.id });
-//   } catch (err) {
-//     return next(new HttpError("Błąd serwera, spróbuj ponownie.", 500));
-//   }
+  let team;
+  try {
+    team = await Team.findOne({ _id: req.params.id });
+  } catch (err) {
+    return next(new HttpError("Błąd serwera, spróbuj ponownie.", 500));
+  }
 
-//   if (!team) {
-//     return next(new HttpError("Nie ma drużyny o takim ID.", 204));
-//   }
+  if (!team) {
+    return next(new HttpError("Nie ma drużyny o takim ID.", 204));
+  }
 
-//   res.status(200).json({ team });
-// };
+  res.status(200).json({ team });
+};
 
 // const createTeam = async (req, res, next) => {
 //   const { teamName, place } = req.body;
@@ -95,51 +99,58 @@ export const getAllTeams = async (
 //   res.status(200).json({ message: "updateTeam" });
 // };
 
-// const deleteTeam = async (req, res, next) => {
-//   if (!req?.params?.id) {
-//     return next(new HttpError("Wymagany ID drużyny.", 400));
-//   }
+export const deleteTeam = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  if (!req?.params?.id) {
+    return next(new HttpError("Wymagany ID drużyny.", 400));
+  }
 
-//   if (!checkMongoIdLength(req.params.id)) {
-//     return next(new HttpError("Podane ID ma złą formę.", 400));
-//   }
+  if (!MongoDBUtils.checkMongoIdLength(req.params.id)) {
+    return next(new HttpError("Podane ID ma złą formę.", 400));
+  }
 
-//   let fileDeletedResponse;
-//   try {
-//     const team = await Team.findOne({ _id: req.params.id }).exec();
-//     if (!team) {
-//       return next(new HttpError(`Nie ma drużyny o ID: ${req.params.id}.`, 204));
-//     }
+  let filesDeletedResponse: TDeleteFileResponse[];
+  try {
+    const team = await Team.findOne({ _id: req.params.id }).exec();
+    if (!team) {
+      return next(new HttpError(`Nie ma drużyny o ID: ${req.params.id}.`, 204));
+    }
 
-//     //delete file
-//     try {
-//       fileDeletedResponse = deleteFile(team.teamCrestImage);
-//     } catch (error) {
-//       return next(
-//         new HttpError(
-//           `Błąd serwera, skasowanie pliku graficznego nie powiodło się.`,
-//           500
-//         )
-//       );
-//     }
+    //deleting file
+    try {
+      filesDeletedResponse = ImageFilesUtils.deleteFiles([team.teamCrestImage]);
+    } catch (error) {
+      return next(
+        new HttpError(
+          `Błąd serwera, skasowanie pliku graficznego nie powiodło się.`,
+          500
+        )
+      );
+    }
 
-//     if (fileDeletedResponse === DELETE_FILE_RESPONSE.fileUnDeleted) {
-//       return next(
-//         new HttpError(
-//           `Błąd serwera, skasowanie pliku graficznego rozgrywek nie powiodło się.`,
-//           500
-//         )
-//       );
-//     }
+    //if couldn't delete file for any reason - inform that in response
+    if (filesDeletedResponse.includes("FILE_UNDELETED")) {
+      return next(
+        new HttpError(
+          `Błąd serwera, skasowanie pliku tła nie powiodło się.`,
+          500
+        )
+      );
+    }
 
-//     const result = await team.deleteOne(); //{ _id: req.body.id }
-//     res.json(result);
-//   } catch (error) {
-//     console.log(error);
-//     return next(
-//       new HttpError(`Błąd serwera, skasowanie drużyny nie powiodło się.`, 500)
-//     );
-//   }
-// };
-
-// module.exports = { getAllTeams, createTeam, getTeam, updateTeam, deleteTeam };
+    //response
+    const result = await team.deleteOne();
+    res.json(result);
+  } catch (error) {
+    console.log(error);
+    return next(
+      new HttpError(
+        `Błąd serwera, połączenie z bazą danych nie powiodło się.`,
+        500
+      )
+    );
+  }
+};

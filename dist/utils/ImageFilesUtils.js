@@ -42,20 +42,25 @@ const path_1 = __importDefault(require("path"));
 const sharp_1 = __importDefault(require("sharp"));
 class ImageFilesUtils {
     //images utils
-    static deleteFilesWithFilesArrayArgument(filesArray) {
+    static deleteFiles(items) {
         const result = [];
-        filesArray.forEach((file) => {
-            const deleteResult = this.deleteFile(file.path);
-            result.push(deleteResult);
-        });
-        return result;
-    }
-    static deleteFilesWithPathsArrayArgument(pathsArray) {
-        const result = [];
-        pathsArray.forEach((path) => {
-            const deleteResult = this.deleteFile(path);
-            result.push(deleteResult);
-        });
+        if (items.length === 0)
+            return result;
+        if (items[0].path) {
+            items.forEach((file) => {
+                console.log(file);
+                const fileProperlyTyped = file;
+                const deleteResult = ImageFilesUtils.deleteFile(fileProperlyTyped.path);
+                result.push(deleteResult);
+            });
+        }
+        else {
+            items.forEach((path) => {
+                console.log(path);
+                const deleteResult = this.deleteFile(path);
+                result.push(deleteResult);
+            });
+        }
         return result;
     }
     static createThumbnails(imagesArray) {
