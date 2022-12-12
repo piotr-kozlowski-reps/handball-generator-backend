@@ -32,9 +32,7 @@ const fileResolutionLimiter = async (
   }
 
   if (!isAllowed) {
-    ImageFilesUtils.deleteFilesWithFilesArrayArgument(
-      filesArrayToBePossiblyDeleted
-    );
+    ImageFilesUtils.deleteFiles(filesArrayToBePossiblyDeleted);
 
     return next(
       new HttpError(
@@ -71,7 +69,7 @@ const fileResolutionLimiter = async (
   }
 
   function deleteFilesAndReturnError(filesPathsArray: Express.Multer.File[]) {
-    ImageFilesUtils.deleteFilesWithFilesArrayArgument(filesPathsArray);
+    ImageFilesUtils.deleteFiles(filesPathsArray);
 
     return next(
       new HttpError(

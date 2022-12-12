@@ -7,9 +7,9 @@ import sharp from "sharp";
 
 export default class ImageFilesUtils {
   //images utils
-  static deleteFilesWithFilesArrayArgument(filesArray: Express.Multer.File[]) {
+  static deleteFiles(items: Express.Multer.File[] | string[]) {
     const result: TDeleteFileResponse[] = [];
-    filesArray.forEach((file) => {
+    items.forEach((file) => {
       const deleteResult = this.deleteFile(file.path);
       result.push(deleteResult);
     });

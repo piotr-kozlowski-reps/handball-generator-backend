@@ -30,7 +30,7 @@ const fileExtensionLimiter = (allowedExtensionsArray) => {
         if (files.length < 1)
             isAllowed = false;
         if (!isAllowed) {
-            ImageFilesUtils_1.default.deleteFilesWithFilesArrayArgument(file ? [file] : files);
+            ImageFilesUtils_1.default.deleteFiles(file ? [file] : files);
             return next(new http_error_1.default(`Obrazek musi być plikiem o rozszerzeniu: ${allowedExtensionsArray.toString()}`, 400));
         }
         next();

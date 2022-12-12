@@ -495,3 +495,4 @@
 20221211	22:12:50	e3464507-2736-42bd-9356-89aaf45d537d	GET	http://localhost:3000	/api/sponsors-bar
 20221211	22:12:51	946fb17d-e7d5-4f47-b450-db5e1812b077	GET	http://localhost:3000	/api/sponsors-bar
 20221211	22:12:53	b1b37158-283a-4a82-b20f-90012b1eb364	GET	http://localhost:3000	/api/sponsors-bar
+20221212	10:27:00	e2d388fc-1c23-4a09-80a5-e68b1def8e4e	POST	undefined	/api/auth

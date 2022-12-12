@@ -189,6 +189,6 @@ const deleteBackgroundImage = (req, res, next) => __awaiter(void 0, void 0, void
 exports.deleteBackgroundImage = deleteBackgroundImage;
 ////private
 function deleteFiles(arrayOfFiles) {
-    const result = ImageFilesUtils_1.default.deleteFilesWithFilesArrayArgument(arrayOfFiles);
+    const result = ImageFilesUtils_1.default.deleteFiles(arrayOfFiles);
     return result;
 }

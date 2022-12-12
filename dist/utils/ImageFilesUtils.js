@@ -42,7 +42,7 @@ const path_1 = __importDefault(require("path"));
 const sharp_1 = __importDefault(require("sharp"));
 class ImageFilesUtils {
     //images utils
-    static deleteFilesWithFilesArrayArgument(filesArray) {
+    static deleteFiles(filesArray) {
         const result = [];
         filesArray.forEach((file) => {
             const deleteResult = this.deleteFile(file.path);

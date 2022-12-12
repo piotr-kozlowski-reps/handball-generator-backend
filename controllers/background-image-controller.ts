@@ -263,7 +263,6 @@ export const deleteBackgroundImage = async (
 
 ////private
 function deleteFiles(arrayOfFiles: Express.Multer.File[]) {
-  const result =
-    ImageFilesUtils.deleteFilesWithFilesArrayArgument(arrayOfFiles);
+  const result = ImageFilesUtils.deleteFiles(arrayOfFiles);
   return result;
 }
