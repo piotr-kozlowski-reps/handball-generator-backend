@@ -12,40 +12,20 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getAllTeams = void 0;
-// const deleteFile = require("../utils/deleteFIle");
+exports.deleteTeam = exports.getTeam = exports.getAllTeams = void 0;
 const http_error_1 = __importDefault(require("../utils/http-error"));
 const Team_1 = __importDefault(require("../models/Team"));
-// const { checkMongoIdLength } = require("../utils/checkMongoIDLength");
+const MongoDBUtils_1 = __importDefault(require("../utils/MongoDBUtils"));
+const ImageFilesUtils_1 = __importDefault(require("../utils/ImageFilesUtils"));
+const general_crud_1 = require("../utils/general-crud");
 const getAllTeams = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
-    let teams;
-    try {
-        teams = yield Team_1.default.find();
-    }
-    catch (err) {
-        return next(new http_error_1.default("Błąd serwera, spróbuj ponownie.", 500));
-    }
-    res.status(200).json(teams);
+    (0, general_crud_1.fetchAll_General)(Team_1.default, req, res, next);
 });
 exports.getAllTeams = getAllTeams;
-// const getTeam = async (req, res, next) => {
-//   if (!req?.params?.id) {
-//     return next(new HttpError("Wymagane ID drużyny.", 400));
-//   }
-//   if (!checkMongoIdLength(req.params.id)) {
-//     return next(new HttpError("Podane ID ma złą formę.", 400));
-//   }
-//   let team;
-//   try {
-//     team = await Team.findOne({ _id: req.params.id });
-//   } catch (err) {
-//     return next(new HttpError("Błąd serwera, spróbuj ponownie.", 500));
-//   }
-//   if (!team) {
-//     return next(new HttpError("Nie ma drużyny o takim ID.", 204));
-//   }
-//   res.status(200).json({ team });
-// };
+const getTeam = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    (0, general_crud_1.fetchOne_General)(Team_1.default, req, res, next);
+});
+exports.getTeam = getTeam;
 // const createTeam = async (req, res, next) => {
 //   const { teamName, place } = req.body;
 //   if (!teamName)
@@ -89,45 +69,74 @@ exports.getAllTeams = getAllTeams;
 // const updateTeam = async (req, res, next) => {
 //   res.status(200).json({ message: "updateTeam" });
 // };
-// const deleteTeam = async (req, res, next) => {
-//   if (!req?.params?.id) {
-//     return next(new HttpError("Wymagany ID drużyny.", 400));
+const deleteTeam = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    var _a;
+    if (!((_a = req === null || req === void 0 ? void 0 : req.params) === null || _a === void 0 ? void 0 : _a.id)) {
+        return next(new http_error_1.default("Wymagany ID drużyny.", 400));
+    }
+    if (!MongoDBUtils_1.default.checkMongoIdLength(req.params.id)) {
+        return next(new http_error_1.default("Podane ID ma złą formę.", 400));
+    }
+    let filesDeletedResponse;
+    try {
+        const team = yield Team_1.default.findOne({ _id: req.params.id }).exec();
+        if (!team) {
+            return next(new http_error_1.default(`Nie ma drużyny o ID: ${req.params.id}.`, 204));
+        }
+        //deleting file
+        try {
+            filesDeletedResponse = ImageFilesUtils_1.default.deleteFiles([team.teamCrestImage]);
+        }
+        catch (error) {
+            return next(new http_error_1.default(`Błąd serwera, skasowanie pliku graficznego nie powiodło się.`, 500));
+        }
+        //if couldn't delete file for any reason - inform that in response
+        if (filesDeletedResponse.includes("FILE_UNDELETED")) {
+            return next(new http_error_1.default(`Błąd serwera, skasowanie pliku tła nie powiodło się.`, 500));
+        }
+        //response
+        const result = yield team.deleteOne();
+        res.json(result);
+    }
+    catch (error) {
+        console.log(error);
+        return next(new http_error_1.default(`Błąd serwera, połączenie z bazą danych nie powiodło się.`, 500));
+    }
+});
+exports.deleteTeam = deleteTeam;
+/////////////////////////////// OLD
+// export const getAllTeams = async (
+//   req: Request,
+//   res: Response,
+//   next: NextFunction
+// ) => {
+//   let teams;
+//   try {
+//     teams = await Team.find();
+//   } catch (err) {
+//     return next(new HttpError("Błąd serwera, spróbuj ponownie.", 500));
 //   }
-//   if (!checkMongoIdLength(req.params.id)) {
+//   res.status(200).json(teams);
+// };
+// export const getTeam = async (
+//   req: Request,
+//   res: Response,
+//   next: NextFunction
+// ) => {
+//   if (!req?.params?.id) {
+//     return next(new HttpError("Wymagane ID drużyny.", 400));
+//   }
+//   if (!MongoDBUtils.checkMongoIdLength(req.params.id)) {
 //     return next(new HttpError("Podane ID ma złą formę.", 400));
 //   }
-//   let fileDeletedResponse;
+//   let team;
 //   try {
-//     const team = await Team.findOne({ _id: req.params.id }).exec();
-//     if (!team) {
-//       return next(new HttpError(`Nie ma drużyny o ID: ${req.params.id}.`, 204));
-//     }
-//     //delete file
-//     try {
-//       fileDeletedResponse = deleteFile(team.teamCrestImage);
-//     } catch (error) {
-//       return next(
-//         new HttpError(
-//           `Błąd serwera, skasowanie pliku graficznego nie powiodło się.`,
-//           500
-//         )
-//       );
-//     }
-//     if (fileDeletedResponse === DELETE_FILE_RESPONSE.fileUnDeleted) {
-//       return next(
-//         new HttpError(
-//           `Błąd serwera, skasowanie pliku graficznego rozgrywek nie powiodło się.`,
-//           500
-//         )
-//       );
-//     }
-//     const result = await team.deleteOne(); //{ _id: req.body.id }
-//     res.json(result);
-//   } catch (error) {
-//     console.log(error);
-//     return next(
-//       new HttpError(`Błąd serwera, skasowanie drużyny nie powiodło się.`, 500)
-//     );
+//     team = await Team.findOne({ _id: req.params.id });
+//   } catch (err) {
+//     return next(new HttpError("Błąd serwera, spróbuj ponownie.", 500));
 //   }
+//   if (!team) {
+//     return next(new HttpError("Nie ma drużyny o takim ID.", 204));
+//   }
+//   res.status(200).json({ team });
 // };
-// module.exports = { getAllTeams, createTeam, getTeam, updateTeam, deleteTeam };

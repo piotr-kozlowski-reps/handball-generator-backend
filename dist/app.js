@@ -24,6 +24,8 @@ const refresh_routes_1 = __importDefault(require("./routes/refresh-routes"));
 const logout_routes_1 = __importDefault(require("./routes/logout-routes"));
 const team_routes_1 = __importDefault(require("./routes/team-routes"));
 const background_image_routes_1 = __importDefault(require("./routes/background-image-routes"));
+const sponsors_bar_routes_1 = __importDefault(require("./routes/sponsors-bar-routes"));
+const game_name_routes_1 = __importDefault(require("./routes/game-name-routes"));
 // /** connect to MongoDB */
 (0, bdConn_1.default)();
 // /** custom middleware logger */
@@ -61,18 +63,10 @@ app.use("/api/refresh", refresh_routes_1.default);
 app.use("/api/logout", logout_routes_1.default);
 /** protected routes */
 app.use(verifyJWT_1.default);
-app.use("/api/team", upload.single("teamCrestImage"), team_routes_1.default);
-// app.use(
-//   "/api/sponsors-bar",
-//   upload.single("sponsorsBarImage"),
-//   require("./routes/sponsors-bar-routes")
-// );
+app.use("/api/team", upload.array("teamCrestImage"), team_routes_1.default);
+app.use("/api/sponsors-bar", upload.array("sponsorsBarImage"), sponsors_bar_routes_1.default);
 app.use("/api/background-image", upload.array("backgroundImages"), background_image_routes_1.default);
-// app.use(
-//   "/api/game-name",
-//   upload.single("gameImage"),
-//   require("./routes/game-name-routes")
-// );
+app.use("/api/game-name", upload.array("gameImage"), game_name_routes_1.default);
 /**  error handling */
 app.use((req, res, next) => {
     return next(new http_error_1.default("Could not find this route.", 404));

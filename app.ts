@@ -22,7 +22,9 @@ import authRoutes from "./routes/auth-routes";
 import refreshRoutes from "./routes/refresh-routes";
 import logoutRoutes from "./routes/logout-routes";
 import teamRoutes from "./routes/team-routes";
-import backgroundImage from "./routes/background-image-routes";
+import backgroundImages from "./routes/background-image-routes";
+import sponsorsBars from "./routes/sponsors-bar-routes";
+import gameName from "./routes/game-name-routes";
 
 // /** connect to MongoDB */
 connectDB();
@@ -72,22 +74,14 @@ app.use("/api/logout", logoutRoutes);
 
 /** protected routes */
 app.use(verifyJWT);
-app.use("/api/team", upload.single("teamCrestImage"), teamRoutes);
-// app.use(
-//   "/api/sponsors-bar",
-//   upload.single("sponsorsBarImage"),
-//   require("./routes/sponsors-bar-routes")
-// );
+app.use("/api/team", upload.array("teamCrestImage"), teamRoutes);
+app.use("/api/sponsors-bar", upload.array("sponsorsBarImage"), sponsorsBars);
 app.use(
   "/api/background-image",
   upload.array("backgroundImages"),
-  backgroundImage
+  backgroundImages
 );
-// app.use(
-//   "/api/game-name",
-//   upload.single("gameImage"),
-//   require("./routes/game-name-routes")
-// );
+app.use("/api/game-name", upload.array("gameImage"), gameName);
 
 /**  error handling */
 app.use((req, res, next) => {

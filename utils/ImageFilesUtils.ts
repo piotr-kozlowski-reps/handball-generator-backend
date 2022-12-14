@@ -9,20 +9,23 @@ export default class ImageFilesUtils {
   //images utils
   static deleteFiles(items: Express.Multer.File[] | string[]) {
     const result: TDeleteFileResponse[] = [];
-    items.forEach((file) => {
-      const deleteResult = this.deleteFile(file.path);
-      result.push(deleteResult);
-    });
 
-    return result;
-  }
+    if (items.length === 0) return result;
 
-  static deleteFilesWithPathsArrayArgument(pathsArray: string[]) {
-    const result: TDeleteFileResponse[] = [];
-    pathsArray.forEach((path) => {
-      const deleteResult = this.deleteFile(path);
-      result.push(deleteResult);
-    });
+    if ((<Express.Multer.File[]>items)[0].path) {
+      items.forEach((file) => {
+        console.log(file);
+        const fileProperlyTyped = file as Express.Multer.File;
+        const deleteResult = ImageFilesUtils.deleteFile(fileProperlyTyped.path);
+        result.push(deleteResult);
+      });
+    } else {
+      items.forEach((path) => {
+        console.log(path);
+        const deleteResult = this.deleteFile(path as string);
+        result.push(deleteResult);
+      });
+    }
 
     return result;
   }

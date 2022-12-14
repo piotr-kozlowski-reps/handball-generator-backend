@@ -11,7 +11,7 @@ const team_controller_1 = require("../controllers/team-controller");
 const router = express_1.default.Router();
 ////routes
 router.get("/", team_controller_1.getAllTeams);
-// router.get("/:id", teamController.getTeam);
+router.get("/:id", team_controller_1.getTeam);
 // router.post(
 //   "/",
 //   filesPayloadExists,
@@ -20,5 +20,5 @@ router.get("/", team_controller_1.getAllTeams);
 //   teamController.createTeam
 // );
 // router.put("/", teamController.updateTeam);
-// router.delete("/:id", teamController.deleteTeam);
+router.delete("/:id", team_controller_1.deleteTeam);
 exports.default = router;

@@ -1,5 +1,3 @@
-// const { DELETE_FILE_RESPONSE } = require("../config/deleteFileResponse");
-// const { deleteFiles } = require("../utils/deleteFIle");
 import HttpError from "../utils/http-error";
 import BackgroundImage from "../models/BackgroundImage";
 import { Request, Response, NextFunction } from "express";
@@ -10,26 +8,16 @@ import {
   IImageProcessingError,
   TBackgroundImage,
   TDeleteFileResponse,
-  TProcessedImageFile,
   TUnprocessedImageResponse,
 } from "../utils/app.types";
-import { Model } from "mongoose";
-
-// const { createThumbnails } = require("../utils/createThumbnail");
+import { fetchAll_General, fetchOne_General } from "../utils/general-crud";
 
 export const getAllBackgroundImages = async (
   req: Request,
   res: Response,
   next: NextFunction
 ) => {
-  let backgrounds;
-  try {
-    backgrounds = await BackgroundImage.find();
-  } catch (err) {
-    return next(new HttpError("Błąd serwera, spróbuj ponownie.", 500));
-  }
-
-  res.status(200).json(backgrounds);
+  fetchAll_General(BackgroundImage, req, res, next);
 };
 
 export const getBackgroundImage = async (
@@ -37,26 +25,7 @@ export const getBackgroundImage = async (
   res: Response,
   next: NextFunction
 ) => {
-  if (!req?.params?.id) {
-    return next(new HttpError("Wymagane ID tła.", 400));
-  }
-
-  if (!MongoDBUtils.checkMongoIdLength(req.params.id)) {
-    return next(new HttpError("Podane ID ma złą formę.", 400));
-  }
-
-  let backgroundImage;
-  try {
-    backgroundImage = await BackgroundImage.findOne({ _id: req.params.id });
-  } catch (err) {
-    return next(new HttpError("Błąd serwera, spróbuj ponownie.", 500));
-  }
-
-  if (!backgroundImage) {
-    return next(new HttpError("Nie ma tła o takim ID.", 204));
-  }
-
-  res.status(200).json({ backgroundImage });
+  fetchOne_General(BackgroundImage, req, res, next);
 };
 
 export const createBackgroundImages = async (
@@ -80,7 +49,7 @@ export const createBackgroundImages = async (
     return file.originalname.split(".")[0];
   });
   if (OverallUtils.checkIfArrayHasDuplicates(backgroundImageNamesArray)) {
-    deleteFiles(filesArray);
+    const result = ImageFilesUtils.deleteFiles(filesArray);
     return next(
       new HttpError(
         "W przesłanych plikach znajdowały się pliki o tej samej nazwie.",
@@ -99,7 +68,7 @@ export const createBackgroundImages = async (
       if (foundBackgroundInDB) foundBackgrounds.push(foundBackgroundInDB);
     }
   } catch (err) {
-    deleteFiles(filesArray);
+    const result = ImageFilesUtils.deleteFiles(filesArray);
     return next(
       new HttpError(
         "Nie udało się zweryfikować czy pliki tła już istnieją, spróbuj ponownie.",
@@ -135,7 +104,7 @@ export const createBackgroundImages = async (
     );
 
     //delete duplicates and send response if no files left
-    deleteFiles(fileDuplicatesArray);
+    const result = ImageFilesUtils.deleteFiles(fileDuplicatesArray);
     if (filesArray.length < 1) {
       return next(
         new HttpError(
@@ -152,7 +121,7 @@ export const createBackgroundImages = async (
 
   //delete images if their thumbnails were unprocessed
   if (unprocessedImages.length > 0) {
-    deleteFiles(unprocessedImages);
+    const result = ImageFilesUtils.deleteFiles(unprocessedImages);
     finalUnprocessedImagesArray.push(
       ...unprocessedImages.map((image) => ({
         fileName: image.originalname,
@@ -175,7 +144,7 @@ export const createBackgroundImages = async (
     finalProcessedImagesArray.push(...result);
   } catch (error) {
     console.error(error);
-    deleteFiles(processedImages);
+    const result = ImageFilesUtils.deleteFiles(processedImages);
     await BackgroundImage.deleteMany(backgroundImagesObjects);
     finalUnprocessedImagesArray.push(
       ...processedImages.map((image) => ({
@@ -224,7 +193,7 @@ export const deleteBackgroundImage = async (
 
     //deleting file
     try {
-      filesDeletedResponse = ImageFilesUtils.deleteFilesWithPathsArrayArgument([
+      filesDeletedResponse = ImageFilesUtils.deleteFiles([
         backgroundImage.backgroundImage,
         backgroundImage.backgroundImageThumbnail,
       ]);
@@ -261,8 +230,45 @@ export const deleteBackgroundImage = async (
   }
 };
 
-////private
-function deleteFiles(arrayOfFiles: Express.Multer.File[]) {
-  const result = ImageFilesUtils.deleteFiles(arrayOfFiles);
-  return result;
-}
+/////////////////////////////// OLD
+// export const getAllBackgroundImages = async (
+//   req: Request,
+//   res: Response,
+//   next: NextFunction
+// ) => {
+//   let backgrounds;
+//   try {
+//     backgrounds = await BackgroundImage.find();
+//   } catch (err) {
+//     return next(new HttpError("Błąd serwera, spróbuj ponownie.", 500));
+//   }
+
+//   res.status(200).json(backgrounds);
+// };
+
+// export const getBackgroundImage = async (
+//   req: Request,
+//   res: Response,
+//   next: NextFunction
+// ) => {
+//   if (!req?.params?.id) {
+//     return next(new HttpError("Wymagane ID tła.", 400));
+//   }
+
+//   if (!MongoDBUtils.checkMongoIdLength(req.params.id)) {
+//     return next(new HttpError("Podane ID ma złą formę.", 400));
+//   }
+
+//   let backgroundImage;
+//   try {
+//     backgroundImage = await BackgroundImage.findOne({ _id: req.params.id });
+//   } catch (err) {
+//     return next(new HttpError("Błąd serwera, spróbuj ponownie.", 500));
+//   }
+
+//   if (!backgroundImage) {
+//     return next(new HttpError("Nie ma tła o takim ID.", 204));
+//   }
+
+//   res.status(200).json({ backgroundImage });
+// };

@@ -44,18 +44,23 @@ class ImageFilesUtils {
     //images utils
     static deleteFiles(items) {
         const result = [];
-        items.forEach((file) => {
-            const deleteResult = this.deleteFile(file.path);
-            result.push(deleteResult);
-        });
-        return result;
-    }
-    static deleteFilesWithPathsArrayArgument(pathsArray) {
-        const result = [];
-        pathsArray.forEach((path) => {
-            const deleteResult = this.deleteFile(path);
-            result.push(deleteResult);
-        });
+        if (items.length === 0)
+            return result;
+        if (items[0].path) {
+            items.forEach((file) => {
+                console.log(file);
+                const fileProperlyTyped = file;
+                const deleteResult = ImageFilesUtils.deleteFile(fileProperlyTyped.path);
+                result.push(deleteResult);
+            });
+        }
+        else {
+            items.forEach((path) => {
+                console.log(path);
+                const deleteResult = this.deleteFile(path);
+                result.push(deleteResult);
+            });
+        }
         return result;
     }
     static createThumbnails(imagesArray) {

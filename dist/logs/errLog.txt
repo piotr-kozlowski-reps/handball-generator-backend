@@ -203,3 +203,19 @@ Dopuszczalna wysokość pliku to: 10 px.
 20221211	22:12:50	0e97e0f7-d87b-435f-94b0-90b402386c19	Error: Could not find this route.
 20221211	22:12:51	27ef0fad-6f6c-427f-986f-5e46d2b829e7	Error: Could not find this route.
 20221211	22:12:53	4a033c44-068b-4d45-9131-d641b44ba694	Error: Could not find this route.
+20221212	20:10:50	2409dd83-87f8-4869-a506-da6fc1229020	Error: Nie jesteś zalogowany.
+20221212	20:10:50	32817f07-e87c-4af8-970c-8e2f4bd07b99	Error: Nie jesteś zalogowany.
+20221212	20:11:00	6746e620-9133-4e7b-b0d2-6228aec9bca4	Error: Dostęp zabroniony.
+20221212	20:11:00	8cfb8739-ba11-4da7-bbe5-590690677af6	Error: Dostęp zabroniony.
+20221212	20:13:51	a6904083-c185-4d48-b94b-2d13fc994ce1	Error: Nie masz dostępu do tych zasobów.
+20221212	20:13:51	08ac4262-85de-4a0b-9ee4-a53b4c19d3bd	Error: Nie masz dostępu do tych zasobów.
+20221212	20:13:51	404b3da1-cda4-4e75-9740-b73ae5597bb5	Error: Nie masz dostępu do tych zasobów.
+20221212	20:13:51	d1035e02-63db-4019-b464-a7f571a09da5	Error: Nie masz dostępu do tych zasobów.
+20221212	20:30:25	9f5525c9-4bde-4777-b180-779f1323f8bb	Error: Could not find this route.
+20221212	20:33:39	bd1d4030-6b53-4493-b05a-ed06ee7e84e8	Error: Błąd serwera, skasowanie pliku graficznego nie powiodło się.
+20221213	13:59:52	6ca64668-e01c-4a1a-8a6e-3965b19a8cec	Error: Nie ma żadnych informacji dla przekazanaego ID.
+20221213	14:06:34	34506444-4ed2-4e1f-8a52-959e37555d5f	Error: Token jest niepoprawny
+20221213	14:06:38	b03cc1b8-1b66-4f8d-813d-39b7f8c83d47	Error: Nie ma żadnych informacji dla przekazanaego ID.
+20221213	14:21:27	587077b9-756e-4274-ac58-dcbe711451cf	Error: Nie ma żadnych informacji dla przekazanaego ID.
+20221213	15:05:10	c39b5e52-c1a8-47de-aaf3-9bd130f86d7f	Error: Token jest niepoprawny
+20221213	16:51:11	e29b56cd-7e11-4140-91b6-f09958afa59d	Error: Token jest niepoprawny

@@ -19,6 +19,16 @@ export type TBackgroundImage = {
   backgroundImageThumbnail: string;
 };
 
+export type TSponsorsBar = {
+  barName: string;
+  sponsorsBarImage: string;
+};
+
+export type TGameName = {
+  gameName: string;
+  gameImage: string;
+};
+
 export type TDeleteFileResponse =
   | "FILE_DELETED"
   | "FILE_UNDELETED"
