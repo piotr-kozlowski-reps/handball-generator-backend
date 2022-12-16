@@ -7,7 +7,7 @@ const express_1 = __importDefault(require("express"));
 const app = (0, express_1.default)();
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-const cors_1 = __importDefault(require("cors"));
+const corsOptions_1 = __importDefault(require("./config/corsOptions"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const path_1 = __importDefault(require("path"));
@@ -35,22 +35,15 @@ app.use(logEvents_1.logger);
 //   console.log(req);
 //   next();
 // });
-// /** static files server */
-app.use("/images", express_1.default.static(path_1.default.join(__dirname, "images")));
 //multer
 const multer_1 = __importDefault(require("multer"));
 const storage = (0, createMulterStorage_1.createMulterStorage)(multer_1.default);
 const upload = (0, multer_1.default)({ storage: storage });
-/**  custom handler ->  options credentials add when request from allowOrigins array - needs to be before CORS() */
-// app.use(credentials);
-//TODO: nie działało mi w chromie podczas developmentu - nie wiem dlaczego
-/**  Cross Origin Resource Sharing */
-let corsConfig = {
-    origin: true,
-    credentials: true,
-};
-app.use((0, cors_1.default)(corsConfig));
-app.options("*", (0, cors_1.default)(corsConfig));
+/** CORS */
+app.options("*", corsOptions_1.default);
+app.use(corsOptions_1.default);
+// /** static files server */
+app.use("/images", express_1.default.static(path_1.default.join(__dirname, "images")));
 /** express middleware to handle urlencoded form data */
 app.use(express_1.default.urlencoded({ extended: true }));
 /** express middleware for json data */

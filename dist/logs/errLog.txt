@@ -383,3 +383,21 @@ Dopuszczalna wysokość pliku to: 10 px.
 20221215	21:57:30	81759c40-78bb-452d-b372-679c0b11329c	Error: Nie jesteś zalogowany.
 20221215	21:57:30	ae832dea-ac04-4558-af19-1d18bf35d55f	Error: Nie jesteś zalogowany.
 20221216	14:24:59	5672b260-a400-4633-97d5-ecbc8f298269	Error: Nie masz dostępu do tych zasobów.
+20221216	14:27:50	50408f85-1dd6-40b1-9472-29c0a39aec34	Error: Nie masz dostępu do tych zasobów.
+20221216	14:27:52	8471c385-c3a4-4d5f-a1a8-1874c95b41ee	Error: Nie masz dostępu do tych zasobów.
+20221216	14:27:56	8e5e9d1a-acd7-4dee-8efe-ebcfb192c88f	Error: Nie masz dostępu do tych zasobów.
+20221216	14:33:29	637783b4-8db8-4a54-b661-9a7de860e65c	Error: Nie masz dostępu do tych zasobów.
+20221216	14:33:29	f180c839-c61a-4410-a21e-ebfbf0e0a82c	Error: Nie masz dostępu do tych zasobów.
+20221216	14:56:59	a00079d1-d463-469b-b827-63f5c0737061	Error: Nie masz dostępu do tych zasobów.
+20221216	15:01:39	de966ea6-2405-46e8-920f-7874be87999c	Error: Nie masz dostępu do tych zasobów.
+20221216	15:03:14	fe4951ed-0d74-4324-b26a-148a6fc2eb1d	Error: Nie masz dostępu do tych zasobów.
+20221216	15:32:55	783dfea8-20cb-4af6-b46b-62dd2b445687	Error: Nie masz dostępu do tych zasobów.
+20221216	16:15:44	3373d1f1-acb6-4478-9870-e431745234af	Error: Nie masz dostępu do tych zasobów.
+20221216	20:08:30	827bf251-91e9-453b-9e4a-ecacf29cea0d	Error: Token jest niepoprawny
+20221216	20:08:30	a5f6866e-d871-408e-8cc0-8d10bacf2307	Error: Nie jesteś zalogowany.
+20221216	20:08:31	34c03426-5386-4c54-83e8-00b3682cd2e4	Error: Token jest niepoprawny
+20221216	20:08:31	56bf627d-45a2-4a04-947f-8d58a168a4be	Error: Nie jesteś zalogowany.
+20221216	20:08:33	1211174d-58a3-4e95-bd37-c8302e8a535a	Error: Token jest niepoprawny
+20221216	20:08:33	cd5460be-cbe1-4f68-83d0-8bb62bc483bd	Error: Nie jesteś zalogowany.
+20221216	20:08:37	2afe99ba-d523-4b92-8f8c-a635e04848ab	Error: Token jest niepoprawny
+20221216	20:08:37	8b3d96fe-49ed-4513-89a5-f8faafca4e6a	Error: Nie jesteś zalogowany.
