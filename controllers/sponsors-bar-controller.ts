@@ -3,7 +3,7 @@ import SponsorsBar from "../models/SponsorsBar";
 
 import { Request, Response, NextFunction } from "express";
 import MongoDBUtils from "../utils/MongoDBUtils";
-import { TDeleteFileResponse } from "../utils/app.types";
+import { TDeleteFileResponse, TSponsorsBar } from "../utils/app.types";
 import ImageFilesUtils from "../utils/ImageFilesUtils";
 import { fetchAll_General, fetchOne_General } from "../utils/general-crud";
 
@@ -23,51 +23,80 @@ export const getSponsorsBar = async (
   fetchOne_General(SponsorsBar, req, res, next);
 };
 
-// const createSponsorsBar = async (req, res, next) => {
-//   const { barName } = req.body;
-//   if (!barName)
-//     return res
-//       .status(400)
-//       .json({ message: "Nazwa belki sponsorów jest wymagana." });
+export const createSponsorsBar = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  let filesArray: Express.Multer.File[] | undefined = req.files as
+    | Express.Multer.File[]
+    | undefined;
+  const { barName } = req.body;
 
-//   let foundSponsorsBar;
-//   try {
-//     foundSponsorsBar = await SponsorsBar.findOne({ barName: barName });
-//   } catch (err) {
-//     return next(
-//       new HttpError(
-//         "Nie udało się zweryfikować czy belka sponsorów już istnieje, spróbuj ponownie.",
-//         500
-//       )
-//     );
-//   }
-//   console.log({ foundSponsorsBar });
-//   if (foundSponsorsBar) {
-//     deleteFile(req.file.path);
-//     return next(
-//       new HttpError("Belka sponsorów o takiej nazwie już istnieje.", 400)
-//     );
-//   }
-//   const newSponsorBar = new SponsorsBar({
-//     barName,
-//     sponsorsBarImage: req.file.path,
-//   });
-//   let result;
-//   try {
-//     result = await newSponsorBar.save();
-//     console.log(result);
-//   } catch (err) {
-//     return next(
-//       new HttpError("Nie udało zapisać danych, spróbuj ponownie.", 500)
-//     );
-//   }
-//   //final response
-//   res.status(201).json({ result });
-// };
+  // if no fields values - send error response
+  if (!barName)
+    return next(new HttpError("Nazwa belki sponsorów jest wymagana.", 400));
+  if (!filesArray || filesArray.length < 1) {
+    return next(new HttpError("Musisz przesłać plik belki sponsorów.", 400));
+  }
+  if (filesArray.length > 1) {
+    return next(
+      new HttpError(
+        "Nie możesz przesłać więcej niż jeden plik belki sponsorów.",
+        400
+      )
+    );
+  }
 
-// const updateSponsorsBar = async (req, res, next) => {
-//   res.status(200).json({ message: "updateSponsorsBar" });
-// };
+  console.log(filesArray);
+
+  //check team with this teamName exist already in Database
+  let foundSponsorsBar: TSponsorsBar | null;
+  try {
+    foundSponsorsBar = await SponsorsBar.findOne({ barName: barName });
+  } catch (err) {
+    return next(
+      new HttpError(
+        "Nie udało się zweryfikować czy belka sponsorów już istnieje, spróbuj ponownie.",
+        500
+      )
+    );
+  }
+
+  if (foundSponsorsBar) {
+    ImageFilesUtils.deleteFiles([filesArray[0].path]);
+    return next(
+      new HttpError("Belka sponsorów o takiej nazwie już istnieje.", 400)
+    );
+  }
+
+  // create new Sponsors Bar
+  const newSponsorBar = new SponsorsBar({
+    barName,
+    sponsorsBarImage: filesArray[0].path,
+  });
+
+  let result;
+  try {
+    result = await newSponsorBar.save();
+    console.log(result);
+  } catch (err) {
+    return next(
+      new HttpError("Nie udało zapisać danych, spróbuj ponownie.", 500)
+    );
+  }
+  //final response
+  res.status(201).json({ result });
+};
+
+export const updateSponsorsBar = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  throw new Error("Not implemented.");
+  res.status(200).json({ message: "updateSponsorsBar" });
+};
 
 export const deleteSponsorsBar = async (
   req: Request,

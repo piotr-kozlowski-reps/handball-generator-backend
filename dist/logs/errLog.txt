@@ -219,3 +219,167 @@ Dopuszczalna wysokość pliku to: 10 px.
 20221213	14:21:27	587077b9-756e-4274-ac58-dcbe711451cf	Error: Nie ma żadnych informacji dla przekazanaego ID.
 20221213	15:05:10	c39b5e52-c1a8-47de-aaf3-9bd130f86d7f	Error: Token jest niepoprawny
 20221213	16:51:11	e29b56cd-7e11-4140-91b6-f09958afa59d	Error: Token jest niepoprawny
+20221214	10:31:34	3431d908-e78e-447c-90e7-700867efc66a	Error: Malformed part header
+20221214	10:34:07	a8504d42-c636-4d69-923a-eff610247926	Error: Drużyna już istnieje.
+20221214	10:35:26	762a6e05-b9ff-46eb-9f5f-2f126f4cbfbd	Error: Drużyna już istnieje.
+20221214	10:35:54	d11f2bc6-f24e-4af6-8563-90f3b3e22e4e	Error: Token jest niepoprawny
+20221214	11:46:09	7bb7cb94-eb50-422d-8549-217969c318a7	Error: Nie jesteś zalogowany.
+20221214	11:46:09	50914e69-05d3-4e0c-896a-acfcec759176	Error: Nie jesteś zalogowany.
+20221214	11:46:12	083eb7b4-25d8-4704-90f8-18d7c7a56107	Error: Nie jesteś zalogowany.
+20221214	11:46:12	257f5049-b472-4444-bb9f-17ee839866cd	Error: Nie jesteś zalogowany.
+20221214	11:48:34	d09dfef5-96f4-4620-adee-6ea8ef27cbe7	Error: Nie masz dostępu do tych zasobów.
+20221214	12:01:11	da300656-a79f-463b-8837-601e24c716c3	Error: Nie jesteś zalogowany.
+20221214	12:01:11	f668768c-7db6-45e9-9446-d3a4cf5e5da8	Error: Nie jesteś zalogowany.
+20221214	12:01:29	11e6a4c2-5022-43fd-ab30-9ee89089d8f3	Error: Nie masz dostępu do tych zasobów.
+20221214	12:08:56	882e2d51-01af-42e7-8fd7-172c2c342f4e	Error: Nie jesteś zalogowany.
+20221214	12:08:56	c390f99d-de79-4451-a004-ba43ccf83e7b	Error: Nie jesteś zalogowany.
+20221214	12:08:58	92dc9fa1-c897-4ea4-86f2-b6c01bea5899	Error: Nie masz dostępu do tych zasobów.
+20221214	12:08:58	82923b49-9a2d-4c42-80b6-0960a2f3a155	Error: Nie masz dostępu do tych zasobów.
+20221214	12:08:58	25bcd008-8d88-4b61-b9b6-fbecbc44355c	Error: Nie masz dostępu do tych zasobów.
+20221214	12:08:58	df0af599-b422-4e1b-8010-75d85f3dbca8	Error: Nie masz dostępu do tych zasobów.
+20221214	12:08:58	0be0cb22-4def-4870-88f9-2a74e13e0f0d	Error: Nie masz dostępu do tych zasobów.
+20221214	13:58:47	e2e1c150-067b-432d-86a4-466fb624cdcb	Error: Nie masz dostępu do tych zasobów.
+20221214	13:59:38	25f37ca7-8f25-449d-9d70-220a3b2a1690	Error: Nie masz dostępu do tych zasobów.
+20221214	14:00:40	f456f8c4-48a4-4fee-8f78-01177ab83efc	Error: Nie masz dostępu do tych zasobów.
+20221214	14:04:26	c2883e7e-9563-4bc7-9c70-d6324ca8cf06	Error: Nie masz dostępu do tych zasobów.
+20221214	14:04:26	665ed5b1-22e0-40c4-bf20-3a9d6b11b0a6	Error: Nie masz dostępu do tych zasobów.
+20221214	14:04:26	3193eb1a-455b-405c-8a93-2f86fad829d1	Error: Nie masz dostępu do tych zasobów.
+20221214	14:04:26	2e67219d-f885-4cb1-8a94-cabaa8750b72	Error: Nie masz dostępu do tych zasobów.
+20221214	16:24:11	52cf14a4-67dd-4e72-8e11-e33deeee866b	Error: Nie masz dostępu do tych zasobów.
+20221214	16:24:11	561dea65-f0d8-4cba-9bef-5b635b5b98ee	Error: Nie masz dostępu do tych zasobów.
+20221214	16:29:12	ff241530-fa17-4c3b-8b2f-ed18c892fa8f	Error: Nie jesteś zalogowany.
+20221214	16:29:12	8517d45f-a359-4153-a891-a4022aae1d2f	Error: Nie jesteś zalogowany.
+20221214	16:32:06	3c50cb62-47c4-432f-a970-ecf843584425	Error: Obrazek musi być plikiem o rozszerzeniu: .png,.jpg,.jpeg
+20221214	16:32:50	8c587abf-acfe-4642-b48e-3677f5314a80	Error: Obrazek musi być plikiem o rozszerzeniu: .png,.jpg,.jpeg
+20221214	16:37:35	8bccef7b-f932-4e79-88b4-5e4e9241db2d	Error: Obrazek musi być plikiem o rozszerzeniu: .png,.jpg,.jpeg
+20221214	16:37:59	22772e4c-6c46-4ba2-b561-a0dc8d53a964	Error: Obrazek musi być plikiem o rozszerzeniu: .png,.jpg,.jpeg
+20221214	16:39:27	e5a639fd-0000-4260-b9ee-f02208658322	Error: Brak pliku/ów graficznych.
+20221214	19:36:29	7272e2c6-04a8-43e3-ab3d-956155e5193b	Error: Nie jesteś zalogowany.
+20221214	19:36:29	bc7ecdac-2055-44af-9ab6-0b30056674d7	Error: Nie jesteś zalogowany.
+20221215	12:05:25	fe5225e4-a886-4981-9af3-055689fab1ec	Error: Nie jesteś zalogowany.
+20221215	12:05:25	841e46e2-4726-480c-af5e-6d443554e587	Error: Nie jesteś zalogowany.
+20221215	12:11:15	5029ba9d-7e60-4f56-bd58-548dbe498fed	Error: Brak pliku/ów graficznych.
+20221215	12:13:16	f51f6a8f-558f-4c9b-8fee-672a2137026d	Error: Brak pliku/ów graficznych.
+20221215	12:13:47	d2f4d79e-d324-452d-b763-82c61f22d816	Error: Brak pliku/ów graficznych.
+20221215	12:17:49	2a784690-9801-4d38-8fa7-f6ecca233ecb	Error: Brak pliku/ów graficznych.
+20221215	12:18:05	197330ba-82b4-42a8-ac8c-4bc94530f3d5	Error: Brak pliku/ów graficznych.
+20221215	12:20:55	5f90b581-55fd-4801-89cf-ac1cdb699aae	Error: Brak pliku/ów graficznych.
+20221215	12:25:56	20614253-eb42-49ba-bddb-c97abdc6a09e	Error: Brak pliku/ów graficznych.
+20221215	12:42:19	015bea15-92a9-4912-8f97-d39100a59766	Error: Brak pliku/ów graficznych.
+20221215	12:42:45	689da47c-8687-44ae-8fb1-40878e34cc8d	Error: Brak pliku/ów graficznych.
+20221215	12:42:48	622fe349-2d40-4b00-a6b5-dbd5f0857c21	Error: Brak pliku/ów graficznych.
+20221215	12:44:07	a17b6354-bc11-4d73-b258-93380b115e1c	Error: Brak pliku/ów graficznych.
+20221215	12:44:29	89a52de4-9c81-421b-812c-1c6dbb7e4636	Error: Brak pliku/ów graficznych.
+20221215	12:45:14	242a24bb-e930-4ec9-acb6-e72a7e058c49	Error: Drużyna już istnieje.
+20221215	12:47:28	77a58646-f86a-4cbd-b7f9-f4f6a5301c32	Error: Brak pliku/ów graficznych.
+20221215	12:50:55	b3ec84db-d734-4b67-ac0a-4d6746609630	Error: Brak pliku/ów graficznych.
+20221215	13:26:20	4712c877-5595-43d8-9858-6683c2028b0e	Error: Nie masz dostępu do tych zasobów.
+20221215	13:27:40	b568f0ab-ed68-4767-bddd-be688d8ff1ea	Error: Nie jesteś zalogowany.
+20221215	13:27:40	ec6da111-b9e8-4c72-bcc1-5aa6dec3e1bd	Error: Nie jesteś zalogowany.
+20221215	13:34:23	108f7e8a-71a1-44a5-b8f4-8de7fa9974cb	Error: Nie jesteś zalogowany.
+20221215	13:34:23	996698ce-a990-45f8-b5ed-5b0a23801151	Error: Nie jesteś zalogowany.
+20221215	13:38:00	d25ef937-41e4-446b-a59f-bcab639694b2	Error: Nie jesteś zalogowany.
+20221215	13:38:00	06ad28a9-ecd4-4fa1-b85e-db52776cd973	Error: Nie jesteś zalogowany.
+20221215	13:47:37	ce1cffb0-3183-4590-9909-30c7a298ec9d	Error: Nie jesteś zalogowany.
+20221215	13:47:37	286918b1-f96f-4ad0-bbf5-2c031cf6965b	Error: Nie jesteś zalogowany.
+20221215	13:48:05	60e15328-3dbf-4146-9c7c-a18e67daf01b	Error: Nie jesteś zalogowany.
+20221215	13:48:05	2cd1ffe4-fd66-4de0-962b-c4522785cc55	Error: Nie jesteś zalogowany.
+20221215	14:03:18	0acbf650-c030-4816-9ecb-e68be077f23c	Error: Nie jesteś zalogowany.
+20221215	14:03:18	aa108796-f354-4b46-a397-33a1e39d328f	Error: Nie jesteś zalogowany.
+20221215	14:03:51	fe968550-c77c-4306-a84b-1328d953a07e	Error: Nie jesteś zalogowany.
+20221215	14:03:51	244f70f6-6284-4566-a687-1101755af72c	Error: Nie jesteś zalogowany.
+20221215	14:04:51	4fbcebf6-76d6-44c8-b1f8-fb06f6b3458a	Error: Nie jesteś zalogowany.
+20221215	14:04:51	bd823986-5266-4e34-b7f8-d2d18d3616e9	Error: Nie jesteś zalogowany.
+20221215	14:07:48	c01ea000-63ff-4252-82bf-55ad3d499aaf	Error: Nie jesteś zalogowany.
+20221215	14:07:48	4087d51d-e28e-49d0-b728-cffb8e309ebc	Error: Nie jesteś zalogowany.
+20221215	14:08:25	7e051237-91b6-47e5-b4bd-b89443c9bc98	Error: Nie jesteś zalogowany.
+20221215	14:08:25	6c6785af-d77c-4011-9517-a2ba79d0626e	Error: Nie jesteś zalogowany.
+20221215	14:08:42	4057eeda-187f-4e46-85d4-e1050f4292a1	Error: Nie jesteś zalogowany.
+20221215	14:08:42	971e496d-bccd-4469-8454-f79d12b0795b	Error: Nie jesteś zalogowany.
+20221215	14:11:46	57abb484-e969-4a8c-b5e0-e2494ca69ebe	Error: Nie jesteś zalogowany.
+20221215	14:11:46	2f4a4891-8ccf-4db2-9c90-5ffe1aa62b0d	Error: Nie jesteś zalogowany.
+20221215	14:12:46	6b8bfa6e-38dd-4f3c-8430-ebe4c44764da	Error: Nie jesteś zalogowany.
+20221215	14:12:46	bff69a36-df4d-406c-901d-0cc788855a84	Error: Nie jesteś zalogowany.
+20221215	14:13:41	b9b5675a-7796-41b3-ae6d-af0eb7d5f0d9	Error: Nie jesteś zalogowany.
+20221215	14:13:41	3fd07079-0fcc-4fa2-afe8-08b0c2da8858	Error: Nie jesteś zalogowany.
+20221215	14:14:29	76bf7896-edf2-4797-bc16-8f7cf8af67f8	Error: Nie jesteś zalogowany.
+20221215	14:14:29	49092825-8f0a-4d0e-b7a5-1689e38ad8be	Error: Nie jesteś zalogowany.
+20221215	14:15:48	14a16c7d-adf5-47c8-95aa-7070f5b637b2	Error: Nie jesteś zalogowany.
+20221215	14:15:48	d3f984a2-ed70-4809-8158-923b760a7ab0	Error: Nie jesteś zalogowany.
+20221215	14:16:44	b15fc1eb-bcb0-4079-a247-2fcc1b2784fb	Error: Nie jesteś zalogowany.
+20221215	14:16:44	8f1ad009-b06b-40e6-b0c8-7a574ea4d63d	Error: Nie jesteś zalogowany.
+20221215	14:17:18	098a9a2c-c74e-4c61-8961-719e968d6404	Error: Nie jesteś zalogowany.
+20221215	14:17:18	efc70150-af7f-4e4f-b726-137ae46b2373	Error: Nie jesteś zalogowany.
+20221215	14:19:23	89245054-5684-41ab-a37f-8bdbc08255e0	Error: Nie jesteś zalogowany.
+20221215	14:19:23	f94cd8a3-462c-4d18-93ca-fdeb6681cf83	Error: Nie jesteś zalogowany.
+20221215	14:20:27	b62a1846-d03b-4651-8d67-0012dc32b2ab	Error: Nie jesteś zalogowany.
+20221215	14:20:27	9966a436-2739-4a7b-942f-930f242e95dd	Error: Nie jesteś zalogowany.
+20221215	14:21:06	311b689c-ba0a-4790-bfaf-4337dde32086	Error: Nie jesteś zalogowany.
+20221215	14:21:06	8196311e-76c5-4cb9-8449-1605a9e42633	Error: Nie jesteś zalogowany.
+20221215	14:22:15	17ff78ab-5e83-4fbf-9106-bd5b0c0167a5	Error: Nie jesteś zalogowany.
+20221215	14:22:15	a24fb388-3a5b-4320-81c8-5296e5d430ad	Error: Nie jesteś zalogowany.
+20221215	14:23:07	eb997340-3100-4bee-9e23-60e04b96cc57	Error: Nie jesteś zalogowany.
+20221215	14:23:07	4181e647-71b7-4cb5-9161-6a53feffec9d	Error: Nie jesteś zalogowany.
+20221215	15:06:22	3ffcb2cb-014e-4d50-85b2-7358280bae33	Error: Przesłane pliki tła o takiej/takich nazwach już istnieją w bazie danych.
+20221215	15:07:53	83254051-d349-41ec-8e73-e53b4675d09e	Error: Nie masz dostępu do tych zasobów.
+20221215	15:07:53	1439330d-8b62-4985-9550-36d2821041f7	Error: Nie masz dostępu do tych zasobów.
+20221215	15:08:49	e3f6d6ad-65bb-4a20-8512-70b952f81830	Error: Nie masz dostępu do tych zasobów.
+20221215	15:08:49	7f829d1e-f834-4934-a016-ac7e3e921a97	Error: Nie masz dostępu do tych zasobów.
+20221215	15:10:19	3106e495-d16b-403e-9f67-277565eb8ae0	Error: Nie masz dostępu do tych zasobów.
+20221215	15:10:19	ba95ba3a-ced8-4b5a-a615-4ea58d290d19	Error: Nie masz dostępu do tych zasobów.
+20221215	15:37:47	daa8ab9a-92e3-45b7-bccd-e5bb4228528e	Error: Nie masz dostępu do tych zasobów.
+20221215	15:51:31	3caaf2fb-cc8b-4ccc-8369-05e837883be3	Error: Nie masz dostępu do tych zasobów.
+20221215	15:53:28	efb38542-c253-406b-903f-b6a16e96d12c	Error: Nie masz dostępu do tych zasobów.
+20221215	15:53:28	163e5bc9-e7fc-45d2-989e-ba6ebcec43fe	Error: Nie masz dostępu do tych zasobów.
+20221215	15:54:00	3e5f862e-7563-4698-b2a0-71267807e2ee	Error: Nie masz dostępu do tych zasobów.
+20221215	15:54:00	274891ac-e38e-470c-8480-7fe205997599	Error: Nie masz dostępu do tych zasobów.
+20221215	15:54:08	57ef12ef-ccce-429b-94c6-33b07e92c421	Error: Nie masz dostępu do tych zasobów.
+20221215	15:54:08	07de628c-826d-40cc-9599-1933a7e6de92	Error: Nie masz dostępu do tych zasobów.
+20221215	15:54:14	6b49c869-d0e2-4a62-9db2-5c418d36de5a	Error: Nie masz dostępu do tych zasobów.
+20221215	15:54:14	fb97b40f-692c-482c-b05b-eaa8c6f47e9a	Error: Nie masz dostępu do tych zasobów.
+20221215	15:55:02	d664c8b2-d161-4374-94d8-45a2cce30b0c	Error: Nie masz dostępu do tych zasobów.
+20221215	15:55:02	d09ef838-0d44-4c69-a61c-63756216bcb1	Error: Nie masz dostępu do tych zasobów.
+20221215	16:00:05	39135690-e421-4559-a59a-92869dff2b95	Error: Nie masz dostępu do tych zasobów.
+20221215	16:01:22	126af4ec-766c-411a-816d-43a230f9effd	Error: Nie jesteś zalogowany.
+20221215	16:01:22	d473ee59-4772-4534-a311-c7cdaf196ab8	Error: Nie jesteś zalogowany.
+20221215	16:05:58	8a9f104b-c86a-4f85-b83e-c6788ae0d815	Error: Nie masz dostępu do tych zasobów.
+20221215	16:05:58	1c72c2ad-244a-4422-a29a-10069c286f11	Error: Nie masz dostępu do tych zasobów.
+20221215	16:05:58	6dafe04a-3770-48ca-944a-10c2cfae6f4c	Error: Nie masz dostępu do tych zasobów.
+20221215	16:06:00	7c5c6ab1-56d6-4cf8-a84a-ad66e209cc38	Error: Nie masz dostępu do tych zasobów.
+20221215	16:06:47	d992c9dc-1786-4d91-86df-938020a96900	Error: Nie masz dostępu do tych zasobów.
+20221215	16:14:46	a5110571-72b1-4abc-949f-bc3fb92470d5	Error: Nie masz dostępu do tych zasobów.
+20221215	16:15:19	48bbc032-220f-45e5-90e7-57bf1aa3970f	Error: Nie jesteś zalogowany.
+20221215	16:15:19	de7b3494-8f80-4016-962d-549ec2d4af7c	Error: Nie jesteś zalogowany.
+20221215	16:15:22	4c7c6c6c-9e80-447d-9c3c-1cab8bcf4e8f	Error: Nie masz dostępu do tych zasobów.
+20221215	16:15:46	6a3a88f2-e324-40b5-9353-d8568a147525	Error: Nie masz dostępu do tych zasobów.
+20221215	16:16:12	0fc093ac-b601-4543-94a1-25048e487ccc	Error: Nie jesteś zalogowany.
+20221215	16:16:12	23b558c6-39cd-4de8-a4e9-8bd52889f1cd	Error: Nie jesteś zalogowany.
+20221215	16:16:15	960997d5-d6b5-4886-be75-a44c2dd65d9f	Error: Nie masz dostępu do tych zasobów.
+20221215	16:17:03	ea50c443-a5f6-4d5c-b0c0-b7d52ac41157	Error: Nie masz dostępu do tych zasobów.
+20221215	16:17:09	fdf1f9ce-03d7-4ca3-a800-3c76d5c26fa6	Error: Nie masz dostępu do tych zasobów.
+20221215	16:56:47	8254acd2-8bfe-4f2d-9573-983c40e1052e	Error: Nie masz dostępu do tych zasobów.
+20221215	16:59:41	615921f8-6535-4543-a41b-770bade02dbd	Error: Nie jesteś zalogowany.
+20221215	16:59:41	c69bed19-b6bb-43d1-845f-e863affd7521	Error: Nie jesteś zalogowany.
+20221215	17:00:36	8f74e430-6abe-4e1c-b461-64da8f5f6b95	Error: Nie masz dostępu do tych zasobów.
+20221215	20:56:00	c811b968-fef1-41b6-88a2-242712c7bf18	Error: Nie masz dostępu do tych zasobów.
+20221215	20:57:37	5445e206-6d89-442c-bce0-a164e1213b25	Error: Nie masz dostępu do tych zasobów.
+20221215	20:57:52	934af0f0-e0b3-43e4-bd0b-44bccbfb5ed4	Error: Nie masz dostępu do tych zasobów.
+20221215	21:01:17	1482f90f-aa21-4f1e-8fe7-86d189726770	Error: Nie masz dostępu do tych zasobów.
+20221215	21:03:23	aa5882fb-0a34-4d14-9fd3-40652dc5f1c8	Error: Nie jesteś zalogowany.
+20221215	21:03:23	21f16ec7-f87b-40b1-b88d-3bb4d1c741fc	Error: Nie jesteś zalogowany.
+20221215	21:03:26	736b5c2a-7301-4b47-a715-fac7cb77d55c	Error: Nie masz dostępu do tych zasobów.
+20221215	21:07:06	1b2bb423-64eb-487c-a4a8-f9dc7f912fd9	Error: Nie jesteś zalogowany.
+20221215	21:07:06	ace0da78-dce9-4f57-bffa-d50d27f743a9	Error: Nie jesteś zalogowany.
+20221215	21:07:08	ccd40665-c8c0-4a4d-ac06-ff814f5b4ef3	Error: Nie masz dostępu do tych zasobów.
+20221215	21:13:38	d3653a5c-5335-450f-a2eb-593ebb39b8c9	Error: Nie jesteś zalogowany.
+20221215	21:13:38	9c57a62c-2408-4d95-87e7-39a4f754f17a	Error: Nie jesteś zalogowany.
+20221215	21:14:40	d6d6912b-5d51-48bc-b6ae-22627cb4a145	Error: Nie masz dostępu do tych zasobów.
+20221215	21:16:19	8537c704-0827-4e2d-a8e6-6874f5881661	Error: Nie masz dostępu do tych zasobów.
+20221215	21:17:40	587ee2ab-1c58-4c20-b003-d4a140144757	Error: Nie masz dostępu do tych zasobów.
+20221215	21:17:58	e933d884-dbfd-4147-a567-dcf3954d2f88	Error: Nie masz dostępu do tych zasobów.
+20221215	21:19:09	00ad9183-f061-4dff-b7a5-ed6a6740faac	Error: Nie jesteś zalogowany.
+20221215	21:19:09	f1932a30-91a6-4733-a2cc-2addd43aa2a6	Error: Nie jesteś zalogowany.
+20221215	21:21:11	2eff0b63-f170-4a16-b160-a25b40aebe80	Error: Nie masz dostępu do tych zasobów.
+20221215	21:57:30	81759c40-78bb-452d-b372-679c0b11329c	Error: Nie jesteś zalogowany.
+20221215	21:57:30	ae832dea-ac04-4558-af19-1d18bf35d55f	Error: Nie jesteś zalogowany.
+20221216	14:24:59	5672b260-a400-4633-97d5-ecbc8f298269	Error: Nie masz dostępu do tych zasobów.

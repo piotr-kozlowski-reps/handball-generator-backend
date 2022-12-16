@@ -14,8 +14,8 @@ const fileExtensionLimiter = (allowedExtensionsArray) => {
     return (req, res, next) => {
         const file = req.file;
         const files = req.files;
-        // console.log({ file });
-        // console.log({ files });
+        console.log({ file });
+        console.log({ files });
         let isAllowed = true;
         if (file) {
             const fileExtension = path_1.default.extname(file.originalname);
@@ -24,7 +24,9 @@ const fileExtensionLimiter = (allowedExtensionsArray) => {
         if (files) {
             files.forEach((file) => {
                 const fileExtension = path_1.default.extname(file.originalname);
+                console.log({ fileExtension });
                 isAllowed = isAllowed && allowedExtensionsArray.includes(fileExtension);
+                console.log({ isAllowed });
             });
         }
         if (files.length < 1)

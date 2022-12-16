@@ -7,9 +7,18 @@ const filesPayloadExists = (
   res: Response,
   next: NextFunction
 ) => {
+  // console.log({ req });
+
+  console.log("req.file: ", req.file);
+  console.log("req.files: ", req.files);
+
   if (!req.file && !req.files) {
     return next(new HttpError("Brak pliku/ów graficznych.", 400));
   }
+  if (!req.file && req.files?.length === 0) {
+    return next(new HttpError("Brak pliku/ów graficznych.", 400));
+  }
+
   next();
 };
 

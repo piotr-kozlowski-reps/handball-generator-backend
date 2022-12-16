@@ -12,13 +12,12 @@ export const createMulterStorage = (multer: any) => {
       file: Express.Multer.File,
       cb: DestinationCallback
     ) => {
-      // console.log("originalUrl: ", req.originalUrl);
       switch (req.originalUrl) {
         case "/api/team":
-          cb(null, path.join("images", "team-crests"));
+          cb(null, path.join("dist", "images", "team-crests"));
           return;
         case "/api/sponsors-bar":
-          cb(null, path.join("images", "sponsors-bars"));
+          cb(null, path.join("dist", "images", "sponsors-bars"));
           return;
         case "/api/background-image":
           // cb(null, path.join("images", "background-images"));
@@ -26,7 +25,7 @@ export const createMulterStorage = (multer: any) => {
 
           return;
         case "/api/game-name":
-          cb(null, path.join("images", "game-names"));
+          cb(null, path.join("dist", "images", "game-names"));
           return;
       }
     },
@@ -42,6 +41,9 @@ export const createMulterStorage = (multer: any) => {
 
 //utils
 export function createFileName(file: Express.Multer.File): string {
+  console.log("createFileName: ");
+  console.log({ file });
+
   const date = format(Date.now(), "yyyyMMdd-HHmmss");
 
   return `${file.originalname.split(".")[0]}___${date}${path.extname(

@@ -2,7 +2,12 @@ import HttpError from "../utils/http-error";
 import Team from "../models/Team";
 import { Request, Response, NextFunction } from "express";
 import MongoDBUtils from "../utils/MongoDBUtils";
-import { TDeleteFileResponse } from "../utils/app.types";
+import {
+  TBackgroundImage,
+  TDeleteFileResponse,
+  TTeam,
+  TUnprocessedImageResponse,
+} from "../utils/app.types";
 import ImageFilesUtils from "../utils/ImageFilesUtils";
 import { fetchAll_General, fetchOne_General } from "../utils/general-crud";
 
@@ -22,57 +27,81 @@ export const getTeam = async (
   fetchOne_General(Team, req, res, next);
 };
 
-// const createTeam = async (req, res, next) => {
-//   const { teamName, place } = req.body;
+export const createTeam = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  let filesArray: Express.Multer.File[] | undefined = req.files as
+    | Express.Multer.File[]
+    | undefined;
+  const { teamName, place } = req.body;
 
-//   if (!teamName)
-//     return res.status(400).json({ message: "Nazwa drużyny jest wymagana." });
+  // if no fields values - send error response
+  if (!teamName)
+    return next(new HttpError("Nazwa drużyny jest wymagana.", 400));
 
-//   if (!place)
-//     return res
-//       .status(400)
-//       .json({ message: "Lokalizacja drużyny jest wymagana." });
+  if (!place)
+    return next(new HttpError("Lokalizacja drużyny jest wymagana.", 400));
 
-//   let foundTeam;
-//   try {
-//     foundTeam = await Team.findOne({ teamName: teamName });
-//   } catch (err) {
-//     return next(
-//       new HttpError(
-//         "Nie udało się zweryfikować czy drużyna już istnieje, spróbuj ponownie.",
-//         500
-//       )
-//     );
-//   }
+  if (!filesArray || filesArray.length < 1) {
+    return next(new HttpError("Musisz przesłać plik tła.", 400));
+  }
+  if (filesArray.length > 1) {
+    return next(
+      new HttpError("Nie możesz przesłać więcej niż jeden plik tła.", 400)
+    );
+  }
 
-//   if (foundTeam) {
-//     deleteFile(req.file.path);
-//     return next(new HttpError("Drużyna już istnieje.", 400));
-//   }
+  console.log(filesArray);
 
-//   const newTeam = new Team({
-//     teamName,
-//     place,
-//     teamCrestImage: req.file.path,
-//   });
+  //check team with this teamName exist already in Database
+  let foundTeam: TTeam | null;
+  try {
+    foundTeam = await Team.findOne({ teamName: teamName });
+  } catch (err) {
+    return next(
+      new HttpError(
+        "Nie udało się zweryfikować czy drużyna już istnieje, spróbuj ponownie.",
+        500
+      )
+    );
+  }
 
-//   let result;
-//   try {
-//     result = await newTeam.save();
-//     console.log(result);
-//   } catch (err) {
-//     return next(
-//       new HttpError("Nie udało zapisać danych, spróbuj ponownie.", 500)
-//     );
-//   }
+  if (foundTeam) {
+    ImageFilesUtils.deleteFiles([filesArray[0].path]);
+    return next(new HttpError("Drużyna już istnieje.", 400));
+  }
 
-//   //final response
-//   res.status(201).json({ result });
-// };
+  // create new Team
+  const newTeam = new Team({
+    teamName,
+    place,
+    teamCrestImage: filesArray[0].path,
+  });
 
-// const updateTeam = async (req, res, next) => {
-//   res.status(200).json({ message: "updateTeam" });
-// };
+  let result;
+  try {
+    result = await newTeam.save();
+    console.log(result);
+  } catch (err) {
+    return next(
+      new HttpError("Nie udało zapisać danych w bazie, spróbuj ponownie.", 500)
+    );
+  }
+
+  //final response
+  res.status(201).json({ result });
+};
+
+export const updateTeam = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  throw new Error("Not implemented.");
+  res.status(200).json({ message: "updateTeam" });
+};
 
 export const deleteTeam = async (
   req: Request,

@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleteTeam = exports.getTeam = exports.getAllTeams = void 0;
+exports.deleteTeam = exports.updateTeam = exports.createTeam = exports.getTeam = exports.getAllTeams = void 0;
 const http_error_1 = __importDefault(require("../utils/http-error"));
 const Team_1 = __importDefault(require("../models/Team"));
 const MongoDBUtils_1 = __importDefault(require("../utils/MongoDBUtils"));
@@ -26,49 +26,56 @@ const getTeam = (req, res, next) => __awaiter(void 0, void 0, void 0, function* 
     (0, general_crud_1.fetchOne_General)(Team_1.default, req, res, next);
 });
 exports.getTeam = getTeam;
-// const createTeam = async (req, res, next) => {
-//   const { teamName, place } = req.body;
-//   if (!teamName)
-//     return res.status(400).json({ message: "Nazwa drużyny jest wymagana." });
-//   if (!place)
-//     return res
-//       .status(400)
-//       .json({ message: "Lokalizacja drużyny jest wymagana." });
-//   let foundTeam;
-//   try {
-//     foundTeam = await Team.findOne({ teamName: teamName });
-//   } catch (err) {
-//     return next(
-//       new HttpError(
-//         "Nie udało się zweryfikować czy drużyna już istnieje, spróbuj ponownie.",
-//         500
-//       )
-//     );
-//   }
-//   if (foundTeam) {
-//     deleteFile(req.file.path);
-//     return next(new HttpError("Drużyna już istnieje.", 400));
-//   }
-//   const newTeam = new Team({
-//     teamName,
-//     place,
-//     teamCrestImage: req.file.path,
-//   });
-//   let result;
-//   try {
-//     result = await newTeam.save();
-//     console.log(result);
-//   } catch (err) {
-//     return next(
-//       new HttpError("Nie udało zapisać danych, spróbuj ponownie.", 500)
-//     );
-//   }
-//   //final response
-//   res.status(201).json({ result });
-// };
-// const updateTeam = async (req, res, next) => {
-//   res.status(200).json({ message: "updateTeam" });
-// };
+const createTeam = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    let filesArray = req.files;
+    const { teamName, place } = req.body;
+    // if no fields values - send error response
+    if (!teamName)
+        return next(new http_error_1.default("Nazwa drużyny jest wymagana.", 400));
+    if (!place)
+        return next(new http_error_1.default("Lokalizacja drużyny jest wymagana.", 400));
+    if (!filesArray || filesArray.length < 1) {
+        return next(new http_error_1.default("Musisz przesłać plik tła.", 400));
+    }
+    if (filesArray.length > 1) {
+        return next(new http_error_1.default("Nie możesz przesłać więcej niż jeden plik tła.", 400));
+    }
+    console.log(filesArray);
+    //check team with this teamName exist already in Database
+    let foundTeam;
+    try {
+        foundTeam = yield Team_1.default.findOne({ teamName: teamName });
+    }
+    catch (err) {
+        return next(new http_error_1.default("Nie udało się zweryfikować czy drużyna już istnieje, spróbuj ponownie.", 500));
+    }
+    if (foundTeam) {
+        ImageFilesUtils_1.default.deleteFiles([filesArray[0].path]);
+        return next(new http_error_1.default("Drużyna już istnieje.", 400));
+    }
+    // create new Team
+    const newTeam = new Team_1.default({
+        teamName,
+        place,
+        teamCrestImage: filesArray[0].path,
+    });
+    let result;
+    try {
+        result = yield newTeam.save();
+        console.log(result);
+    }
+    catch (err) {
+        return next(new http_error_1.default("Nie udało zapisać danych w bazie, spróbuj ponownie.", 500));
+    }
+    //final response
+    res.status(201).json({ result });
+});
+exports.createTeam = createTeam;
+const updateTeam = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    throw new Error("Not implemented.");
+    res.status(200).json({ message: "updateTeam" });
+});
+exports.updateTeam = updateTeam;
 const deleteTeam = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     if (!((_a = req === null || req === void 0 ? void 0 : req.params) === null || _a === void 0 ? void 0 : _a.id)) {

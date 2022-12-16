@@ -9,20 +9,19 @@ const date_fns_1 = require("date-fns");
 const createMulterStorage = (multer) => {
     return multer.diskStorage({
         destination: (req, file, cb) => {
-            // console.log("originalUrl: ", req.originalUrl);
             switch (req.originalUrl) {
                 case "/api/team":
-                    cb(null, path_1.default.join("images", "team-crests"));
+                    cb(null, path_1.default.join("dist", "images", "team-crests"));
                     return;
                 case "/api/sponsors-bar":
-                    cb(null, path_1.default.join("images", "sponsors-bars"));
+                    cb(null, path_1.default.join("dist", "images", "sponsors-bars"));
                     return;
                 case "/api/background-image":
                     // cb(null, path.join("images", "background-images"));
                     cb(null, path_1.default.join("dist", "images", "background-images"));
                     return;
                 case "/api/game-name":
-                    cb(null, path_1.default.join("images", "game-names"));
+                    cb(null, path_1.default.join("dist", "images", "game-names"));
                     return;
             }
         },
@@ -34,6 +33,8 @@ const createMulterStorage = (multer) => {
 exports.createMulterStorage = createMulterStorage;
 //utils
 function createFileName(file) {
+    console.log("createFileName: ");
+    console.log({ file });
     const date = (0, date_fns_1.format)(Date.now(), "yyyyMMdd-HHmmss");
     return `${file.originalname.split(".")[0]}___${date}${path_1.default.extname(file.originalname)}`;
 }

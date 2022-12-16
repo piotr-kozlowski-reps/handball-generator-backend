@@ -8,6 +8,7 @@ import {
   IImageProcessingError,
   TBackgroundImage,
   TDeleteFileResponse,
+  TGameName,
   TUnprocessedImageResponse,
 } from "../utils/app.types";
 import { fetchAll_General, fetchOne_General } from "../utils/general-crud";
@@ -26,6 +27,79 @@ export const getGameName = async (
   next: NextFunction
 ) => {
   fetchOne_General(GameName, req, res, next);
+};
+
+export const createGameName = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  let filesArray: Express.Multer.File[] | undefined = req.files as
+    | Express.Multer.File[]
+    | undefined;
+  const { gameName } = req.body;
+
+  // if no fields values - send error response
+  if (!gameName)
+    return next(new HttpError("Nazwa rozgrywek jest wymagana.", 400));
+  if (!filesArray || filesArray.length < 1) {
+    return next(new HttpError("Musisz przesłać plik rozgrywek.", 400));
+  }
+  if (filesArray.length > 1) {
+    return next(
+      new HttpError("Nie możesz przesłać więcej niż jeden plik rozgrywek.", 400)
+    );
+  }
+
+  console.log(filesArray);
+
+  //check if gameName with this gameName.Name already exist in Database
+  let foundGameName: TGameName | null;
+  try {
+    foundGameName = await GameName.findOne({
+      gameName: gameName,
+    });
+  } catch (err) {
+    return next(
+      new HttpError(
+        "Nie udało się zweryfikować czy nazwa rozgrywek już istnieje, spróbuj ponownie.",
+        500
+      )
+    );
+  }
+  if (foundGameName) {
+    ImageFilesUtils.deleteFiles([filesArray[0].path]);
+    return next(new HttpError("Nazwa rozgrywek już istnieje.", 400));
+  }
+
+  // create new Team
+  const newGameName = new GameName({
+    gameName,
+    gameImage: filesArray[0].path,
+  });
+
+  let result;
+  try {
+    result = await newGameName.save();
+    console.log({ result });
+  } catch (err) {
+    console.error(err);
+    return next(
+      new HttpError("Nie udało zapisać danych w bazie, spróbuj ponownie.", 500)
+    );
+  }
+
+  //final response
+  res.status(201).json({ result });
+};
+
+export const updateGameName = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  throw new Error("Not implemented.");
+  res.status(200).json({ message: "updateGameName" });
 };
 
 export const deleteGameName = async (
