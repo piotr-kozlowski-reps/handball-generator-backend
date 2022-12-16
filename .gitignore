@@ -8,7 +8,6 @@ secrets.js
 config.js
 nodemon.json
 .env
-/dist
 
 # testing
 /coverage
